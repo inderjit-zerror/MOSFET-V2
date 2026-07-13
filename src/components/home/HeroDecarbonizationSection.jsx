@@ -46,13 +46,13 @@ export default function HeroDecarbonizationSection() {
 
   return (
     <div className=" px-[5vw] py-[2.5vw] BGTint overflow-hidden z-99">
-      <GridLine />
 
       <section
         ref={sectionRef}
         className="relative w-full overflow-hidden  BGRed py-20 sm:py-28 lg:py-32 "
       >
         {/* Grid lines background — 2 vertical + 1 horizontal, like the reference */}
+      <GridLine />
 
         <img
           ref={img1Ref}
