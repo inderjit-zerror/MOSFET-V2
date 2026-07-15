@@ -42,8 +42,8 @@ const navItems = [
     href: "/press",
   },
   {
-    title: "careers",
-    href: "/careers",
+    title: "blogs",
+    href: "/blogs",
   },
 ];
 
@@ -168,8 +168,9 @@ const Header = () => {
               );
             })}
           </div>
-
+          <Link href={`/contact`} >
           <Button txt={"Speak with us"} />
+          </Link>
         </div>
       </header>
     </>
