@@ -1,11 +1,10 @@
-
-import BlogPage from '@/components/blogs/BlogPage'
+import ArticlePage from '@/components/press/Articlepage'
 import React from 'react'
 
 const page = () => {
   return (
    <>
-   <BlogPage />
+   <ArticlePage />
    </>
   )
 }

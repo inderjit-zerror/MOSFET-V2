@@ -14,6 +14,10 @@ const navItems = [
     href: "/about",
   },
   {
+    title: "Products",
+    href: "/Products",
+  },
+  {
     title: "solutions",
     list: [
       {
@@ -34,16 +38,16 @@ const navItems = [
     ],
   },
   {
-    title: "technology",
-    href: "/technology",
-  },
-  {
     title: "press",
     href: "/press",
   },
   {
     title: "blogs",
     href: "/blogs",
+  },
+  {
+    title: "faq",
+    href: "/faq",
   },
 ];
 

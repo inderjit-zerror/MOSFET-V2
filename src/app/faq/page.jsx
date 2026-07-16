@@ -1,11 +1,10 @@
-
-import BlogPage from '@/components/blogs/BlogPage'
+import FAQSection from '@/components/faq/Faqsection'
 import React from 'react'
 
 const page = () => {
   return (
    <>
-   <BlogPage />
+   <FAQSection />
    </>
   )
 }
