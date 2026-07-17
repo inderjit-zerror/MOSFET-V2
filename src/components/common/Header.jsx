@@ -87,7 +87,7 @@ const Header = () => {
         onMouseEnter={closeWithDelay}
       ></div>
 
-      <header className="w-full fixed top-0 left-0 flex py-[0.5rem] px-[1rem] z-[1999]">
+      <header className="w-full fixed top-0 left-0 flex py-[0.8rem] px-[1rem] z-[1999]">
         <div className="w-fit h-fit flex justify-between ml-auto items-center gap-[1rem]">
           <div className="BGLightTint w-fit h-full flex justify-between ml-auto items-center gap-[1rem] px-[1rem] py-[0.5rem]">
             {navItems.map((item, index) => {

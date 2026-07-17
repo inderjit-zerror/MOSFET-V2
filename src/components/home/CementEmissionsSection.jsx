@@ -10,12 +10,12 @@ import GridLine from "../common/GridLine";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const PARAGRAPH_ONE =
-  "For decades, cement's climate impact was treated as a global statistic — significant, but distant. Today, that abstraction has collapsed. Emissions are tracked, priced, disclosed, and scrutinized in real time.";
+  "MOSFET has officially announced the expansion of its AI-driven automotive solutions across India, marking a significant step in its global growth strategy and long-term commitment to intelligent mobility. ";
 
 const PARAGRAPH_TWO_PARTS = {
   before: "Cement production is responsible for 8% of global CO",
   after:
-    " emissions. That's as many as all cars and trucks combined globally. CURA's technology is cost-effective, retrofit-ready, low-energy and reduces the carbon emissions that come from cement manufacturing by 85%.",
+    " This initiative is aimed at addressing the increasing demand for connected, data-driven, and safety-focused vehicle technologies in India’s rapidly evolving automotive ecosystem.",
 };
 
 export default function CementEmissionsSection() {

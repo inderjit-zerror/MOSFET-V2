@@ -6,11 +6,13 @@ const Hero = () => {
   return (
     <div className="w-full h-svh overflow-hidden relative z-99">
       <div className="relative w-full h-full">
-        <img
+        {/* <img
           src="/images/home/Home_Hero.jpg"
           alt="IMG"
           className="w-full h-full object-cover object-bottom"
-        />
+        /> */}
+
+        <video src={`/video/HEROHOME.mp4`} muted loop autoPlay className="w-full h-full object-cover object-center"></video>
 
         {/* Black Tint */}
         <div className="absolute inset-0 bg-black/50"></div>
