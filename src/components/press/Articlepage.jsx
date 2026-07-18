@@ -80,11 +80,11 @@ export default function ArticlePage() {
   return (
     <main className="min-h-screen BGTint text-neutral-900 pt-[15vh]" ref={heroRef}>
      
-     <GridLine />
+     {/* <GridLine /> */}
 
       {/* Hero */}
       <section className="mx-auto max-w-3xl px-6 text-center">
-        <InTitle txt={`Case Study &middot; 2026`} />
+        {/* <InTitle txt={`Case Study &middot; 2026`} /> */}
 
         <h1
           ref={titleRef}

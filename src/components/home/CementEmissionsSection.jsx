@@ -13,7 +13,7 @@ const PARAGRAPH_ONE =
   "MOSFET has officially announced the expansion of its AI-driven automotive solutions across India, marking a significant step in its global growth strategy and long-term commitment to intelligent mobility. ";
 
 const PARAGRAPH_TWO_PARTS = {
-  before: "Cement production is responsible for 8% of global CO",
+  before: "Smarter Tech for Safer Vehicles",
   after:
     " This initiative is aimed at addressing the increasing demand for connected, data-driven, and safety-focused vehicle technologies in India’s rapidly evolving automotive ecosystem.",
 };
@@ -94,7 +94,7 @@ export default function CementEmissionsSection() {
         ref={pinRef}
         className=" sticky top-0 left-0 flex h-[100vh] w-full items-center justify-center overflow-hidden bg-[#F7F7F1]"
       >
-       <GridLine/>
+       {/* <GridLine/> */}
 
         <img
           src="/images/cura-rock.png"
@@ -110,7 +110,7 @@ export default function CementEmissionsSection() {
         />
 
         <div className="relative z-10 mx-auto flex w-[70vw] max-w-[64rem] flex-col items-center text-center">
-          <InTitle txt={"Cement emissions are no longer abstract."} />
+          <InTitle txt={"Smarter Tech for Safer Vehicles"} />
 
           <div className="relative w-full">
             <p

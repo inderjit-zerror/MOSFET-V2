@@ -94,16 +94,16 @@ export default function BlogHero({ post }) {
           alt=""
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div
+        {/* <div
           aria-hidden="true"
           className={`absolute inset-0 bg-gradient-to-br ${THEMES[post.theme]} mix-blend-multiply opacity-70`}
         />
         <div
           aria-hidden="true"
           className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"
-        />
+        /> */}
 
-        <div className="relative h-full flex flex-col justify-between p-6 sm:p-10 md:p-12">
+        {/* <div className="relative h-full flex flex-col justify-between p-6 sm:p-10 md:p-12">
           <div className="flex items-start justify-between">
             <span
               ref={eyebrowRef}
@@ -112,7 +112,7 @@ export default function BlogHero({ post }) {
               <span className="h-1.5 w-1.5 rounded-full bg-[#EE2F2E]! " />
               Featured {post.bannerEyebrow}
             </span>
-            {/* <CFMark className="w-8 h-8 sm:w-10 sm:h-10 text-white opacity-90" /> */}
+            
           </div>
 
           <h2
@@ -121,7 +121,7 @@ export default function BlogHero({ post }) {
           >
             {post.bannerTitle}
           </h2>
-        </div>
+        </div> */}
       </div>
 
       <div
@@ -144,7 +144,7 @@ export default function BlogHero({ post }) {
               · {post.readTime}
             </span>
           </div>
-          <h3 className="TextStandard text-lg! heading1 sm:text-2xl! leading-snug transition-colors duration-200 group-hover:text-[#EE2F2E]">
+          <h3 className="TextStandard PH leading-snug transition-colors duration-200 group-hover:text-[#EE2F2E]">
             {post.title}
           </h3>
         </div>

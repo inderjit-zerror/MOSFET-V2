@@ -14,8 +14,8 @@ const navItems = [
     href: "/about",
   },
   {
-    title: "Products",
-    href: "/Products",
+    title: "products",
+    href: "/products",
   },
   {
     title: "solutions",

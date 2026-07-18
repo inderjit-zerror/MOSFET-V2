@@ -45,7 +45,7 @@ export default function HeroDecarbonizationSection() {
   }, []);
 
   return (
-    <div className=" px-[5vw] py-[2.5vw] BGTint overflow-hidden z-99">
+    <div className=" px-[3.2vw] py-[2.5vw] BGTint overflow-hidden z-99">
 
       <section
         ref={sectionRef}
@@ -75,7 +75,7 @@ export default function HeroDecarbonizationSection() {
             An at-the-source approach to cement decarbonization
           </h1>
 
-          <p className=" paragraph my-6 max-w-2xl text-[1.05rem]  leading-[1.6] text-[#FBFBF8]!">
+          <p className=" paragraph my-6 PH max-w-2xl text-[1.05rem]  leading-[1.6] text-[#FBFBF8]!">
             MOSFET has officially announced the expansion of its AI-driven
             automotive solutions across India, marking a significant step in its
             global growth strategy and long-term commitment to intelligent

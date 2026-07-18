@@ -135,12 +135,12 @@ export default function PartnersCollaborators() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen overflow-hidden bg-[#eceee9] text-black z-99"
+      className="relative h-fit overflow-hidden bg-[#eceee9] text-black z-99"
     >
 
         <GridLine />
 
-      <div className="relative mx-auto grid min-h-screen max-w-[1900px] grid-cols-1 px-6 py-20 sm:px-10 lg:grid-cols-[47.5%_52.5%] lg:px-[3vw] lg:py-[15vh]">
+      <div className="relative mx-auto grid h-fit max-w-[1900px] grid-cols-1 px-6 py-20 sm:px-10 lg:grid-cols-[47.5%_52.5%] lg:px-[3vw] lg:py-[15vh]">
         <div className="flex max-w-[560px] flex-col items-start lg:pt-0">
           {/* <div className="eyebrow mb-12 rounded-full bg-[#EE2F2E] px-4 py-3 text-[13px] font-medium uppercase tracking-[-0.02em] text-[white] lg:mb-11">
             
@@ -153,7 +153,7 @@ export default function PartnersCollaborators() {
               Partners &amp; Collaborators
             </h1>
 
-            <div className="paragraph mt-12 max-w-[470px] space-y-7">
+            <div className="paragraph mt-12 max-w-[470px] PH space-y-7">
               <p>
                 CURA works alongside industrial operators, academic institutions,
                 and strategic collaborators to validate and scale its upstream

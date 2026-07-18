@@ -124,7 +124,7 @@ export default function NewsPress() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen overflow-hidden  bg-[black] text-white z-99"
+      className="relative h-fit overflow-hidden  bg-[black] text-white z-99"
     >
 
         <GridLine />
@@ -141,7 +141,7 @@ export default function NewsPress() {
               From validation to commercial deployment
             </h1>
 
-            <p className="paragraph text-[#ECEEE9]! mt-10">
+            <p className="paragraph text-[#ECEEE9]! PH mt-10">
               MOSFET is introducing a suite of advanced solutions that combine precision-engineered hardware with powerful AI-based software.
             </p>
 
@@ -234,7 +234,7 @@ export default function NewsPress() {
                       <a href={item.href}>{item.title}</a>
                     </h2>
 
-                    <p className="paragraph mt-5">
+                    <p className="paragraph mt-5 PH">
                       {item.excerpt}
                     </p>
                   </div>

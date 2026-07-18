@@ -1,12 +1,8 @@
-import ArticlePage from '@/components/press/Articlepage'
-import React from 'react'
+// Place this file at: app/press/page.jsx
+// It renders the press listing (grid of all releases) at /press
 
-const page = () => {
-  return (
-   <>
-   <ArticlePage />
-   </>
-  )
+import PressPage from "@/components/press/PressPage";
+
+export default function page() {
+  return <PressPage />;
 }
-
-export default page

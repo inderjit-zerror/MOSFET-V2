@@ -463,14 +463,14 @@ export default function ContactSection() {
       className="relative min-h-screen bg-[#FAF6EE] font-sans text-zinc-900"
     >
       {/* Vertical grid lines */}
-      <GridLine />
+      {/* <GridLine /> */}
 
       <div className="relative z-10 grid min-h-screen grid-cols-1 lg:grid-cols-2">
         {/* Left column — brand info */}
         <section className="flex flex-col border-b border-[#e7e4dc] px-6 py-16 sm:px-10 sm:py-20 lg:border-b-0 lg:border-r lg:px-16 lg:py-24">
           <div className="mx-auto flex w-full max-w-[30rem] flex-col lg:mx-0">
 
-            <InTitle txt={`Contact`} />
+            {/* <InTitle txt={`Contact`} /> */}
 
 
             <h1 ref={headingRef} className="heading1 mb-6">
@@ -550,7 +550,7 @@ export default function ContactSection() {
                   onChange={handleChange("name")}
                   required
                   disabled={isSubmitting}
-                  className="w-full rounded-md border border-white bg-white px-4 py-3.5 text-[0.9375rem] text-zinc-900 outline-none transition-colors placeholder:text-zinc-400 focus:border-zinc-900 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="w-full  border border-white bg-white px-4 py-3.5 text-[0.9375rem] text-zinc-900 outline-none transition-colors placeholder:text-zinc-400 focus:border-zinc-900 disabled:cursor-not-allowed disabled:opacity-60"
                 />
               </div>
 
@@ -566,7 +566,7 @@ export default function ContactSection() {
                   onChange={handleChange("email")}
                   required
                   disabled={isSubmitting}
-                  className="w-full rounded-md border border-white bg-white px-4 py-3.5 text-[0.9375rem] text-zinc-900 outline-none transition-colors placeholder:text-zinc-400 focus:border-zinc-900 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="w-full h-fit border border-white bg-white px-4 py-3.5 text-[0.9375rem] text-zinc-900 outline-none transition-colors placeholder:text-zinc-400 focus:border-zinc-900 disabled:cursor-not-allowed disabled:opacity-60"
                 />
               </div>
             </div>
@@ -582,7 +582,7 @@ export default function ContactSection() {
                 value={form.company}
                 onChange={handleChange("company")}
                 disabled={isSubmitting}
-                className="w-full rounded-md border border-white bg-white px-4 py-3.5 text-[0.9375rem] text-zinc-900 outline-none transition-colors placeholder:text-zinc-400 focus:border-zinc-900 disabled:cursor-not-allowed disabled:opacity-60"
+                className="w-full h-fit border border-white bg-white px-4 py-3.5 text-[0.9375rem] text-zinc-900 outline-none transition-colors placeholder:text-zinc-400 focus:border-zinc-900 disabled:cursor-not-allowed disabled:opacity-60"
               />
             </div>
 
@@ -597,7 +597,7 @@ export default function ContactSection() {
                   onChange={handleChange("helpType")}
                   required
                   disabled={isSubmitting}
-                  className="w-full appearance-none rounded-md border border-white bg-white px-4 py-3.5 text-[0.9375rem] text-zinc-900 outline-none transition-colors focus:border-zinc-900 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="w-full appearance-none h-fit border border-white bg-white px-4 py-3.5 text-[0.9375rem] text-zinc-900 outline-none transition-colors focus:border-zinc-900 disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   <option value="" disabled>
                     Select one...
@@ -623,7 +623,7 @@ export default function ContactSection() {
                 onChange={handleChange("message")}
                 rows={6}
                 disabled={isSubmitting}
-                className="min-h-[9rem] w-full resize-y rounded-md border border-white bg-white px-4 py-3.5 text-[0.9375rem] text-zinc-900 outline-none transition-colors placeholder:text-zinc-400 focus:border-zinc-900 disabled:cursor-not-allowed disabled:opacity-60"
+                className="min-h-[9rem] w-full resize-y h-fit border border-white bg-white px-4 py-3.5 text-[0.9375rem] text-zinc-900 outline-none transition-colors placeholder:text-zinc-400 focus:border-zinc-900 disabled:cursor-not-allowed disabled:opacity-60"
               />
             </div>
 

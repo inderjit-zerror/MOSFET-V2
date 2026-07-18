@@ -3,7 +3,7 @@ import GridLine from "../common/GridLine";
 
 const AboutHero = () => {
   return (
-    <div className="w-full h-svh flex justify-center items-center relative BGTint pt-[8vh] px-[3vw]">
+    <div className="w-full h-svh flex justify-center items-center relative BGTint pt-[8vh] pb-[4vh] px-[3vw]">
       <GridLine />
 
       <div className="w-full h-full overflow-hidden relative flex items-end p-10">

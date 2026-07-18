@@ -126,8 +126,8 @@ export default function CementProcessSlider() {
   const Icon = slide.icon;
 
   return (
-    <section className="relative w-full  px-[10vw] py-10 BGRed ">
-      <div className="col-span-1 md:col-span-4 flex flex-col items-center text-center py-[6vw] md:py-[4vw] px-[4vw] border-b border-gray-200">
+    <section className="relative w-full  px-[10vw] py-[10vh] BGRed ">
+      <div className="col-span-1 md:col-span-4 flex flex-col items-center text-center pb-[6vw] md:pb-[4vw] px-[4vw] border-b border-gray-200">
 
         <InTitle2 txt={'industrial process engineering'} />
 
@@ -137,14 +137,14 @@ export default function CementProcessSlider() {
           Industrial perspective.
         </h1>
 
-        <p className="paragraph max-w-[38rem] text-[#ECEEE9]!">
+        <p className="paragraph max-w-[38rem] PH text-[#ECEEE9]!">
            MOSFET is introducing a suite of advanced solutions that combine precision-engineered hardware with powerful AI-based software.
         </p>
       </div>
 
-      <GridLine />
+      {/* <GridLine /> */}
 
-      <div className="grid grid-cols-1   h-[100svh] md:grid-cols-2">
+      <div className="grid grid-cols-1   h-[99svh] md:grid-cols-2">
         {/* Left: Image */}
         <div className="relative aspect-[4/3] bg-[#ECEEE9]/90 w-full overflow-hidden md:aspect-auto md:min-h-[650px]">
           <div
@@ -165,14 +165,14 @@ export default function CementProcessSlider() {
 
           <h2
             ref={titleRef}
-            className="max-w-md paragraph text-[2.25rem] font-semibold leading-[1.15] text-[#1c1c18]"
+            className="max-w-[90%] paragraph text-[2rem]!  text-[#1c1c18]"
           >
             {slide.title}
           </h2>
 
           <p
             ref={descRef}
-            className="mx-auto paragraph mt-6 max-w-sm text-[1rem] leading-[1.6] text-[#4a4a42]"
+            className="mx-auto paragraph mt-6 max-w-[90%] text-[1rem] text-justify PH leading-[1.6] text-[#4a4a42]"
           >
             {slide.description}
           </p>

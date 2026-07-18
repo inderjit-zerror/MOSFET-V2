@@ -3,12 +3,11 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { posts as ALL_POSTS, CATEGORIES } from "@/components/blogs/Data.jsx";
+import { pressReleases as ALL_RELEASES, CATEGORIES } from "@/components/press/PressData";
 
-
-import Pagination from "./Pagination";
-import BlogCard from "./Blogcard";
-import BlogHero from "./Bloghero";
+import PressPagination from "./PressPagination";
+import PressCard from "./PressCard";
+import PressHero from "./PressHero";
 import InTitle from "../common/InTitle";
 
 if (typeof window !== "undefined") {
@@ -45,7 +44,7 @@ function SortIcon(props) {
   );
 }
 
-export default function BlogPage() {
+export default function PressPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [query, setQuery] = useState("");
   const [sortAsc, setSortAsc] = useState(false);
@@ -55,9 +54,9 @@ export default function BlogPage() {
   const headerRef = useRef(null);
   const mastheadRef = useRef(null);
 
-  // The most recent post always leads as the hero, mirroring the reference site.
-  const heroPost = ALL_POSTS[0];
-  const restPosts = ALL_POSTS.slice(1);
+  // The most recent release always leads as the hero.
+  const heroPost = ALL_RELEASES[0];
+  const restPosts = ALL_RELEASES.slice(1);
 
   const filtered = useMemo(() => {
     let list = restPosts;
@@ -70,7 +69,7 @@ export default function BlogPage() {
       list = list.filter(
         (p) =>
           p.title.toLowerCase().includes(q) ||
-          p.bannerTitle.toLowerCase().includes(q)
+          p.excerpt.toLowerCase().includes(q)
       );
     }
 
@@ -115,7 +114,7 @@ export default function BlogPage() {
   // (filter switch, search, or page change).
   useEffect(() => {
     if (!gridRef.current) return;
-    const cards = gridRef.current.querySelectorAll(".blog-card");
+    const cards = gridRef.current.querySelectorAll(".press-card");
     gsap.fromTo(
       cards,
       { opacity: 0, y: 28 },
@@ -139,21 +138,20 @@ export default function BlogPage() {
           className="mb-10 sm:mb-14 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"
         >
           <div className="flex flex-col gap-3 max-w-2xl">
-           
-            <InTitle txt={`Blog`} />
+            <InTitle txt={`Press`} />
             <h1 className="TextStandard heading1 font-extrabold text-3xl sm:text-4xl md:text-5xl leading-[1.05] tracking-tight">
-              Insights on modern commercial insurance
+              News, announcements, and stories from CoverForce
             </h1>
           </div>
           <p className="text-sm paragraph sm:text-base text-[#202020]/55 max-w-sm sm:text-right">
-            Product news, engineering deep dives, and stories from the
+            Company news, product milestones, and case studies from the
             brokers and wholesalers building on CoverForce.
           </p>
         </header> */}
 
         {/* Hero */}
         <section className="mb-10 sm:mb-0">
-          <BlogHero post={heroPost} />
+          <PressHero post={heroPost} />
         </section>
 
         {/* Filters + Search */}
@@ -188,7 +186,7 @@ export default function BlogPage() {
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search…"
+                placeholder="Search press…"
                 className="w-full sm:w-64 rounded-full BGLightTint pl-10 pr-4 py-2.5 text-sm TextStandard placeholder:text-[#202020]/40 outline-none focus:ring-2 focus:ring-[#EE2F2E]/30"
               />
             </label>
@@ -207,7 +205,7 @@ export default function BlogPage() {
         {/* Grid */}
         {pageItems.length === 0 ? (
           <div className="py-20 text-center">
-            <p className="text-lg font-semibold TextStandard">No posts match that search.</p>
+            <p className="text-lg font-semibold TextStandard">No press releases match that search.</p>
             <p className="text-sm text-[#202020]/50 mt-1">
               Try a different keyword or clear the filter.
             </p>
@@ -218,14 +216,14 @@ export default function BlogPage() {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6"
           >
             {pageItems.map((post) => (
-              <BlogCard key={post.id} post={post} />
+              <PressCard key={post.id} post={post} />
             ))}
           </div>
         )}
 
         {/* Pagination */}
         {filtered.length > 0 && (
-          <Pagination
+          <PressPagination
             page={page}
             totalPages={totalPages}
             totalItems={filtered.length}

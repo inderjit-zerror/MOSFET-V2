@@ -32,7 +32,7 @@ const newsItems = [
 
 export default function TractionSection() {
   return (
-    <section className="BGTint w-full px-6 py-20 md:px-10 ">
+    <section className="BGTint w-full h-fit px-6 pt-20 md:px-10 ">
 
       <div className="mx-auto grid  grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
         {/* Left column */}
@@ -68,8 +68,8 @@ export default function TractionSection() {
 
               {/* Text content */}
               <div className="flex-1">
-                <p className=" paragraph  TextRed">{item.date}</p>
-                <h3 className="mt-2 heading1 text-[1.3rem]!">{item.title}</h3>
+                <p className=" paragraph PP  TextRed">{item.date}</p>
+                <h3 className="mt-2 paragraph PH ">{item.title}</h3>
               </div>
 
               {/* Arrow */}

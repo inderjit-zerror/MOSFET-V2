@@ -111,8 +111,8 @@ export default function AboutDetail() {
   const Icon = slide.icon;
 
   return (
-    <section className="relative w-full  px-[10vw] py-10 BGTint ">
-      <div className="col-span-1 md:col-span-4 flex flex-col items-center text-center py-[6vw] md:py-[4vw] px-[4vw] border-b border-gray-200">
+    <section className="relative w-full  px-[10vw] py-[10vh] BGTint ">
+      <div className="col-span-1 md:col-span-4 flex flex-col items-center text-center pb-[5vh]  px-[4vw] border-b border-gray-200">
 
         <InTitle txt={'industrial process engineering'} />
 
@@ -122,14 +122,14 @@ export default function AboutDetail() {
           Industrial perspective.
         </h1>
 
-        <p className="paragraph max-w-[38rem] ">
+        <p className="paragraph max-w-[38rem] PH ">
            MOSFET is introducing a suite of advanced solutions that combine precision-engineered hardware with powerful AI-based software.
         </p>
       </div>
 
       <GridLine />
 
-      <div className="grid grid-cols-1  h-[100svh] md:grid-cols-2 ">
+      <div className="grid grid-cols-1  h-[95svh] md:grid-cols-2 ">
         {/* Left: Image */}
         <div className="relative aspect-[4/3] bg-[#ECEEE9]/90 w-full overflow-hidden md:aspect-auto md:min-h-[650px]">
           <div
@@ -140,7 +140,7 @@ export default function AboutDetail() {
         </div>
 
         {/* Right: Content */}
-        <div className="relative flex min-h-[400px] flex-col  items-center justify-center BGRed px-10 py-16 text-center md:min-h-[650px]">
+        <div className="relative flex min-h-[400px] flex-col  items-center justify-center BGRed px-7 py-16 text-center md:min-h-[650px]">
           {/* <div
             ref={iconRef}
             className="mb-8 flex h-16 w-16 items-center justify-center rounded-xl border border-[#e8552f]/60"
@@ -150,14 +150,14 @@ export default function AboutDetail() {
 
           <h2
             ref={titleRef}
-            className="max-w-md paragraph text-[2.25rem] font-semibold leading-[1.15] TextTint"
+            className="max-w-[90%] heading1 text-[2rem]! font-semibold leading-[1.15] TextTint"
           >
             {slide.title}
           </h2>
 
           <p
             ref={descRef}
-            className="mx-auto paragraph mt-6 max-w-sm text-[1rem] leading-[1.6] TextTint"
+            className="mx-auto paragraph mt-6 max-w-[90%] text-[1rem] leading-[1.6] text-justify TextTint"
           >
             {slide.description}
           </p>

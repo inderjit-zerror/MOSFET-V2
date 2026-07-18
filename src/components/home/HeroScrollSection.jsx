@@ -99,7 +99,7 @@ export default function HeroScrollSection() {
             <div className="grid w-full grid-cols-1 gap-12 md:grid-cols-2 md:gap-8">
               {/* Left: Heading */}
               <h2 className="heading1  leading-[1.1] text-[#ECEEE9]! sm:text-[3.5rem] lg:text-[4rem]">
-                Designed to decarbonize, at today&apos;s cost.
+                Smarter Tech <br /> for Safer Vehicles <br />AI-driven automotive solutions across India
               </h2>
 
               {/* Right: Copy + CTA */}

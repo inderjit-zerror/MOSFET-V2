@@ -5,7 +5,7 @@ export default function Footer() {
       <div className="absolute left-[-4vw] top-[-5rem] h-[14rem] w-[14rem] rounded-full border-[0.0625rem] border-white/5 opacity-30" />
       <div className="absolute right-[-6vw] top-[4rem] h-[26rem] w-[26rem] rounded-full border-[0.0625rem] border-white/5 opacity-30" />
 
-      <div className="relative mx-auto flex min-h-[34.625rem] max-w-[92vw] flex-col justify-between pt-[6rem]">
+      <div className="relative mx-auto flex min-h-[34.625rem] max-w-[93vw] flex-col justify-between pt-[6rem]">
         <div className="grid grid-cols-[1fr_0.78fr] gap-[8vw]">
           <div>
             <div className="mb-[2.5rem]">
@@ -17,7 +17,7 @@ export default function Footer() {
               </p>
             </div>
 
-            <p className="paragraph max-w-[30rem] text-[#ECEEE9]! ">
+            <p className="paragraph max-w-[30rem] PP text-[#ECEEE9]! ">
               Engineered MOSFET power solutions designed for
               <br />
               high efficiency and reliable performance.
@@ -26,17 +26,17 @@ export default function Footer() {
 
           <div className="grid grid-cols-1 gap-[1.35rem] pt-[0.3rem] ml-auto">
             <div>
-              <p className="mb-[0.7rem] paragraph text-[#ff3030]!">Phone</p>
-              <p className="paragraph leading-[1.4] text-[#ECEEE9]!">
+              <p className="mb-1 paragraph text-[#ff3030]!">Phone</p>
+              <p className="paragraph leading-[1.4] PP text-[#ECEEE9]!">
                 +91 9999878104 / +91 9910700028
               </p>
             </div>
 
             <div>
-              <p className="mb-[0.7rem] paragraph text-[#ff3030]!">
+              <p className="mb-1 paragraph text-[#ff3030]!">
                 Location
               </p>
-              <p className="max-w-[25rem] paragraph  text-[#ECEEE9]!">
+              <p className="max-w-[25rem] paragraph PP  text-[#ECEEE9]!">
                 B-66, 1st Floor, Naraina Industrial Area, Phase 1, New Delhi,
                 India
               </p>
@@ -44,7 +44,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="h-[0.0625rem] w-full bg-white/10" />
+        <div className="h-[0.0625rem] w-full bg-white/50" />
 
         <div className="grid grid-cols-[1fr_1.1fr_1.35fr_1fr_0.75fr] gap-[3vw]">
           <FooterColumn
@@ -85,11 +85,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="h-[0.0625rem] w-full bg-white/10" />
+        <div className="h-[0.0625rem] w-full bg-white/50" />
 
         <div className="flex items-center justify-between pb-[0.5rem]">
           <div className="flex items-center gap-[0.65rem]">
-            <span className="text-[0.95rem] text-[#ECEEE9]/90">Follow us:</span>
+            <span className="text-[0.95rem] text-[#ECEEE9]/90 PP">Follow us:</span>
 
             {["f", "𝕏", "◎", "in"].map((item, index) => (
               <a
@@ -106,7 +106,7 @@ export default function Footer() {
             ))}
           </div>
 
-          <p className="paragraph text-[#ECEEE9]!">
+          <p className="paragraph text-[#ECEEE9]! PP">
             © All Right Reserved. 2026. Mosfet
           </p>
         </div>
@@ -120,12 +120,12 @@ function FooterColumn({ title, links }) {
     <div>
       <h3 className="mb-[1rem] paragraph   text-[#ff3030]! capitalize">{title}</h3>
 
-      <ul className="space-y-[0.65rem]">
+      <ul className="">
         {links.map((link) => (
           <li key={link}>
             <a
               href="#"
-              className="paragraph   text-[#ECEEE9]/90! hover:text-[#ff3030]!"
+              className="paragraph PP text-[#ECEEE9]/90! hover:text-[#ff3030]!"
             >
               {link}
             </a>

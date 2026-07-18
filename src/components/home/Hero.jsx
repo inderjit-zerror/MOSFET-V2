@@ -25,7 +25,7 @@ const Hero = () => {
           Mosfet - Smarter Tech <br /> for Safer Vehicles
         </h1>
 
-        <div className="paragraph my-5 max-w-[40vw] text-[#FBFBF7]! space-y-7">
+        <div className="paragraph my-5 max-w-[40vw] text-[#FBFBF7]! PH space-y-7">
           <p>
             MOSFET is an advanced automotive technology company dedicated to
             building intelligent, connected, and safety-driven vehicle
