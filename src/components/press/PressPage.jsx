@@ -130,7 +130,7 @@ export default function PressPage() {
   }, [activeCategory, query, sortAsc, page]);
 
   return (
-    <main className="BGTint min-h-screen pt-[1vh]">
+    <main className="BGTint min-h-screen pt-[1vh] max-sm:pt-[10vh]">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
         {/* Masthead */}
         {/* <header

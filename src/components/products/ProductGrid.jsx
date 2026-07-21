@@ -87,7 +87,7 @@ export default function ProductGrid() {
     <section
       id="products"
       ref={gridRef}
-      className="mx-auto w-full BGTint px-5 py-10 md:px-8 md:py-[10vh]"
+      className="mx-auto w-full BGTint px-5 py-10 md:px-8 md:py-[10vh] max-sm:pt-[15vh]"
     >
 
       <h1 className="heading1 mb-5 ">Mosfet Products</h1>

@@ -715,7 +715,7 @@ export default function FAQSection() {
   return (
     <section
       ref={sectionRef}
-      className="BGTint relative w-full overflow-hidden py-20 sm:py-28"
+      className="BGTint relative w-full overflow-hidden py-20 sm:py-28 max-sm:pt-[8vh]"
     >
       {/* <GridLine /> */}
       {/* decorative vertical guide lines, matching the reference layout */}
@@ -733,9 +733,9 @@ export default function FAQSection() {
 
         <div className="flex w-full flex-col gap-8 lg:flex-row lg:items-start lg:gap-10">
           {/* ---------- Left: category filters ---------- */}
-          <div className="w-full flex-shrink-0 lg:sticky lg:top-24 lg:w-64">
-            <div className="flex flex-row flex-wrap gap-2 lg:flex-col lg:flex-nowrap lg:gap-2">
-              <p className=" paragraph">Filter's</p>
+          <div className="w-full flex-shrink-0 lg:sticky lg:top-24 lg:w-64 ">
+            <div className="flex flex-row flex-wrap gap-2 lg:flex-col lg:flex-nowrap lg:gap-2 ">
+              <p className=" paragraph max-sm:hidden">Filter's</p>
               {CATEGORIES.map((category) => {
                 const isActive = activeCategory === category;
                 return (

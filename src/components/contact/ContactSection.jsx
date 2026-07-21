@@ -460,7 +460,7 @@ export default function ContactSection() {
   return (
     <main
       ref={containerRef}
-      className="relative min-h-screen bg-[#FAF6EE] font-sans text-zinc-900"
+      className="relative min-h-screen bg-[#FAF6EE] font-sans text-zinc-900 max-sm:pt-[10vh]"
     >
       {/* Vertical grid lines */}
       {/* <GridLine /> */}
