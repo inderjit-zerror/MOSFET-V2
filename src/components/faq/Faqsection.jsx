@@ -990,7 +990,7 @@ export default function FAQSection() {
   return (
     <section
       ref={sectionRef}
-      className="BGTint relative w-full overflow-hidden py-20 sm:py-28 max-sm:pt-[8vh]"
+      className="BGTint relative w-full overflow-hidden py-20 sm:py-28 max-sm:pt-[15vh]"
     >
       {/* <GridLine /> */}
       {/* decorative vertical guide lines, matching the reference layout */}
