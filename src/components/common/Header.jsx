@@ -296,6 +296,11 @@ const Header = () => {
       ></div>
 
       <header className="w-full fixed top-0 left-0 flex py-3 px-4 sm:py-[0.8rem] sm:px-[1rem] z-[1999]">
+        <a href="/">
+        <div className="w-[100px] h-full max-md:hidden ">
+          <img src={`/logo.png`} alt="img" className="w-full object-center object-cover" />
+        </div>
+        </a>
         <div className="w-full md:w-fit h-fit flex justify-between md:justify-end ml-auto items-center gap-[1rem]">
           {/* Desktop nav */}
           <div className="hidden md:flex BGLightTint w-fit h-full justify-between ml-auto items-center gap-[1rem] px-[1rem] py-[0.5rem]">
@@ -388,8 +393,15 @@ const Header = () => {
 
           {/* Mobile bar: logo/spacer + hamburger */}
           <div className="flex md:hidden w-full items-center justify-between BGLightTint px-4 py-2.5">
-            <Link href="/" className="paragraph text-[0.9rem]! font-medium! capitalize">
-             <img src={`/logo.png`} alt="img" className="h-[1.8rem] object-cover " />
+            <Link
+              href="/"
+              className="paragraph text-[0.9rem]! font-medium! capitalize"
+            >
+              <img
+                src={`/logo.png`}
+                alt="img"
+                className="h-[1.8rem] object-cover "
+              />
             </Link>
 
             <button

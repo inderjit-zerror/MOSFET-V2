@@ -326,6 +326,240 @@ const CATEGORIES = [
   "Warranty Claim",
 ];
 
+// const FAQ_ITEMS = [
+//   // ---------- Product Related Queries ----------
+//   {
+//     category: "Product Related Queries",
+//     question: "What is Orbit and who is it for?",
+//     answer:
+//       "Orbit is a workspace for small teams to plan, track, and ship work in one place. It replaces scattered spreadsheets and chat threads with a single shared source of truth, so everyone from founders to freelancers can see what's happening at a glance.",
+//   },
+//   {
+//     category: "Product Related Queries",
+//     question: "Which platforms does Orbit run on?",
+//     answer:
+//       "Orbit works in any modern browser and also ships as a native app for Windows, macOS, iOS, and Android. Your data stays in sync across every device the moment you make a change.",
+//   },
+//   {
+//     category: "Product Related Queries",
+//     question: "Can I customize boards and workflows?",
+//     answer:
+//       "Yes. Every board can be switched between list, kanban, calendar, and timeline views, and you can build custom statuses, fields, and automations to match how your team actually works.",
+//   },
+//   {
+//     category: "Product Related Queries",
+//     question: "Does Orbit support recurring tasks?",
+//     answer:
+//       "You can set any task to repeat daily, weekly, monthly, or on a custom schedule. Orbit automatically creates the next instance once the current one is marked complete.",
+//   },
+//   {
+//     category: "Product Related Queries",
+//     question: "Is there a mobile app?",
+//     answer:
+//       "Yes, the Orbit mobile app mirrors the desktop experience so you can update tasks, comment, and get notifications on the go. Offline changes sync automatically once you're back online.",
+//   },
+//   {
+//     category: "Product Related Queries",
+//     question: "Can I set up dashboards for reporting?",
+//     answer:
+//       "Custom dashboards let you pull charts and metrics from any project — burndown rates, workload, overdue tasks, and more — and share them as a live link or export them as PDF.",
+//   },
+//   {
+//     category: "Product Related Queries",
+//     question: "How many projects can I create?",
+//     answer:
+//       "There's no hard limit on the number of projects. Free trial workspaces can create up to 5 active projects at a time, while every paid plan supports unlimited projects.",
+//   },
+//   {
+//     category: "Product Related Queries",
+//     question: "Does Orbit support file attachments?",
+//     answer:
+//       "You can attach files directly to tasks and comments up to 5GB per file. Attachments are versioned automatically, so earlier uploads are never overwritten or lost.",
+//   },
+
+//   // ---------- Services Related Queries ----------
+//   {
+//     category: "Services Related Queries",
+//     question: "Do you offer onboarding assistance?",
+//     answer:
+//       "Every new team gets a guided setup session with a product specialist, plus access to a self-serve onboarding checklist inside the app to help you get running in under a day.",
+//   },
+//   {
+//     category: "Services Related Queries",
+//     question: "Can I get a dedicated account manager?",
+//     answer:
+//       "Teams on our Business and Enterprise plans are assigned a dedicated account manager who checks in quarterly and helps plan rollouts, migrations, and training for new hires.",
+//   },
+//   {
+//     category: "Services Related Queries",
+//     question: "Do you provide custom integration builds?",
+//     answer:
+//       "Our services team can build bespoke integrations with internal tools or legacy systems on a project basis. Reach out through the support form and we'll scope the work together.",
+//   },
+//   {
+//     category: "Services Related Queries",
+//     question: "Is training available for larger teams?",
+//     answer:
+//       "Yes, we run live group training sessions for teams of 10 or more, covering setup, admin controls, and best practices. Sessions can be recorded for anyone who can't attend live.",
+//   },
+//   {
+//     category: "Services Related Queries",
+//     question: "Can you help migrate data from another platform?",
+//     answer:
+//       "Our migration service maps your existing boards, tasks, and due dates from tools like Trello, Asana, or CSV exports, and handles the transfer for you so nothing is left behind.",
+//   },
+//   {
+//     category: "Services Related Queries",
+//     question: "Do you offer priority support add-ons?",
+//     answer:
+//       "Priority support can be added to any plan for guaranteed response times under two hours during business days, along with a direct line to our senior support engineers.",
+//   },
+//   {
+//     category: "Services Related Queries",
+//     question: "Can Orbit be white-labeled for my clients?",
+//     answer:
+//       "Enterprise customers can apply their own branding, including logo, color scheme, and a custom domain, so client-facing workspaces feel like a natural extension of their own product.",
+//   },
+
+//   // ---------- Common Questions ----------
+//   {
+//     category: "Common Questions",
+//     question: "Do I need a credit card to start a free trial?",
+//     answer:
+//       "No. You can create an account and use every core feature for 14 days without entering payment details. We'll only ask for a card if you decide to upgrade once the trial ends.",
+//   },
+//   {
+//     category: "Common Questions",
+//     question: "Can I invite external clients or contractors?",
+//     answer:
+//       "Yes. Guest seats let you bring clients and contractors into specific projects without giving them access to your whole workspace. You control exactly what they can view, comment on, or edit.",
+//   },
+//   {
+//     category: "Common Questions",
+//     question: "How does billing work if I add or remove teammates?",
+//     answer:
+//       "Billing is prorated automatically. Add someone mid-cycle and you're only charged for the days they're active; remove someone and that seat's cost is credited to your next invoice.",
+//   },
+//   {
+//     category: "Common Questions",
+//     question: "Which tools does Orbit integrate with?",
+//     answer:
+//       "Orbit connects natively with Slack, Google Calendar, GitHub, and Figma, and supports Zapier for everything else. New integrations ship roughly every month based on customer requests.",
+//   },
+//   {
+//     category: "Common Questions",
+//     question: "Can I move my existing data from another tool?",
+//     answer:
+//       "Yes. Our import wizard supports direct migration from Trello, Asana, and CSV files, mapping boards, tasks, and due dates automatically. Most teams are fully migrated in under an hour.",
+//   },
+//   {
+//     category: "Common Questions",
+//     question: "Do you offer discounts for nonprofits or students?",
+//     answer:
+//       "Yes, verified nonprofits and educational institutions get 50% off any paid plan. Reach out through our support form with proof of status and we'll apply the discount to your account.",
+//   },
+//   {
+//     category: "Common Questions",
+//     question: "How can I get help if I'm stuck?",
+//     answer:
+//       "Live chat support is available on every plan, with replies typically within a few hours on weekdays. Paid plans also include priority email support and weekly onboarding office hours.",
+//   },
+//   {
+//     category: "Common Questions",
+//     question: "Can I change my plan later?",
+//     answer:
+//       "You can upgrade, downgrade, or switch between monthly and annual billing at any time from account settings. Changes take effect immediately, with charges prorated for the current cycle.",
+//   },
+
+//   // ---------- Our Conditions ----------
+//   {
+//     category: "Our Conditions",
+//     question: "What is your refund policy?",
+//     answer:
+//       "If you're not satisfied within the first 30 days of a paid subscription, we'll issue a full refund, no questions asked. Just reach out through the support form to request one.",
+//   },
+//   {
+//     category: "Our Conditions",
+//     question: "Are there any usage restrictions on the free trial?",
+//     answer:
+//       "The free trial includes every core feature but caps workspace storage at 5GB and limits automations to 100 runs per month. These limits reset once you upgrade to a paid plan.",
+//   },
+//   {
+//     category: "Our Conditions",
+//     question: "What happens to my data if I cancel?",
+//     answer:
+//       "Your workspace is kept in a read-only state for 30 days after cancellation so you can export anything you need. After that window, all data is permanently deleted from our servers.",
+//   },
+//   {
+//     category: "Our Conditions",
+//     question: "Is my data encrypted and backed up?",
+//     answer:
+//       "All data is encrypted in transit and at rest, and we run continuous backups across multiple regions. You can also export a full copy of your workspace at any time from account settings.",
+//   },
+//   {
+//     category: "Our Conditions",
+//     question: "Do you have a service level agreement?",
+//     answer:
+//       "Business and Enterprise plans include an SLA guaranteeing 99.9% uptime, with service credits applied automatically to your next invoice if that threshold isn't met in a given month.",
+//   },
+//   {
+//     category: "Our Conditions",
+//     question: "Who owns the data I upload to Orbit?",
+//     answer:
+//       "You retain full ownership of everything you upload. We never sell customer data or use it to train external models, and you can request a complete export or deletion at any time.",
+//   },
+//   {
+//     category: "Our Conditions",
+//     question: "What are the terms for annual contracts?",
+//     answer:
+//       "Annual plans are billed upfront at a discounted rate and renew automatically unless cancelled at least 14 days before the renewal date. You can switch to monthly billing at renewal.",
+//   },
+
+//   // ---------- Warranty Claim ----------
+//   {
+//     category: "Warranty Claim",
+//     question: "Does Orbit come with a service warranty?",
+//     answer:
+//       "Paid plans include a service warranty covering platform uptime, data integrity, and core feature availability for the full length of your subscription term.",
+//   },
+//   {
+//     category: "Warranty Claim",
+//     question: "How do I file a warranty claim?",
+//     answer:
+//       "Submit a claim through the support form with your account ID and a description of the issue. Our team reviews and responds to every warranty claim within two business days.",
+//   },
+//   {
+//     category: "Warranty Claim",
+//     question: "What does the warranty cover?",
+//     answer:
+//       "It covers data loss caused by platform errors, extended unplanned downtime beyond our published SLA, and billing discrepancies. It doesn't cover issues from third-party integrations you've connected.",
+//   },
+//   {
+//     category: "Warranty Claim",
+//     question: "How long do I have to file a claim?",
+//     answer:
+//       "Claims must be filed within 60 days of the issue occurring. We recommend reporting problems as soon as you notice them so we can investigate while logs are still available.",
+//   },
+//   {
+//     category: "Warranty Claim",
+//     question: "Will I be compensated if my claim is approved?",
+//     answer:
+//       "Approved claims are typically resolved with service credits applied to your account, though qualifying cases such as verified data loss may be eligible for a partial refund.",
+//   },
+//   {
+//     category: "Warranty Claim",
+//     question: "Can I track the status of my claim?",
+//     answer:
+//       "Yes, every claim gets a reference number you can use to check its status from the support portal, and you'll receive an email update at each stage of the review.",
+//   },
+//   {
+//     category: "Warranty Claim",
+//     question: "Does the warranty extend to add-on services?",
+//     answer:
+//       "Paid add-ons such as custom integrations and priority support are covered under the same warranty terms as the core plan, for as long as the add-on remains active on your account.",
+//   },
+// ];
+
 const FAQ_ITEMS = [
   // ---------- Product Related Queries ----------
   {
@@ -375,6 +609,24 @@ const FAQ_ITEMS = [
     question: "Does Orbit support file attachments?",
     answer:
       "You can attach files directly to tasks and comments up to 5GB per file. Attachments are versioned automatically, so earlier uploads are never overwritten or lost.",
+  },
+  {
+    category: "Product Related Queries",
+    question: "What products does MOSFET make?",
+    answer:
+      "MOSFET makes dash cams, car audio systems, and vehicle lighting — all engineered and tested in-house before they reach the road.",
+  },
+  {
+    category: "Product Related Queries",
+    question: "Can I install MOSFET products myself?",
+    answer:
+      "Most MOSFET products are plug-and-play and easy to install yourself. For audio and lighting installs, we recommend using a professional technician for the best results.",
+  },
+  {
+    category: "Product Related Queries",
+    question: "Are MOSFET products compatible with all car models?",
+    answer:
+      "Most MOSFET products fit standard vehicles. We recommend checking the compatibility list on each product page before ordering to be sure.",
   },
 
   // ---------- Services Related Queries ----------
@@ -470,6 +722,18 @@ const FAQ_ITEMS = [
     answer:
       "You can upgrade, downgrade, or switch between monthly and annual billing at any time from account settings. Changes take effect immediately, with charges prorated for the current cycle.",
   },
+  {
+    category: "Common Questions",
+    question: "Where can I buy MOSFET products?",
+    answer:
+      "You can buy MOSFET products through our website, authorized dealers, and select OEM partners across India.",
+  },
+  {
+    category: "Common Questions",
+    question: "Does MOSFET ship across India?",
+    answer:
+      "Yes, MOSFET ships nationwide across India, with delivery typically taking three to seven business days depending on your location.",
+  },
 
   // ---------- Our Conditions ----------
   {
@@ -558,8 +822,19 @@ const FAQ_ITEMS = [
     answer:
       "Paid add-ons such as custom integrations and priority support are covered under the same warranty terms as the core plan, for as long as the add-on remains active on your account.",
   },
+  {
+    category: "Warranty Claim",
+    question: "Do MOSFET dash cams come with a warranty?",
+    answer:
+      "Yes, every MOSFET dash cam ships with a 1-year manufacturer warranty covering manufacturing defects.",
+  },
+  {
+    category: "Warranty Claim",
+    question: "How do I file a MOSFET warranty claim?",
+    answer:
+      "To file a warranty claim, submit your order ID and a description of the issue through our support form, and our team will respond within 2 business days.",
+  },
 ];
-
 export default function FAQSection() {
   const sectionRef = useRef(null);
   const eyebrowRef = useRef(null);

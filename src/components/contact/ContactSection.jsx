@@ -474,15 +474,14 @@ export default function ContactSection() {
 
 
             <h1 ref={headingRef} className="heading1 mb-6">
-              Let&rsquo;s Connect
+              We're Here to Help
             </h1>
 
             <p
               ref={paragraphRef}
-              className="mb-16 max-w-[27rem] text-base leading-relaxed text-zinc-900/70 lg:mb-24"
+              className="mb-16 max-w-[27rem] text-[1.0625rem] leading-[1rem] text-zinc-900/70 lg:mb-24"
             >
-              Whether you have a question or need assistance, our team is
-              here to help every step of the way. Let&rsquo;s connect today.
+             Whether you have a question about a product, need help with an order, or want to explore a partnership, our team is here to help — reach out and we'll get back to you fast.
             </p>
 
             <div

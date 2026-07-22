@@ -296,7 +296,7 @@ import GridLine from "../common/GridLine";
 const milestones = [
   {
     period: "2022–2025",
-    title: "Understanding the Basics",
+    title: " Foundation: Started as a car electronics workshop in Delhi.",
     excerpt:
       "Every electronic system starts with a few key components. Resistors control current flow, capacitors store and release energy. ",
     image:
@@ -423,14 +423,14 @@ export default function NewsPress() {
           {/* Left: sticky intro */}
           <div className="lg:sticky lg:top-[10vh] lg:self-start">
 
-            <InTitle txt={'Progress Roadmap'} />
+            <InTitle txt={' Our Journey'} />
 
             <h1 className="heading1 text-[#ECEEE9]!">
-              From validation to commercial deployment
+              From Circuit to Road
             </h1>
 
             <p className="paragraph text-[#ECEEE9]! PH mt-10">
-              MOSFET is introducing a suite of advanced solutions that combine precision-engineered hardware with powerful AI-based software.
+             MOSFET works with OEMs, fleet operators, dealers, and retail partners across India to bring connected vehicle technology to every kind of driver — from individual car owners to large commercial fleets. Our partner network is what lets us deliver consistent quality and support, wherever you're based.
             </p>
 
             {/* Progress dots */}

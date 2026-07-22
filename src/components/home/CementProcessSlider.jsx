@@ -343,16 +343,16 @@ export default function CementProcessSlider() {
     <section className="relative w-full px-5 py-10 sm:px-[10vw] sm:py-[10vh] BGRed ">
       <div className="col-span-1 md:col-span-4 flex flex-col items-center text-center pb-8 sm:pb-[6vw] md:pb-[4vw] px-2 sm:px-[4vw] border-b border-gray-200">
 
-        <InTitle2 txt={'industrial process engineering'} />
+        <InTitle2 txt={'The MOSFET Network'} />
 
         <h1 className="heading1 mb-[1.5rem] text-[1.75rem]! sm:text-[2.75rem]! lg:text-[3.75rem]! text-[#ECEEE9]! max-w-[45rem]">
-          Scientific depth.
+          Built to Perform, 
           <br />
-          Industrial perspective.
+          Not Just Impress
         </h1>
 
         <p className="paragraph max-w-[38rem] PH text-[#ECEEE9]!">
-           MOSFET is introducing a suite of advanced solutions that combine precision-engineered hardware with powerful AI-based software.
+           Every MOSFET product is tested on real Indian roads before it ships, not just on a lab bench. We check it in heat, dust, monsoon rain, and stop-and-go traffic, because that's the environment it actually has to survive in, every single day.
         </p>
       </div>
 

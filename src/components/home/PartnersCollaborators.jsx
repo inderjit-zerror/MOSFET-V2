@@ -343,22 +343,19 @@ export default function PartnersCollaborators() {
             
           </div> */}
 
-          <InTitle txt={'The Cura Ecosystem'} />
+          <InTitle txt={'The MOSFET Network'} />
 
           <div className="copy-block">
             <h1 className="heading1 max-w-[520px]">
-              Partners &amp; Collaborators
+             Partners & Distributors
             </h1>
 
             <div className="paragraph mt-12 max-w-[470px] PH space-y-7">
               <p>
-                CURA works alongside industrial operators, academic institutions,
-                and strategic collaborators to validate and scale its upstream
-                approach.
+                 MOSFET works with OEMs, fleet operators, dealers, and retail partners across India to bring connected vehicle technology to every kind of driver — from individual car owners to large commercial fleets. 
               </p>
               <p>
-                Our focus is disciplined progress from laboratory validation
-                through pilot deployment.
+                Our partner network is what lets us deliver consistent quality and support, wherever you're based.
               </p>
             </div>
           </div>

@@ -65,14 +65,12 @@ const Hero = () => {
 
       <div className="w-full h-full px-5 pb-10 sm:px-10 sm:pb-20 absolute bottom-0 left-0 flex flex-col justify-end">
         <h1 className="heading1 text-[2.25rem]! sm:text-[3.25rem]! lg:text-[5rem]! text-[#FBFBF7] ">
-          Mosfet - Smarter Tech <br className="hidden sm:block" /> for Safer Vehicles
+         Built for the Road Ahead <br className="hidden sm:block" /> SmartTech, DriveSafe
         </h1>
 
         <div className="paragraph my-4 sm:my-5 max-w-full sm:max-w-[70vw] lg:max-w-[40vw] text-[#FBFBF7]! PH space-y-7">
           <p>
-            MOSFET is an advanced automotive technology company dedicated to
-            building intelligent, connected, and safety-driven vehicle
-            ecosystems for modern mobility.
+             MOSFET builds dash cams, audio systems, and lighting engineered for the way India actually drives — real roads, real traffic, real weather. Every product is designed to make your everyday drive safer and smarter.
           </p>
         </div>
 

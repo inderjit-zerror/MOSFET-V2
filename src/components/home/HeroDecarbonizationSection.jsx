@@ -259,14 +259,11 @@ export default function HeroDecarbonizationSection() {
         {/* Content */}
         <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-4 sm:px-6 text-center">
           <h1 className="heading1 leading-[1.15] text-[1.9rem]! text-[#FBFBF8]! sm:text-[3.25rem]! lg:text-[4rem]!">
-            An at-the-source approach to cement decarbonization
+            Ready to Upgrade Your Ride?
           </h1>
 
           <p className="paragraph my-5 sm:my-6 PH max-w-2xl text-[0.95rem] sm:text-[1.05rem] leading-[1.6] text-[#FBFBF8]!">
-            MOSFET has officially announced the expansion of its AI-driven
-            automotive solutions across India, marking a significant step in
-            its global growth strategy and long-term commitment to
-            intelligent mobility.
+           From dash cams to audio and lighting, MOSFET builds the tech that keeps you safer, informed, and in control — on every route, every time.
           </p>
 
           <Button2 txt={"Speak with us"} />

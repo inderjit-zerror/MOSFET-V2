@@ -233,11 +233,11 @@ export default function HeroScrollSection() {
               {/* Right: Copy + CTA */}
               <div className="flex flex-col justify-center">
                 <p className=" paragraph leading-[1.6] text-[#ECEEE9]!">
-                 MOSFET has officially announced the expansion of its AI-driven automotive solutions across India, marking a significant step in its global growth strategy and long-term commitment to intelligent mobility. This initiative is aimed at addressing the increasing demand for connected, data-driven, and safety-focused vehicle technologies in India’s rapidly evolving automotive ecosystem.
+                  Every MOSFET product pairs rugged, precision-built hardware with AI software tuned specifically for Indian roads and everyday driving conditions. From dash cams to audio systems, each component is engineered in-house and tested before it ever reaches a customer.
                 </p>
 
                 <p className="paragraph mt-6 text-[1rem] sm:text-[1.15rem] leading-[1.6] text-[#ECEEE9]!">
-                 As part of this expansion, MOSFET is introducing a suite of advanced solutions that combine precision-engineered hardware with powerful AI-based software.
+                 MOSFET is introducing a suite of advanced solutions that combine precision-engineered hardware with powerful AI-based software.
                 </p>
 
                 <div className="mt-8 sm:mt-10">

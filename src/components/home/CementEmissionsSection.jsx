@@ -148,12 +148,12 @@ import GridLine from "../common/GridLine";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const PARAGRAPH_ONE =
-  "MOSFET has officially announced the expansion of its AI-driven automotive solutions across India, marking a significant step in its global growth strategy and long-term commitment to intelligent mobility. ";
+  " MOSFET is expanding its AI-driven vehicle technology across India, backed by a long-term commitment to safer, smarter mobility for every driver. As we grow, we're rolling out hardware and software built for India's roads: precision dash cams, connected safety systems, and audio engineered to last. ";
 
 const PARAGRAPH_TWO_PARTS = {
   before: "Smarter Tech for Safer Vehicles",
   after:
-    " This initiative is aimed at addressing the increasing demand for connected, data-driven, and safety-focused vehicle technologies in India’s rapidly evolving automotive ecosystem.",
+    " MOSFET builds dash cams, audio systems, and lighting engineered for the way India actually drives — real roads, real traffic, real weather. Every product is designed to make your everyday drive safer and smarter.",
 };
 
 export default function CementEmissionsSection() {
@@ -248,7 +248,7 @@ export default function CementEmissionsSection() {
         />
 
         <div className="relative z-10 mx-auto flex w-[90vw] sm:w-[80vw] max-w-[64rem] flex-col items-center text-center">
-          <InTitle txt={"Smarter Tech for Safer Vehicles"} />
+          <InTitle txt={"AI-Driven Tech, Built for India"} />
 
           <div className="relative w-full">
             <p
