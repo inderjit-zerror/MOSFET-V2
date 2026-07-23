@@ -103,7 +103,7 @@ export default function BlogCard({ post, className = "", cardRef }) {
       className={`blog-card group relative flex h-full flex-col overflow-hidden  bg-white border border-black/[0.06] will-change-transform ${className}`}
       style={{ boxShadow: "0 1px 2px rgba(0,0,0,0.04)" }}
     >
-      <a href={`/blog/${post.id}`} className="flex h-full flex-col">
+      <a href={``} className="flex h-full flex-col">
         {/* Banner — fixed height (not aspect-ratio) so wide, 2-col cards
             stay the same height as normal cards; only their width grows. */}
         <div className="relative overflow-hidden h-44 sm:h-48 shrink-0">
