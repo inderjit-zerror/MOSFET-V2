@@ -295,7 +295,7 @@ const Header = () => {
         onMouseEnter={closeWithDelay}
       ></div>
 
-      <header className="w-full fixed top-0 left-0 flex py-3 px-4 sm:py-[0.8rem] sm:px-[1rem] z-[1999]">
+      <header className="w-full fixed top-0 left-0 flex py-3 px-4 sm:py-[0.8rem] sm:px-[3rem] z-[1999]">
         <a href="/">
         <div className="w-[100px] h-full max-md:hidden ">
           <img src={`/logo.png`} alt="img" className="w-full object-center object-cover" />
@@ -358,7 +358,7 @@ const Header = () => {
                       onMouseEnter={openNow}
                       onMouseLeave={closeWithDelay}
                     >
-                      <div className="BGLightTint   px-[0.5rem] py-[0.5rem] flex gap-[0.5rem] mr-[1.4vw]">
+                      <div className="BGLightTint   px-[0.5rem] py-[0.5rem] flex gap-[0.5rem] mr-[2.8vw]">
                         {item.list.map((product, i) => (
                           <Link
                             key={i}
