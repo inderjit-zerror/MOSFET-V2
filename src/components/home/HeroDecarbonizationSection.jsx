@@ -243,18 +243,34 @@ export default function HeroDecarbonizationSection() {
 
         <img
           ref={img1Ref}
-          src="https://cdn.prod.website-files.com/69abbe0146c41c8bc91f489c/69c11bd92b5c0718bbf9b215_im121212121age%202718.avif"
+          src="/try4.png"
           alt="IMG"
           aria-hidden="true"
           className="pointer-events-none absolute hidden sm:block scale-[4] bottom-[25%] right-[5%] w-[6vw] select-none will-change-transform"
         />
         <img
           ref={img2Ref}
-          src="https://cdn.prod.website-files.com/69abbe0146c41c8bc91f489c/69c56aad7c1deab674da18d1_final%20cta.png"
+          src="/try6.png"
           alt="IMG"
           aria-hidden="true"
           className="pointer-events-none absolute hidden sm:block scale-[4] bottom-[25%] left-[5%] w-[6vw] select-none will-change-transform"
         />
+        <img
+          ref={img1Ref}
+          src="/try7.png"
+          alt="IMG"
+          aria-hidden="true"
+          className="pointer-events-none absolute hidden sm:block scale-[3] bottom-[80%] right-[5%] w-[6vw] select-none will-change-transform"
+        />
+      
+        <img
+          ref={img1Ref}
+          src="/try9.png"
+          alt="IMG"
+          aria-hidden="true"
+          className="pointer-events-none absolute hidden sm:block scale-[3] bottom-[80%] left-[5%] w-[6vw] select-none will-change-transform"
+        />
+      
 
         {/* Content */}
         <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-4 sm:px-6 text-center">
