@@ -1,5 +1,6 @@
 import CementEmissionsSection from "@/components/home/CementEmissionsSection";
 import CementProcessSlider from "@/components/home/CementProcessSlider";
+import WithOrWithoutMosfet from "@/components/home/WithOrWithoutMosfet";
 import Hero from "@/components/home/Hero";
 import HeroDecarbonizationSection from "@/components/home/HeroDecarbonizationSection";
 import HeroScrollSection from "@/components/home/HeroScrollSection";
@@ -10,13 +11,14 @@ import { createPageMetadata } from "@/lib/seo";
 const HomePage = () => {
   return (
     <>
-    <Hero />
-    <CementEmissionsSection />
-    <HeroScrollSection />
-    <CementProcessSlider/>
-    <PartnersCollaborators />
-    <NewsPress />
-    <HeroDecarbonizationSection/>
+      <Hero />
+      <CementEmissionsSection />
+      <HeroScrollSection />
+      <CementProcessSlider />
+      <WithOrWithoutMosfet />
+      <PartnersCollaborators />
+      <NewsPress />
+      <HeroDecarbonizationSection />
     </>
   );
 };
