@@ -246,46 +246,76 @@ export default function HeroDecarbonizationSection() {
           src="/try4.png"
           alt="IMG"
           aria-hidden="true"
-          className="pointer-events-none absolute hidden sm:block scale-[4] bottom-[25%] right-[5%] w-[6vw] select-none will-change-transform"
+          className="pointer-events-none absolute hidden sm:block scale-[4] bottom-[25%] right-[0%] w-[6vw] select-none will-change-transform"
         />
         <img
           ref={img2Ref}
           src="/try6.png"
           alt="IMG"
           aria-hidden="true"
-          className="pointer-events-none absolute hidden sm:block scale-[4] bottom-[25%] left-[5%] w-[6vw] select-none will-change-transform"
+          className="pointer-events-none absolute hidden sm:block scale-[4] bottom-[25%] left-[0%] w-[6vw] select-none will-change-transform"
         />
         <img
           ref={img1Ref}
           src="/try7.png"
           alt="IMG"
           aria-hidden="true"
-          className="pointer-events-none absolute hidden sm:block scale-[3] bottom-[80%] right-[5%] w-[6vw] select-none will-change-transform"
+          className="pointer-events-none absolute hidden sm:block scale-[3] bottom-[80%] right-[0%] w-[6vw] select-none will-change-transform"
         />
-      
+
         <img
           ref={img1Ref}
           src="/try9.png"
           alt="IMG"
           aria-hidden="true"
-          className="pointer-events-none absolute hidden sm:block scale-[3] bottom-[80%] left-[5%] w-[6vw] select-none will-change-transform"
+          className="pointer-events-none absolute hidden sm:block scale-[3] bottom-[80%] left-[0%] w-[6vw] select-none will-change-transform"
         />
-      
+
 
         {/* Content */}
-        <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-4 sm:px-6 text-center">
-          <h1 className="heading1 leading-[1.15] text-[1.9rem]! text-[#FBFBF8]! sm:text-[3.25rem]! lg:text-[4rem]!">
+        <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-4 sm:px-6 text-center">
+
+          {/* New Text Block from Image */}
+          <div className=" w-full">
+            <h2 className="heading1 text-[#FBFBF8] uppercase text-center text-[2rem] sm:text-[3.5rem] lg:text-[4.5rem] font-bold tracking-tight mb-16 leading-[1.1]">
+              NOW IMAGINE IT <span className="text-[#101010]">DONE BETTER.</span>
+            </h2>
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-12 sm:gap-6 w-full mx-auto">
+              {[
+                { from: 'COMPLEX', to: 'SIMPLE' },
+                { from: 'UNCERTAIN', to: 'DEPENDABLE' },
+                { from: 'COST', to: 'VALUE' },
+                { from: 'PROBLEM', to: 'SOLUTION' }
+              ].map((item, idx) => (
+                <div key={idx} className="flex flex-col items-center">
+                  <div className="relative text-white/70 font-semibold tracking-[0.15em] text-sm sm:text-base uppercase">
+                    {item.from}
+                    <span className="absolute top-1/2 left-[-10%] w-[120%] h-[2px] bg-[#101010] -translate-y-1/2"></span>
+                  </div>
+
+                  <div className="w-[1px] h-8 sm:h-10 bg-white/50 my-5"></div>
+
+                  <div className="text-[#FBFBF8] font-bold tracking-widest text-xl sm:text-2xl uppercase">
+                    {item.to}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* <h1 className="heading1 leading-[1.15] text-[1.9rem]! text-[#FBFBF8]! sm:text-[3.25rem]! lg:text-[4rem]!">
             Ready to Upgrade Your Ride?
           </h1>
 
           <p className="paragraph my-5 sm:my-6 PH max-w-2xl text-[0.95rem] sm:text-[1.05rem] leading-[1.6] text-[#FBFBF8]!">
-           From dash cams to audio and lighting, MOSFET builds the tech that keeps you safer, informed, and in control — on every route, every time.
+            From dash cams to audio and lighting, MOSFET builds the tech that keeps you safer, informed, and in control — on every route, every time.
           </p>
 
-          <Button2 txt={"Speak with us"} />
+          <Button2 txt={"Speak with us"} /> */}
 
           {/* Small underline accent */}
-          <div className="mt-10 sm:mt-14 h-px w-16 bg-white/25" />
+          {/* <div className="mt-10 sm:mt-14 h-px w-16 bg-white/25" /> */}
         </div>
       </section>
     </div>

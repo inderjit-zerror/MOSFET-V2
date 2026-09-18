@@ -140,7 +140,7 @@ const Header = () => {
                       <div className={`flex items-center ${item.isSpecial ? "border border-[#EE2F2E]/30 bg-[#EE2F2E]/10 px-3 py-1.5 rounded-sm" : ""}`}>
                         {item.isSpecial && <div className="w-1.5 h-1.5 rounded-full bg-[#EE2F2E] mr-2"></div>}
                         <p
-                          className={`paragraph text-[0.8rem]! font-semibold! uppercase tracking-wider hover:text-[#EE2F2E]! ${isActive ? "TextRed" : ""
+                          className={`paragraph text-[0.8rem]! font-medium! uppercase tracking-wider hover:text-[#EE2F2E]! ${isActive ? "TextRed" : ""
                             }`}
                         >
                           {item.title}
@@ -151,7 +151,7 @@ const Header = () => {
                     <div className={`flex items-center ${item.isSpecial ? "border border-[#EE2F2E]/30 bg-[#EE2F2E]/10 px-3 py-1.5 rounded-sm" : ""}`}>
                       {item.isSpecial && <div className="w-1.5 h-1.5 rounded-full bg-[#EE2F2E] mr-2"></div>}
                       <p
-                        className={`paragraph text-[0.8rem]! font-semibold! uppercase tracking-wider hover:text-[#EE2F2E]! ${isActive ? "TextRed" : ""
+                        className={`paragraph text-[0.8rem]! font-medium! uppercase tracking-wider hover:text-[#EE2F2E]! ${isActive ? "TextRed" : ""
                           }`}
                       >
                         {item.title}

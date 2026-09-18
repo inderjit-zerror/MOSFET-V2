@@ -128,7 +128,7 @@
 //     >
 
 //         <GridLine />
-     
+
 //       <div className="relative mx-auto max-w-[1900px] px-6 py-20 sm:px-10 lg:px-[3vw] lg:py-[9vh]">
 //         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[minmax(0,500px)_1fr] lg:gap-[7.5vw] ">
 
@@ -295,46 +295,41 @@ import GridLine from "../common/GridLine";
 
 const milestones = [
   {
-    period: "2022–2025",
-    title: " Foundation: Started as a car electronics workshop in Delhi.",
-    excerpt:
-      "Every electronic system starts with a few key components. Resistors control current flow, capacitors store and release energy. ",
+    period: "01",
+    title: "AUTOMOTIVE ELECTRONICS",
+    excerpt: "",
     image:
       "https://images.unsplash.com/photo-1624602482469-3cd73308e649?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     href: "#",
   },
   {
-    period: "Nov 2025",
-    title: "Analog vs Digital Electronics",
-    excerpt:
-      "Electronics can be broadly divided into analog and digital systems. Analog electronics deal with continuous signals like sound.",
+    period: "02",
+    title: "CONNECTED VEHICLE TECHNOLOGY",
+    excerpt: "",
     image:
       "https://images.unsplash.com/photo-1562618817-253b06cf2b6e?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     href: "#",
   },
   {
-    period: "Jan 2026",
-    title: "Modern Innovations",
-    excerpt:
-      "Recent advancements have transformed electronics into intelligent systems. Technologies like Artificial Intelligence (AI).",
+    period: "03",
+    title: "ADAS & CAMERA SYSTEMS",
+    excerpt: "",
     image:
       "https://images.unsplash.com/photo-1619434447196-2a8a745cdcf3?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     href: "#",
   },
   {
-    period: "2026",
-    title: "How MOSFET Technology Powers Modern Devices",
-    excerpt:
-      "Modern electronics power everything from smartphones and smart homes to electric vehicles and AI-driven systems.",
+    period: "04",
+    title: "CLOUD TELEMATICS & FLEET AUTOMATION",
+    excerpt: "",
     image:
       "https://images.unsplash.com/photo-1686586362051-95a77f2c0833?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     href: "#",
   },
   {
-    period: "2027 →",
-    title: "Commercial demonstration facility with Grand Forks Concrete",
-    excerpt:
-      "Electronics can be broadly divided into analog and digital systems. Analog electronics deal with continuous signals like sound.",
+    period: "05",
+    title: "SMART MOBILITY & EV ECOSYSTEM",
+    excerpt: "",
     image:
       "https://images.unsplash.com/photo-1770316937606-ce3e4e6c5faa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     href: "#",
@@ -415,22 +410,22 @@ export default function NewsPress() {
       className="relative h-fit overflow-hidden  bg-[black] text-white z-99"
     >
 
-        <GridLine />
-     
+      <GridLine />
+
       <div className="relative mx-auto max-w-[1900px] px-6 py-20 sm:px-10 lg:px-[3vw] lg:py-[9vh]">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[minmax(0,500px)_1fr] lg:gap-[7.5vw] ">
 
           {/* Left: sticky intro */}
           <div className="lg:sticky lg:top-[10vh] lg:self-start">
 
-            <InTitle txt={' Our Journey'} />
+            <InTitle txt={''} />
 
             <h1 className="heading1 text-[#ECEEE9]!">
-              From Circuit to Road
+              WE DO <br /> OPERATE IN
             </h1>
 
             <p className="paragraph text-[#ECEEE9]! PH mt-10">
-             MOSFET works with OEMs, fleet operators, dealers, and retail partners across India to bring connected vehicle technology to every kind of driver — from individual car owners to large commercial fleets. Our partner network is what lets us deliver consistent quality and support, wherever you're based.
+              Five industries, one engineering partner: from the electronics inside the vehicle to the fleets and mobility ecosystems around it.
             </p>
 
             {/* Progress dots */}
@@ -522,9 +517,11 @@ export default function NewsPress() {
                       <a href={item.href}>{item.title}</a>
                     </h2>
 
-                    <p className="paragraph mt-5 PH">
-                      {item.excerpt}
-                    </p>
+                    {item.excerpt && (
+                      <p className="paragraph mt-5 PH">
+                        {item.excerpt}
+                      </p>
+                    )}
                   </div>
                 </article>
               ))}

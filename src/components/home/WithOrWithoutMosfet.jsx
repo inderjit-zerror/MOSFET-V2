@@ -1,135 +1,200 @@
 "use client";
 
-import React from "react";
-import { X, Check } from "lucide-react";
-import InTitle2 from "../common/InTitle2";
+import React, { useCallback, useState } from "react";
+import { Check, X } from "lucide-react";
 
-const withoutFeatures = [
+const FEATURES = [
   {
-    title: "SYSTEMS THAT BELONG IN YOUR VEHICLE",
-    desc: "Systems that feel like an afterthought—added to the vehicle rather than designed around it.",
+    id: "fit",
+    label: "Systems that belong in your vehicle",
+    without:
+      "Systems that feel like an afterthought—added to the vehicle rather than designed around it.",
+    with: "Solutions designed specifically for your vehicle, its technology, and its real-world requirements.",
   },
   {
-    title: "ONE ECOSYSTEM. ONE EXPERIENCE.",
-    desc: "Multiple devices. Multiple interfaces. Multiple software platforms.",
+    id: "ecosystem",
+    label: "One ecosystem, one experience",
+    without: "Multiple devices. Multiple interfaces. Multiple software platforms.",
+    with: "Multiple accessories. One connected software experience.",
   },
   {
-    title: "QUALITY YOU CAN DEPEND ON",
-    desc: "Multiple electronic accessories with inconsistent or unclear quality standards.",
+    id: "quality",
+    label: "Quality you can depend on",
+    without:
+      "Multiple electronic accessories with inconsistent or unclear quality standards.",
+    with: "Engineered, tested, and quality-focused solutions built for dependable automotive performance.",
   },
   {
-    title: "SUPPORT BEYOND THE SALE",
-    desc: "Limited support after installation, leaving businesses to manage hardware and software issues on their own.",
+    id: "support",
+    label: "Support beyond the sale",
+    without:
+      "Limited support after installation, leaving businesses to manage hardware and software issues on their own.",
+    with: "End-to-end hardware and software support, backed by a partner that stays with you beyond deployment.",
   },
   {
-    title: "SECURITY & COMPLIANCE BUILT IN",
-    desc: "Unclear security practices and uncertain compliance can create avoidable business risks.",
+    id: "security",
+    label: "Security and compliance built in",
+    without:
+      "Unclear security practices and uncertain compliance can create avoidable business risks.",
+    with: "VAPT, DPDP-aligned practices, and continuous software support designed to keep your technology secure and evolving.",
   },
   {
-    title: "COMPLIANCE THAT BUILDS CONFIDENCE",
-    desc: "Legal and regulatory compliance can become a question mark.",
-  }
-];
-
-const withFeatures = [
-  {
-    title: "SYSTEMS THAT BELONG IN YOUR VEHICLE",
-    desc: "Solutions designed specifically for your vehicle, its technology, and its real-world requirements.",
+    id: "confidence",
+    label: "Compliance that builds confidence",
+    without: "Legal and regulatory compliance can become a question mark.",
+    with: "BIS-aligned solutions and a Make in India approach, built with compliance and local requirements in mind.",
   },
-  {
-    title: "ONE ECOSYSTEM. ONE EXPERIENCE.",
-    desc: "Multiple accessories. One connected software experience.",
-  },
-  {
-    title: "QUALITY YOU CAN DEPEND ON",
-    desc: "Engineered, tested, and quality-focused solutions built for dependable automotive performance.",
-  },
-  {
-    title: "SUPPORT BEYOND THE SALE",
-    desc: "End-to-end hardware and software support, backed by a partner that stays with you beyond deployment.",
-  },
-  {
-    title: "SECURITY & COMPLIANCE BUILT IN",
-    desc: "VAPT, DPDP-aligned practices, and continuous software support designed to keep your technology secure and evolving.",
-  },
-  {
-    title: "COMPLIANCE THAT BUILDS CONFIDENCE",
-    desc: "BIS-aligned solutions and a Make in India approach, built with compliance and local requirements in mind.",
-  }
 ];
 
 export default function WithOrWithoutMosfet() {
+  const [states, setStates] = useState(() => FEATURES.map(() => false)); // false = without, true = with
+  const allOn = states.every(Boolean);
+  const allOff = states.every((s) => !s);
+
+  const toggleOne = useCallback((idx) => {
+    setStates((prev) => prev.map((s, i) => (i === idx ? !s : s)));
+  }, []);
+
+  const toggleAll = useCallback(() => {
+    setStates((prev) => {
+      const turnOn = !prev.every(Boolean);
+      return prev.map(() => turnOn);
+    });
+  }, []);
+
+  const handleSwitchKeyDown = (e, idx) => {
+    if (e.key === " " || e.key === "Enter") {
+      e.preventDefault();
+      toggleOne(idx);
+    }
+  };
+
+  const handlePointerMove = (e) => {
+    const el = e.currentTarget;
+    const rect = el.getBoundingClientRect();
+    el.style.setProperty("--px", `${((e.clientX - rect.left) / rect.width) * 100}%`);
+    el.style.setProperty("--py", `${((e.clientY - rect.top) / rect.height) * 100}%`);
+  };
+
   return (
-    <section className="relative w-full px-5 py-16 sm:px-[10vw] sm:py-[12vh] bg-[#0a0a0a] text-white overflow-hidden">
-      {/* Background glow effects */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#ff3030]/5 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[#f59e0b]/5 rounded-full blur-[100px] pointer-events-none" />
+    <section className="relative w-full overflow-hidden BGTint py-16 sm:py-24">
+      <style>{`
+        @keyframes mosfetFadeSlide {
+          from { opacity: 0; transform: translateY(4px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .mosfet-copy { animation: mosfetFadeSlide 0.35s ease; }
+        @media (prefers-reduced-motion: reduce) {
+          .mosfet-copy { animation: none; }
+        }
+      `}</style>
 
-      {/* Header section */}
-      <div className="relative flex flex-col items-center text-center pb-12 sm:pb-20 px-2 max-w-4xl mx-auto z-10">
-        <InTitle2 txt={'COMPARISON'} />
-        <h1 className="heading1 mt-6 mb-6 text-[2rem]! sm:text-[3rem]! lg:text-[3.75rem]! text-white! uppercase tracking-tight">
-          <span className="text-gray-500">WITHOUT OR.</span>   WITH MOSFET
-        </h1>
-        <p className="paragraph max-w-[48rem] PH  text-white! text-sm sm:text-[1.1rem] leading-[1.7]">
-          Not a story about bad competitors. A look at the gaps that quietly stay open when camera, telematics, software and hardware come from different generic vendors.
-        </p>
-      </div>
+      {/* faint circuit-trace backdrop */}
+      <svg className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.04]" aria-hidden="true">
+        <defs>
+          <pattern id="mosfet-trace" width="120" height="120" patternUnits="userSpaceOnUse">
+            <path d="M0 60H40M80 60H120M60 0V40M60 80V120" stroke="#000000" strokeWidth="1" fill="none" />
+            <circle cx="60" cy="60" r="3" fill="#000000" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#mosfet-trace)" />
+      </svg>
 
-      {/* Comparison Grid */}
-      <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 max-w-7xl mx-auto z-10">
-
-        {/* Divider line for desktop */}
-        <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-gray-900 via-gray-700 to-gray-900 -translate-x-1/2" />
-
-        {/* Without MOSFET */}
-        <div className="flex flex-col space-y-8 sm:space-y-12 pr-0 lg:pr-10 lg:pb-8">
-          <h2 className="text-[#f59e0b] font-bold text-lg sm:text-xl tracking-[0.2em] uppercase text-center mb-2">
-            WITHOUT MOSFET
+      <div className="relative z-10  px-5 sm:px-[3vw] flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+        {/* Heading */}
+        <div className="w-full lg:w-[40%]  lg:sticky mb-auto lg:top-0  lg:mb-0">
+          <h2 className="heading1 TextStandard mb-6">
+            Every accessory is a switch. Flip it and see what changes.
           </h2>
+          <p className="paragraph">
+            Six differences between running your fleet without MOSFET and running it with MOSFET.
+            Click any switch below.
+          </p>
 
-          <div className="space-y-8 sm:space-y-10">
-            {withoutFeatures.map((item, idx) => (
-              <div key={idx} className="flex items-start gap-4 sm:gap-6 group">
-                <div className="mt-1 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-[#f59e0b]/10 border border-[#f59e0b]/20 group-hover:bg-[#f59e0b]/20 transition-colors">
-                  <X className="w-4 h-4 sm:w-5 sm:h-5 text-[#f59e0b]" strokeWidth={2.5} />
-                </div>
-                <div className="flex flex-col">
-                  <h3 className="text-sm sm:text-base font-bold text-gray-300 tracking-wider uppercase mb-1 sm:mb-2 transition-colors group-hover:text-gray-200">
-                    {item.title}
-                  </h3>
-                  <p className="text-[13px] sm:text-[15px] text-gray-500 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
+          {/* master switch */}
+          <div className="mt-6 flex items-center justify-start border-t border-black/5 pt-6 pb-2">
+            <button
+              type="button"
+              onClick={toggleAll}
+              className="inline-flex items-center gap-3  border border-black/10 bg-gray-50 px-6 py-3 text-xs font-semibold uppercase tracking-widest TextStandard transition-colors hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EE2F2E]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+            >
+              <span
+                className="h-2 w-2  transition-colors duration-300"
+                style={{ backgroundColor: allOn ? "#EE2F2E" : allOff ? "#9ca3af" : "#6b7280" }}
+              />
+              {allOn ? "All switched to MOSFET" : allOff ? "Flip every switch" : "Flip the rest"}
+            </button>
           </div>
         </div>
 
-        {/* With MOSFET */}
-        <div className="flex flex-col space-y-8 sm:space-y-12 pl-0 lg:pl-10 pt-16 lg:pt-0 border-t border-gray-800 lg:border-t-0">
-          <h2 className="text-[#ff3030] font-bold text-lg sm:text-xl tracking-[0.2em] uppercase text-center mb-2">
-            WITH MOSFET
-          </h2>
+        {/* Panel */}
+        <div className="w-full lg:w-[60%] relative">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {FEATURES.map((item, idx) => {
+              const on = states[idx];
+              return (
+                <div
+                  key={item.id}
+                  onMouseMove={handlePointerMove}
+                  className="relative flex flex-col gap-6 border border-black/5 bg-gray-50 p-6 sm:p-8 transition-colors duration-300 hover:bg-gray-100/50"
+                  style={{
+                    background:
+                      "radial-gradient(250px circle at var(--px, 50%) var(--py, 50%), rgba(0,0,0,0.02), transparent 70%), #f9fafb",
+                  }}
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="PH font-semibold uppercase tracking-wider TextStandard">
+                      {item.label}
+                    </h3>
 
-          <div className="space-y-8 sm:space-y-10">
-            {withFeatures.map((item, idx) => (
-              <div key={idx} className="flex items-start gap-4 sm:gap-6 group">
-                <div className="mt-1 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-[#ff3030]/10 border border-[#ff3030]/20 group-hover:bg-[#ff3030]/20 transition-colors">
-                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff3030]" strokeWidth={2.5} />
-                </div>
-                <div className="flex flex-col">
-                  <h3 className="text-sm sm:text-base font-bold text-gray-100 tracking-wider uppercase mb-1 sm:mb-2 transition-colors group-hover:text-white">
-                    {item.title}
-                  </h3>
-                  <p className="text-[13px] sm:text-[15px] text-gray-400 leading-relaxed">
-                    {item.desc}
+                    {/* rocker switch */}
+                    <button
+                      type="button"
+                      role="switch"
+                      aria-checked={on}
+                      aria-label={`Toggle ${item.label}`}
+                      onClick={() => toggleOne(idx)}
+                      onKeyDown={(e) => handleSwitchKeyDown(e, idx)}
+                      className="relative h-8 w-14 flex-shrink-0 rounded-full border transition-colors duration-300 motion-reduce:transition-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EE2F2E]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                      style={{
+                        backgroundColor: on ? "rgba(238,47,46,0.12)" : "rgba(107,114,128,0.1)",
+                        borderColor: on ? "rgba(238,47,46,0.3)" : "rgba(107,114,128,0.2)",
+                      }}
+                    >
+                      <span
+                        className="absolute top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full shadow-sm transition-all duration-300 motion-reduce:transition-none"
+                        style={{
+                          left: on ? "calc(100% - 28px)" : "4px",
+                          backgroundColor: on ? "#EE2F2E" : "#9ca3af",
+                        }}
+                      >
+                        {on ? (
+                          <Check className="h-3.5 w-3.5 text-white" strokeWidth={3} />
+                        ) : (
+                          <X className="h-3.5 w-3.5 text-white" strokeWidth={3} />
+                        )}
+                      </span>
+                    </button>
+                  </div>
+
+                  <p key={on ? "with" : "without"} className="mosfet-copy PP text-gray-600 min-h-[4rem]">
+                    {on ? item.with : item.without}
                   </p>
+
+                  <div className="mt-auto pt-4">
+                    <span
+                      className="text-[11px] font-semibold uppercase tracking-widest"
+                      style={{ color: on ? "#EE2F2E" : "#6b7280" }}
+                    >
+                      {on ? "With MOSFET" : "Without MOSFET"}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
+
+
         </div>
       </div>
     </section>

@@ -159,9 +159,11 @@ export default function CementProcessSlider() {
 
   return (
     <section className="relative w-full px-5 py-10 sm:px-[10vw] sm:py-[10vh] BGRed ">
+
+
       <div className="col-span-1 md:col-span-4 flex flex-col items-center text-center pb-8 sm:pb-[6vw] md:pb-[4vw] px-2 sm:px-[4vw] border-b border-gray-200">
         <InTitle2 txt={'CUSTOM DEVELOPMENT AND MOULDING'} />
-        <h1 className="heading1 mb-[1.5rem] text-[1.75rem]! sm:text-[2.75rem]! lg:text-[3.75rem]! text-[#ECEEE9]! max-w-[45rem]">
+        <h1 className="heading1 mb-[1.5rem] text-[1.75rem]! sm:text-[2.75rem]! lg:text-[3.75rem]! text-[#ECEEE9]! max-w-[55rem]">
           THE PERFECTLY ENGINEERED
           <br />
           PRODUCT FOR YOUR LINEUP.
@@ -172,8 +174,10 @@ export default function CementProcessSlider() {
       </div>
 
       <div className="grid grid-cols-1 md:h-fit md:grid-cols-2 ">
+
+
         {/* Left: Cards Grid */}
-        <div className="relative aspect-[4/3] bg-[#ECEEE9]/90  w-full overflow-hidden md:aspect-auto md:min-h-[650px] p-4 sm:p-8 flex items-center justify-center">
+        <div className="relative aspect-[4/3] bg-[#ECEEE9]  w-full overflow-hidden md:aspect-auto md:min-h-[650px] p-4 sm:p-8 flex items-center justify-center">
           <div
             ref={imageRef}
             className="grid grid-cols-2 gap-3 sm:gap-6 w-full h-full max-h-[600px]"
@@ -181,7 +185,7 @@ export default function CementProcessSlider() {
             {slide.cards.map((card, idx) => (
               <div
                 key={idx}
-                className="relative rounded-xl overflow-hidden group bg-gray-900 border border-gray-800/50 shadow-lg h-full min-h-[160px]"
+                className="relative  overflow-hidden group bg-gray-900 border border-gray-800/50 shadow-lg h-full min-h-[160px]"
               >
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
@@ -199,9 +203,9 @@ export default function CementProcessSlider() {
                   <div>
                     <h3 className="text-[13px] sm:text-xl md:text-2xl font-bold leading-tight tracking-wide">
                       <span className="text-white block">{card.titleWhite}</span>
-                      <span className={`${card.color} block`}>{card.titleColored}</span>
+                      <span className={` text-[red] block`}>{card.titleColored}</span>
                     </h3>
-                    <div className={`w-4 sm:w-8 h-1 mt-1 sm:mt-4 rounded-full ${card.lineColor}`} />
+                    <div className={`w-4 sm:w-8 h-1 mt-1 sm:mt-4 rounded-full bg-[red]`} />
                   </div>
                 </div>
               </div>
@@ -212,9 +216,9 @@ export default function CementProcessSlider() {
         {/* Right: Content */}
         <div className="relative flex min-h-[420px] flex-col items-center justify-center BGTint px-6 py-12 pb-24 sm:px-10 sm:py-16 sm:pb-16 text-center md:min-h-[650px]">
 
-          <p className="text-[10px] sm:text-xs font-bold tracking-[0.2em] text-[#4a4a42] uppercase absolute top-8 sm:top-12">
+          {/* <p className="text-[10px] sm:text-xs font-bold tracking-[0.2em] text-[#4a4a42] uppercase absolute top-8 sm:top-12">
             SIX CAPABILITIES BEHIND THE PRODUCT
-          </p>
+          </p> */}
 
           <div
             ref={iconRef}
@@ -223,12 +227,12 @@ export default function CementProcessSlider() {
             <Icon className="h-6 w-6 sm:h-7 sm:w-7 TextRed" strokeWidth={1.5} />
           </div>
 
-          <p
+          {/* <p
             ref={labelRef}
             className="text-[#e8552f] font-bold text-xs sm:text-sm tracking-widest mb-3 uppercase"
           >
             {slide.supportLabel}
-          </p>
+          </p> */}
 
           <h2
             ref={titleRef}
