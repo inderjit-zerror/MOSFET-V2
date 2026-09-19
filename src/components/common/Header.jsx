@@ -113,7 +113,7 @@ const Header = () => {
         </a>
         <div className="w-full md:w-fit h-fit flex justify-between md:justify-end ml-auto items-center gap-[1rem]">
           {/* Desktop nav */}
-          <div className="hidden md:flex BGLightTint w-fit h-full justify-between ml-auto items-center gap-[1rem] px-[1rem] py-[0.5rem]">
+          <div className="hidden md:flex BGLightTint w-fit h-full justify-between ml-auto items-center gap-[1rem] px-[2rem] py-[0.6rem] -skew-x-[15deg]">
             {navItems.map((item, index) => {
               const isActive =
                 item.href &&
@@ -125,7 +125,7 @@ const Header = () => {
               return (
                 <div
                   key={index}
-                  className="relative group flex justify-center items-center cursor-pointer py-1"
+                  className="relative group flex justify-center items-center cursor-pointer "
                   onMouseEnter={hasDropdown ? openNow : undefined}
                   onMouseLeave={hasDropdown ? closeWithDelay : undefined}
                 >
@@ -151,7 +151,7 @@ const Header = () => {
                     <div className={`flex items-center ${item.isSpecial ? "border border-[#EE2F2E]/30 bg-[#EE2F2E]/10 px-3 py-1.5 rounded-sm" : ""}`}>
                       {item.isSpecial && <div className="w-1.5 h-1.5 rounded-full bg-[#EE2F2E] mr-2"></div>}
                       <p
-                        className={`paragraph text-[0.8rem]! font-medium! uppercase tracking-wider hover:text-[#EE2F2E]! ${isActive ? "TextRed" : ""
+                        className={`paragraph text-[0.7rem]! font-medium! uppercase tracking-wider hover:text-[#EE2F2E]! ${isActive ? "TextRed" : ""
                           }`}
                       >
                         {item.title}
@@ -205,7 +205,7 @@ const Header = () => {
           </Link>
 
           {/* Mobile bar: logo/spacer + hamburger */}
-          <div className="flex md:hidden w-full items-center justify-between BGLightTint px-4 py-2.5">
+          <div className="flex md:hidden w-full items-center justify-between BGLightTint px-[2rem] py-[0.6rem] -skew-x-[15deg]">
             <Link
               href="/"
               className="paragraph text-[0.9rem]! font-medium! capitalize"

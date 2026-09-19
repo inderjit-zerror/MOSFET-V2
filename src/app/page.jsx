@@ -17,17 +17,23 @@ const HomePage = () => {
     <>
       <Hero />
       <CementEmissionsSection />
-      <HeroScrollSection />
+      {/* <HeroScrollSection /> */}
       <CementProcessSlider />
-      <PartnersCollaborators />
-      <NewsPress />
+      <SoftwarePlatformSection />
+
       <DragCompareSection />
       <WithOrWithoutMosfet />
-      <SoftwarePlatformSection />
-      <MoreProfitableSection />
-      <MoreDependableSection />
-      <FuturePlansSection />
       <HeroDecarbonizationSection />
+      <FuturePlansSection />
+
+
+      <PartnersCollaborators />
+
+
+
+      {/* <NewsPress /> */}
+
+
     </>
   );
 };

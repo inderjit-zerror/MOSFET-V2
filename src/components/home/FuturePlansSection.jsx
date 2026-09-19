@@ -62,7 +62,7 @@ export default function FuturePlansSection() {
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[minmax(0,500px)_1fr] lg:gap-[7.5vw]">
           {/* Left: sticky intro */}
           <div className="lg:sticky lg:top-[15vh] lg:self-start">
-            <InTitle txt={'FUTURE PLANS FOR 2027'} />
+
 
             <h1 className="heading1 text-[#101010]!">
               WHERE WE'RE HEADED.
