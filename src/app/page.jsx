@@ -8,8 +8,10 @@ import HeroScrollSection from "@/components/home/HeroScrollSection";
 import NewsPress from "@/components/home/NewsPress";
 import PartnersCollaborators from "@/components/home/PartnersCollaborators";
 import FuturePlansSection from "@/components/home/FuturePlansSection";
+import SoftwarePlatformSection from "@/components/home/SoftwarePlatformSection";
+import MoreProfitableSection from "@/components/home/MoreProfitableSection";
+import MoreDependableSection from "@/components/home/MoreDependableSection";
 import { createPageMetadata } from "@/lib/seo";
-
 const HomePage = () => {
   return (
     <>
@@ -21,8 +23,11 @@ const HomePage = () => {
       <NewsPress />
       <DragCompareSection />
       <WithOrWithoutMosfet />
-      <HeroDecarbonizationSection />
+      <SoftwarePlatformSection />
+      <MoreProfitableSection />
+      <MoreDependableSection />
       <FuturePlansSection />
+      <HeroDecarbonizationSection />
     </>
   );
 };

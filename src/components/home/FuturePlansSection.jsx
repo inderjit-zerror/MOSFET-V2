@@ -78,9 +78,8 @@ export default function FuturePlansSection() {
             {plans.map((plan, i) => (
               <div
                 key={plan.num}
-                className={`plan-item flex flex-col sm:flex-row gap-6 sm:gap-10 py-10 ${
-                  i !== 0 ? "border-t border-black/10" : "pt-0 lg:pt-0"
-                }`}
+                className={`plan-item flex flex-col sm:flex-row gap-6 sm:gap-10 py-10 ${i !== 0 ? "border-t border-black/10" : "pt-0 lg:pt-0"
+                  }`}
               >
                 <div className="text-[18px] font-bold text-[#EE2F2F] pt-1 shrink-0">
                   {plan.num}
