@@ -55,10 +55,10 @@ export default function DragCompareSection() {
   return (
     <section className="relative w-full px-5 pt-16 sm:px-[3vw] sm:pt-[12vh] bg-[#ECEEE9] text-white overflow-hidden">
       <div className="relative flex flex-col items-center text-center pb-8 sm:pb-12 px-2 max-w-4xl mx-auto z-10">
-        <h2 className="heading1 text-[2rem]! sm:text-[3rem]! text-[#EE2F2E]  uppercase tracking-tight">
+        <h2 className="heading1 text-[#EE2F2E]  uppercase tracking-tight">
           With MOSFET. Or without.
         </h2>
-        <p className="paragraph mt-4 text-gray-400 text-sm sm:text-base max-w-2xl">
+        <p className="paragraph mt-4 text-gray-400 max-w-2xl">
           Drag the slider to see the difference between a fragmented ecosystem and a unified, connected experience.
         </p>
       </div>
@@ -85,6 +85,34 @@ export default function DragCompareSection() {
             priority
           />
           <div className="absolute inset-0 bg-black/40" />
+
+          {/* Floating Boxes: Without MOSFET */}
+          <div className="absolute top-[15%] right-[5%] md:right-[10%] pointer-events-none hidden sm:flex items-center gap-4 bg-[#0a0a0a]/90 backdrop-blur-md border border-white/20 py-3 px-5 rounded-md shadow-2xl">
+            <div className="w-2.5 h-2.5 rounded-full bg-[#D97706] shrink-0" />
+            <div className="flex flex-col">
+              <h4 className="text-white text-sm md:text-base font-bold whitespace-nowrap">Fragmented Systems</h4>
+              <span className="text-gray-500 text-[10px] uppercase tracking-[0.2em] mt-0.5">DISCONNECTED</span>
+            </div>
+            <X className="w-5 h-5 md:w-6 md:h-6 text-[#D97706] shrink-0 ml-4" strokeWidth={3} />
+          </div>
+
+          <div className="absolute top-[45%] right-[20%] md:right-[30%] pointer-events-none hidden sm:flex items-center gap-4 bg-[#0a0a0a]/90 backdrop-blur-md border border-white/20 py-3 px-5 rounded-md shadow-2xl">
+            <div className="w-2.5 h-2.5 rounded-full bg-[#D97706] shrink-0" />
+            <div className="flex flex-col">
+              <h4 className="text-white text-sm md:text-base font-bold whitespace-nowrap">Unclear Quality</h4>
+              <span className="text-gray-500 text-[10px] uppercase tracking-[0.2em] mt-0.5">INCONSISTENT</span>
+            </div>
+            <X className="w-5 h-5 md:w-6 md:h-6 text-[#D97706] shrink-0 ml-4" strokeWidth={3} />
+          </div>
+
+          <div className="absolute bottom-[15%] right-[5%] md:right-[15%] pointer-events-none hidden sm:flex items-center gap-4 bg-[#0a0a0a]/90 backdrop-blur-md border border-white/20 py-3 px-5 rounded-md shadow-2xl">
+            <div className="w-2.5 h-2.5 rounded-full bg-[#D97706] shrink-0" />
+            <div className="flex flex-col">
+              <h4 className="text-white text-sm md:text-base font-bold whitespace-nowrap">Limited Support</h4>
+              <span className="text-gray-500 text-[10px] uppercase tracking-[0.2em] mt-0.5">RISKY</span>
+            </div>
+            <X className="w-5 h-5 md:w-6 md:h-6 text-[#D97706] shrink-0 ml-4" strokeWidth={3} />
+          </div>
         </div>
 
         {/* Foreground Image: WITH MOSFET (clipped) */}
@@ -101,6 +129,34 @@ export default function DragCompareSection() {
               priority
             />
             <div className="absolute inset-0 bg-black/20" />
+
+            {/* Floating Boxes: With MOSFET */}
+            <div className="absolute top-[15%] left-[5%] md:left-[10%] pointer-events-none hidden sm:flex items-center gap-4 bg-[#0a0a0a]/90 backdrop-blur-md border border-white/20 py-3 px-5 rounded-md shadow-2xl">
+              <div className="w-2.5 h-2.5 rounded-full bg-[#EE2F2E] shrink-0" />
+              <div className="flex flex-col">
+                <h4 className="text-white text-sm md:text-base font-bold whitespace-nowrap">Built for your vehicle</h4>
+                <span className="text-gray-500 text-[10px] uppercase tracking-[0.2em] mt-0.5">INTEGRATED</span>
+              </div>
+              <Check className="w-5 h-5 md:w-6 md:h-6 text-[#EE2F2E] shrink-0 ml-4" strokeWidth={3} />
+            </div>
+
+            <div className="absolute top-[45%] left-[20%] md:left-[30%] pointer-events-none hidden sm:flex items-center gap-4 bg-[#0a0a0a]/90 backdrop-blur-md border border-white/20 py-3 px-5 rounded-md shadow-2xl">
+              <div className="w-2.5 h-2.5 rounded-full bg-[#EE2F2E] shrink-0" />
+              <div className="flex flex-col">
+                <h4 className="text-white text-sm md:text-base font-bold whitespace-nowrap">Engineered & tested</h4>
+                <span className="text-gray-500 text-[10px] uppercase tracking-[0.2em] mt-0.5">DEPENDABLE</span>
+              </div>
+              <Check className="w-5 h-5 md:w-6 md:h-6 text-[#EE2F2E] shrink-0 ml-4" strokeWidth={3} />
+            </div>
+
+            <div className="absolute bottom-[15%] left-[5%] md:left-[15%] pointer-events-none hidden sm:flex items-center gap-4 bg-[#0a0a0a]/90 backdrop-blur-md border border-white/20 py-3 px-5 rounded-md shadow-2xl">
+              <div className="w-2.5 h-2.5 rounded-full bg-[#EE2F2E] shrink-0" />
+              <div className="flex flex-col">
+                <h4 className="text-white text-sm md:text-base font-bold whitespace-nowrap">Secure & Compliant</h4>
+                <span className="text-gray-500 text-[10px] uppercase tracking-[0.2em] mt-0.5">BIS-ALIGNED</span>
+              </div>
+              <Check className="w-5 h-5 md:w-6 md:h-6 text-[#EE2F2E] shrink-0 ml-4" strokeWidth={3} />
+            </div>
           </div>
         </div>
 
@@ -117,7 +173,7 @@ export default function DragCompareSection() {
       </div>
 
       {/* <div className="text-center mt-6">
-        <p className="text-xs text-gray-500 uppercase tracking-[0.2em]">Drag or scroll to compare</p>
+        <p className=" text-gray-500 uppercase tracking-[0.2em]">Drag or scroll to compare</p>
       </div> */}
     </section>
   );

@@ -31,6 +31,7 @@ import {
   Cloud,
   RefreshCw,
   KeyRound,
+  ChevronDown,
 } from "lucide-react";
 
 // ---------------------------------------------------------------------------
@@ -282,10 +283,11 @@ const SLIDES = [
   },
 ];
 
-const CARD_MARKS = ["A", "B", "C", "D"];
+const CARD_MARKS = [];
 
 export default function CapabilitiesShowcase() {
   const [index, setIndex] = useState(0);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const contentRef = useRef(null);
   const isAnimating = useRef(false);
 
@@ -294,29 +296,38 @@ export default function CapabilitiesShowcase() {
     window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
 
   const goTo = (nextIndex) => {
-    if (isAnimating.current || nextIndex === index) return;
+    if (isAnimating.current || nextIndex === index) {
+      setDropdownOpen(false);
+      return;
+    }
 
     if (reducedMotion()) {
       setIndex(nextIndex);
+      setDropdownOpen(false);
       return;
     }
 
     isAnimating.current = true;
+    setDropdownOpen(false);
+
+    // Animate old content down smoothly and fade out
     gsap.to(contentRef.current, {
       opacity: 0,
-      y: -6,
-      duration: 0.2,
-      ease: "power1.in",
+      y: "20%",
+      duration: 0.4,
+      ease: "power2.in",
       onComplete: () => {
         setIndex(nextIndex);
+
+        // Animate new content up from bottom smoothly
         gsap.fromTo(
           contentRef.current,
-          { opacity: 0, y: 6 },
+          { opacity: 0, y: "20%" },
           {
             opacity: 1,
-            y: 0,
-            duration: 0.35,
-            ease: "power2.out",
+            y: "0%",
+            duration: 0.5,
+            ease: "power3.out",
             onComplete: () => {
               isAnimating.current = false;
             },
@@ -326,7 +337,7 @@ export default function CapabilitiesShowcase() {
     });
   };
 
-  // keyboard navigation between sheets when the list has focus
+  // keyboard navigation when the dropdown is focused
   const onKeyDown = (e) => {
     if (e.key === "ArrowDown" || e.key === "ArrowRight") {
       e.preventDefault();
@@ -340,106 +351,149 @@ export default function CapabilitiesShowcase() {
   const slide = SLIDES[index];
 
   return (
-    <section className="relative w-full min-h-screen BGRed text-white font-sans py-10 sm:py-16 px-4 sm:px-8 lg:px-16 overflow-hidden">
-
-      <div className="mx-auto mb-28 pt-10  flex flex-col justify-center items-center">
+    <section className="relative w-full min-h-screen BGRed text-white py-10 sm:py-16 px-4 sm:px-8 lg:px-16 overflow-hidden">
+      <div className="mx-auto mb-16 pt-10 flex flex-col justify-center items-center">
         <div className="flex-1 space-y-6 text-center">
-          {/* <InTitle txt="Software Platform (SaaS)" /> */}
-          <h2 className="heading1 mt-4 text-white!">
+          <h2 className="heading2 mt-4 text-white!">
             THE PERFECTLY ENGINEERED
             .<br /><span className="text-[black]">PRODUCT FOR YOUR LINEUP.</span>
           </h2>
           <p className="paragraph text-white/70! max-w-xl mx-auto">
-            Tooling, product engineering, competitor benchmarking, local assembly, team training and BIS compliance — before the order and after it.</p>
+            Tooling, product engineering, competitor benchmarking, local assembly, team training and BIS compliance — before the order and after it.
+          </p>
         </div>
       </div>
 
-      <div className="relative  mx-auto">
-        <div className="flex flex-col md:flex-row gap-8 lg:gap-12">
-          {/* Index / navigation */}
-          <nav
-            aria-label="Capabilities"
-            onKeyDown={onKeyDown}
-            className="w-full md:w-[300px] lg:w-[340px] shrink-0"
+      {/* CARDER AND DROPDOWN CONTAINER */}
+      <div className="relative w-full max-w-5xl mx-auto flex flex-col gap-8">
+
+        {/* Dropdown Filter */}
+        <div className="relative z-50 w-full" onKeyDown={onKeyDown}>
+          <button
+            onClick={() => setDropdownOpen(!dropdownOpen)}
+            className="w-full bg-black border border-white/20  px-5 py-4 flex items-center justify-between transition-colors duration-200 "
           >
-            {SLIDES.map((s, idx) => {
-              const active = index === idx;
-              return (
-                <button
-                  key={s.id}
-                  onClick={() => goTo(idx)}
-                  aria-current={active ? "true" : undefined}
-                  className={`w-full flex items-start gap-4 text-left px-3 py-4 border-b border-white/20 transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${active ? "bg-white/10" : "hover:bg-white/5"
-                    }`}
-                  style={{ borderLeft: active ? "2px solid #ffffff" : "2px solid transparent" }}
-                >
-                  <span
-                    className={`shrink-0 w-9 h-9 flex items-center paragraph justify-center font-mono text-[13px] border transition-colors duration-200 ${active
-                      ? "bg-white text-black border-white"
-                      : "border-white/30 text-white/70!"
+            <div className="flex items-center gap-4 text-left">
+              <span className="shrink-0 w-10 h-10 flex items-center justify-center border border-white! text-black bg-white paragraph font-semibold">
+                {slide.id}
+              </span>
+              <div>
+                <span className="block tracking-[0.14em] paragraph uppercase text-white! mb-1 text-[11px]">
+                  {slide.category}
+                </span>
+                <span className="block paragraph text-white/60! font-medium text-[15px] sm:text-base leading-tight">
+                  {slide.title}
+                </span>
+              </div>
+            </div>
+            <ChevronDown
+              className={`w-5 h-5 text-white/70 transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`}
+            />
+          </button>
+
+          {/* Dropdown Menu */}
+          <div
+            className={`absolute top-full left-0 w-full mt-2 bg-[#1a1a1a] border border-white/10 shadow-2xl overflow-hidden transition-all duration-300 origin-top ${dropdownOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'
+              }`}
+          >
+            <div className="max-h-[350px] overflow-y-auto custom-scrollbar grid grid-cols-1 sm:grid-cols-2">
+              {SLIDES.map((s, idx) => {
+                const active = index === idx;
+                return (
+                  <button
+                    key={s.id}
+                    onClick={() => goTo(idx)}
+                    className={`w-full flex items-center gap-4 text-left px-5 py-3 border-b border-white/5 transition-colors duration-200 hover:bg-white/10 ${active ? 'bg-white/5' : ''
                       }`}
                   >
-                    {s.id}
-                  </span>
-                  <span className="pt-1">
-                    <span className="block font-mono text-[10px] tracking-[0.14em] paragraph uppercase text-white/70! mb-1.5">
-                      {s.category}
+                    <span
+                      className={`shrink-0 w-8 h-8 flex items-center paragraph justify-center border transition-colors duration-200 text-sm ${active ? "bg-white text-black border-white" : "border-white/30 text-white/70!"
+                        }`}
+                    >
+                      {s.id}
                     </span>
-                    <span className="block text-[13.5px] sm:text-sm font-medium paragraph leading-snug text-white!">
-                      {s.title}
-                    </span>
-                  </span>
-                </button>
-              );
-            })}
-          </nav>
+                    <div>
+                      <span className="block tracking-[0.14em] paragraph uppercase text-white! mb-0.5 text-[10px]">
+                        {s.category}
+                      </span>
+                      <span className={`block paragraph text-[14px] ${active ? 'text-white/60!' : 'text-white/80!'}`}>
+                        {s.title}
+                      </span>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
 
-          {/* Sheet content */}
-          <div className="flex-1 min-w-0">
-            <div
-              ref={contentRef}
-              className="bg-white text-black border border-white/20 shadow-xl"
-            >
-              <div className="px-6 sm:px-9 pt-8 sm:pt-10 pb-9 sm:pb-11">
-                <h1 className="text-[26px] heading1  font-semibold tracking-tight mb-4">
-                  {slide.title}
-                </h1>
-                <p className="paragraph sm:mb-12">
-                  {slide.description}
-                </p>
+        {/* Sheet content wrapped in overflow-hidden for animation */}
+        <div className="w-full overflow-hidden min-h-[400px]">
+          <div
+            ref={contentRef}
+            className="bg-white text-black border border-white/20 shadow-xl w-full"
+          >
+            <div className="px-6 sm:px-9 pt-8 sm:pt-10 pb-9 sm:pb-11">
+              <h3 className="heading3 uppercase tracking-tight text-[#EE2F2E] mb-4">
+                {slide.title}
+              </h3>
+              <p className="paragraph sm:mb-12">
+                {slide.description}
+              </p>
 
-                {/* card schedule — hairline dividers, no shadows */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-black/10 border border-black/10">
-                  {slide.cards.map((card, idx) => (
+              {/* card schedule */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {slide.cards.map((card, idx) => {
+                  const images = [
+                    "/images/dashcam_orange.jpg",
+                    "/images/dashcam_blue.jpg",
+                    "/images/camera_lens_green.jpg",
+                    "/images/suv_camera_purple.jpg"
+                  ];
+                  const colors = ["white", "white", "white", "white"];
+                  const color = colors[idx % 4];
+                  const img = images[idx % 4];
+
+                  return (
                     <div
                       key={idx}
-                      className="relative bg-white p-6 sm:p-7 min-h-[210px] flex flex-col group transition-colors duration-300 hover:bg-gray-50"
+                      className="relative bg-[#0b0f19] p-6 sm:p-7 min-h-[240px] flex flex-col group overflow-hidden  border border-white/10"
                     >
-                      <span className="absolute top-4 right-5 font-mono text-[10px] text-black/30">
-                        {CARD_MARKS[idx]}
-                      </span>
+                      <div className="absolute top-0 right-0 w-[60%] h-full z-0 pointer-events-none overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#0b0f19] via-[#0b0f19]/80 to-transparent z-10"></div>
+                        <img
+                          src={img}
+                          alt=""
+                          className="w-full h-full object-cover opacity-80 mix-blend-lighten group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                        />
+                      </div>
 
-                      <card.icon className="w-6 h-6 text-[#EE2F2E] mb-6" strokeWidth={1.5} />
+                      <div className="relative z-10 flex flex-col h-full w-[65%]">
+                        <card.icon className="w-8 h-8 mb-4" strokeWidth={2} style={{ color }} />
 
-                      <h3 className="leading-[1.15] mb-3 ">
-                        <span className="block text-[17px] sm:text-lg font-semibold text-black">
-                          {card.titlePart1}
-                        </span>
-                        <span className="block text-[17px] sm:text-lg font-normal text-black/70">
-                          {card.titlePart2}
-                        </span>
-                      </h3>
+                        <h3 className="mb-2">
+                          <span className="block text-white text-[20px] uppercase sm:text-[22px] font-bold leading-tight">
+                            {card.titlePart1}
+                          </span>
+                          <span className="block text-[20px] sm:text-[22px] uppercase font-bold leading-tight" style={{ color }}>
+                            {card.titlePart2}
+                          </span>
+                        </h3>
 
-                      <p className="text-[13.5px] text-black/70 leading-relaxed mt-auto">
-                        {card.description}
-                      </p>
+
+
+                        <p className="text-white/60 text-sm mt-auto">
+                          {card.description}
+                        </p>
+                      </div>
                     </div>
-                  ))}
-                </div>
+                  )
+                })}
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );

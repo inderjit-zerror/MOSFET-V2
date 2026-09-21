@@ -225,12 +225,12 @@
 //                   </a>
 
 //                   <div className="p-6 sm:p-7 lg:p-7">
-//                     {/* <span className="inline-flex rounded-full bg-[#dcefc7] px-4 py-3 text-[13px] font-medium uppercase tracking-[-0.02em] text-[#1f3d1f]">
+//                     {/* <span className="inline-flex rounded-full bg-[#dcefc7] px-4 py-3 uppercase tracking-[-0.02em] text-[#1f3d1f]">
 //                       {item.period}
 //                     </span> */}
 //                     <InTitle txt={item.period} />
 
-//                     <h2 className="mt-6 max-w-[560px] text-[28px] font-medium leading-[1.06] tracking-[-0.03em] lg:text-[32px]">
+//                     <h2 className="mt-6 max-w-[560px] tracking-[-0.03em]">
 //                       <a href={item.href}>{item.title}</a>
 //                     </h2>
 
@@ -508,12 +508,12 @@ export default function NewsPress() {
                   </a>
 
                   <div className="p-6 sm:p-7 lg:p-7">
-                    {/* <span className="inline-flex rounded-full bg-[#dcefc7] px-4 py-3 text-[13px] font-medium uppercase tracking-[-0.02em] text-[#1f3d1f]">
+                    {/* <span className="inline-flex rounded-full bg-[#dcefc7] px-4 py-3 uppercase tracking-[-0.02em] text-[#1f3d1f]">
                       {item.period}
                     </span> */}
                     <InTitle txt={item.period} />
 
-                    <h2 className="mt-6 max-w-[560px] text-[28px] font-medium leading-[1.06] tracking-[-0.03em] lg:text-[32px]">
+                    <h2 className="mt-6 max-w-[560px] tracking-[-0.03em]">
                       <a href={item.href}>{item.title}</a>
                     </h2>
 

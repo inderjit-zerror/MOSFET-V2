@@ -81,11 +81,11 @@ export default function FuturePlansSection() {
                 className={`plan-item flex flex-col sm:flex-row gap-6 sm:gap-10 py-10 ${i !== 0 ? "border-t border-black/10" : "pt-0 lg:pt-0"
                   }`}
               >
-                <div className="text-[18px] font-bold text-[#EE2F2F] pt-1 shrink-0">
+                <div className=" text-[#EE2F2F] pt-1 shrink-0">
                   {plan.num}
                 </div>
                 <div className="flex flex-col gap-4">
-                  <h3 className="text-[24px] sm:text-[32px] font-bold leading-[1.1] tracking-tight">
+                  <h3 className=" tracking-tight">
                     {plan.title}
                   </h3>
                   <p className="paragraph PH text-black/80">

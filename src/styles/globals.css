@@ -59,10 +59,24 @@ button {
 
 
 .heading1 {
-  font-size: 3.625rem;
-  font-weight: 500;
+  font-size: 5.625rem;
+  font-weight: 600;
   line-height: 0.9;
-  letter-spacing: -0.075em;
+  letter-spacing: -0.015em;
+}
+
+.heading2 {
+  font-size: 3.625rem;
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.015em;
+}
+
+.heading3 {
+  font-size: 2.625rem;
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.015em;
 }
 
 .paragraph {
@@ -81,23 +95,7 @@ button {
   font-size: 0.8rem !important;
 }
 
-@media (min-width: 640px) {
 
-  .heading1 {
-    font-size: 4.875rem;
-    font-weight: 600;
-  }
-
-  .paragraph {
-    font-size: 1.1rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .heading1 {
-    font-size: 4rem;
-  }
-}
 
 /* ========================================= COLORS */
 

@@ -121,21 +121,21 @@ export default function CementEmissionsSection() {
         <div className="relative z-10 mx-auto flex w-[90vw] sm:w-[80vw] max-w-[64rem] flex-col items-center text-center">
 
           <div className="relative w-full">
-            <p
+            <h2
               ref={paraOneRef}
-              className="absolute inset-0 m-0 text-[1.5rem] sm:text-[2rem] lg:text-[2.75rem] font-medium leading-[1.25] text-white"
+              className="absolute heading2 uppercase inset-0 m-0 text-white"
             >
               {PARAGRAPH_ONE}
-            </p>
+            </h2>
 
-            <p
+            <h2
               ref={paraTwoRef}
-              className="invisible m-0 text-[1.5rem] sm:text-[2rem] lg:text-[2.75rem] font-medium leading-[1.25] text-white"
+              className="invisible heading2 uppercase m-0 text-[#EE2F2E]"
             >
               {PARAGRAPH_TWO_PARTS.before}
-              <sub className="bottom-0 text-[1rem] sm:text-[1.25rem] lg:text-[1.75rem]">2</sub>
+              <sub className="bottom-0">2</sub>
               {PARAGRAPH_TWO_PARTS.after}
-            </p>
+            </h2>
 
             <div className="w-fit flex gap-5 mt-[10vh] mx-auto">
               <Button txt={'DISCOVER OUR SOLUTIONS'} />

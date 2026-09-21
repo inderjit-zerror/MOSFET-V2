@@ -53,7 +53,7 @@ export default function WithOrWithoutMosfet() {
 
         {/* WITHOUT MOSFET COLUMN */}
         <div className="flex-1">
-          <h3 className="text-[#D97706] heading1 font-bold tracking-[0.2em] uppercase mb-12 md:text-center text-sm">
+          <h3 className="text-[#D97706] heading1 tracking-[0.2em] uppercase mb-12 md:text-center">
             Without MOSFET
           </h3>
           <div className="space-y-12">
@@ -61,10 +61,10 @@ export default function WithOrWithoutMosfet() {
               <div key={`without-${item.id}`} className="flex items-start gap-5">
                 <X className="text-[#D97706] shrink-0 mt-0.5" size={20} strokeWidth={2.5} />
                 <div>
-                  <h4 className="paragraph  text-[#D97706]! font-bold!  uppercase tracking-widest mb-1.5">
+                  <h4 className="paragraph  text-[#D97706]!!  uppercase tracking-widest mb-1.5">
                     {item.label}
                   </h4>
-                  <p className="paragraph text-black leading-relaxed">
+                  <p className="paragraph text-black">
                     {item.without}
                   </p>
                 </div>
@@ -75,7 +75,7 @@ export default function WithOrWithoutMosfet() {
 
         {/* WITH MOSFET COLUMN */}
         <div className="flex-1">
-          <h3 className="text-[#EE2F2E] heading1 font-bold tracking-[0.2em] uppercase mb-12 md:text-center text-sm">
+          <h3 className="text-[#EE2F2E] heading1 tracking-[0.2em] uppercase mb-12 md:text-center">
             With MOSFET
           </h3>
           <div className="space-y-12">
@@ -83,10 +83,10 @@ export default function WithOrWithoutMosfet() {
               <div key={`with-${item.id}`} className="flex items-start gap-5">
                 <Check className="text-[#EE2F2E] shrink-0 mt-0.5" size={20} strokeWidth={2.5} />
                 <div>
-                  <h4 className="paragraph font-bold! text-[#EE2F2E]!  uppercase tracking-widest mb-1.5">
+                  <h4 className="paragraph! text-[#EE2F2E]!  uppercase tracking-widest mb-1.5">
                     {item.label}
                   </h4>
-                  <p className="paragraph text-black leading-relaxed">
+                  <p className="paragraph text-black">
                     {item.with}
                   </p>
                 </div>

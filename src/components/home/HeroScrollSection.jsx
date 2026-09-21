@@ -61,11 +61,11 @@
 //             className="flex w-max whitespace-nowrap will-change-transform"
 //           >
 //             {/* Copy 1 */}
-//             <span className="pr-[3vw] heading1 text-[9vw]! font-extrabold leading-none tracking-tight TextTint">
+//             <span className="pr-[3vw] heading1 tracking-tight TextTint">
 //               NATURE&nbsp;AT&nbsp;SOURCE&nbsp;•&nbsp;NATURE&nbsp;AT&nbsp;SOURCE&nbsp;•&nbsp;
 //             </span>
 //             {/* Copy 2 (identical, required for the seamless loop) */}
-//             <span className="pr-[3vw] heading1 text-[9vw]! font-extrabold leading-none tracking-tight TextTint">
+//             <span className="pr-[3vw] heading1 tracking-tight TextTint">
 //               NATURE&nbsp;AT&nbsp;SOURCE&nbsp;•&nbsp;NATURE&nbsp;AT&nbsp;SOURCE&nbsp;•&nbsp;
 //             </span>
 //           </div>
@@ -98,17 +98,17 @@
 //           <div className="relative z-10 mx-auto flex min-h-[90vh] w-full max-w-[90rem] items-center px-[6vw] py-24">
 //             <div className="grid w-full grid-cols-1 gap-12 md:grid-cols-2 md:gap-8">
 //               {/* Left: Heading */}
-//               <h2 className="heading1  leading-[1.1] text-[#ECEEE9]! sm:text-[3.5rem] lg:text-[4rem]">
+//               <h2 className="heading1 text-[#ECEEE9]!">
 //                 Smarter Tech <br /> for Safer Vehicles <br />AI-driven automotive solutions across India
 //               </h2>
 
 //               {/* Right: Copy + CTA */}
 //               <div className="flex flex-col justify-center">
-//                 <p className=" paragraph leading-[1.6] text-[#ECEEE9]!">
+//                 <p className=" paragraph text-[#ECEEE9]!">
 //                  MOSFET has officially announced the expansion of its AI-driven automotive solutions across India, marking a significant step in its global growth strategy and long-term commitment to intelligent mobility. This initiative is aimed at addressing the increasing demand for connected, data-driven, and safety-focused vehicle technologies in India’s rapidly evolving automotive ecosystem.
 //                 </p>
 
-//                 <p className="paragraph mt-6 text-[1.15rem] leading-[1.6] text-[#ECEEE9]!">
+//                 <p className="paragraph mt-6 text-[#ECEEE9]!">
 //                  As part of this expansion, MOSFET is introducing a suite of advanced solutions that combine precision-engineered hardware with powerful AI-based software.
 //                 </p>
 
@@ -190,11 +190,11 @@ export default function HeroScrollSection() {
             className="flex w-max whitespace-nowrap will-change-transform"
           >
             {/* Copy 1 */}
-            <span className="pr-[3vw] heading1 text-[13vw]! sm:text-[9vw]! font-extrabold leading-none tracking-tight TextTint">
+            <span className="pr-[3vw] heading1 tracking-tight TextTint">
               NATURE&nbsp;AT&nbsp;SOURCE&nbsp;•&nbsp;NATURE&nbsp;AT&nbsp;SOURCE&nbsp;•&nbsp;
             </span>
             {/* Copy 2 (identical, required for the seamless loop) */}
-            <span className="pr-[3vw] heading1 text-[13vw]! sm:text-[9vw]! font-extrabold leading-none tracking-tight TextTint">
+            <span className="pr-[3vw] heading1 tracking-tight TextTint">
               NATURE&nbsp;AT&nbsp;SOURCE&nbsp;•&nbsp;NATURE&nbsp;AT&nbsp;SOURCE&nbsp;•&nbsp;
             </span>
           </div>
@@ -226,17 +226,17 @@ export default function HeroScrollSection() {
           <div className="relative z-10 mx-auto flex min-h-[90vh] w-full max-w-[90rem] items-center px-5 py-16 sm:px-[6vw] sm:py-24">
             <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 md:gap-8">
               {/* Left: Heading */}
-              <h2 className="heading1 leading-[1.1] text-[1.9rem]! text-[#ECEEE9]! sm:text-[3.5rem]! lg:text-[4rem]!">
+              <h2 className="heading1 text-[#ECEEE9]!">
                 Smarter Tech <br className="hidden sm:block" /> for Safer Vehicles <br className="hidden sm:block" />AI-driven automotive solutions across India
               </h2>
 
               {/* Right: Copy + CTA */}
               <div className="flex flex-col justify-center">
-                <p className=" paragraph leading-[1.6] text-[#ECEEE9]!">
+                <p className=" paragraph text-[#ECEEE9]!">
                   Every MOSFET product pairs rugged, precision-built hardware with AI software tuned specifically for Indian roads and everyday driving conditions. From dash cams to audio systems, each component is engineered in-house and tested before it ever reaches a customer.
                 </p>
 
-                <p className="paragraph mt-6 text-[1rem] sm:text-[1.15rem] leading-[1.6] text-[#ECEEE9]!">
+                <p className="paragraph mt-6 text-[#ECEEE9]!">
                  MOSFET is introducing a suite of advanced solutions that combine precision-engineered hardware with powerful AI-based software.
                 </p>
 

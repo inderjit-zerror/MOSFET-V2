@@ -37,7 +37,7 @@ export default function MoreDependableSection() {
             <div className=" mx-auto">
                 <div className="max-w-3xl ">
 
-                    <h2 className="text-4xl heading1 md:text-6xl font-bold leading-tight mt-4 text-white">
+                    <h2 className=" heading1 mt-4 text-white">
                         BUILD CONFIDENCE <br className="hidden md:block" />
                         INTO <span className="text-[#202020]">EVERY DRIVE.</span>
                     </h2>
@@ -52,9 +52,9 @@ export default function MoreDependableSection() {
                                     <ShieldCheck size={28} />
                                 </div>
                                 <div>
-                                    <p className="text-lg md:text-xl text-white/95 leading-relaxed font-semibold">{bullet.text}</p>
+                                    <p className=" text-white/95">{bullet.text}</p>
                                     {bullet.tag && (
-                                        <span className="inline-block mt-4 text-xs font-bold tracking-wide text-white bg-[#202020] border border-[#202020] rounded-full px-4 py-1.5 shadow-lg">
+                                        <span className="inline-block mt-4 tracking-wide text-white bg-[#202020] border border-[#202020] rounded-full px-4 py-1.5 shadow-lg">
                                             {bullet.tag}
                                         </span>
                                     )}

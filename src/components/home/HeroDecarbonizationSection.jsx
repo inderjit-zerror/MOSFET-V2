@@ -71,11 +71,11 @@
 
 // //         {/* Content */}
 // //         <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 text-center">
-// //           <h1 className="heading1 leading-[1.1] text-[#FBFBF8]! sm:text-[3.25rem] lg:text-[4rem]">
+// //           <h1 className="heading1 text-[#FBFBF8]!">
 // //             An at-the-source approach to cement decarbonization
 // //           </h1>
 
-// //           <p className=" paragraph my-6 PH max-w-2xl text-[1.05rem]  leading-[1.6] text-[#FBFBF8]!">
+// //           <p className=" paragraph my-6 PH max-w-2xl text-[#FBFBF8]!">
 // //             MOSFET has officially announced the expansion of its AI-driven
 // //             automotive solutions across India, marking a significant step in its
 // //             global growth strategy and long-term commitment to intelligent
@@ -164,11 +164,11 @@
 
 //         {/* Content */}
 //         <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 text-center">
-//           <h1 className="heading1 leading-[1.15] text-[1.9rem]! text-[#FBFBF8]! sm:text-[3.25rem]! lg:text-[4rem]!">
+//           <h1 className="heading1 text-[#FBFBF8]!">
 //             An at-the-source approach to cement decarbonization
 //           </h1>
 
-//           <p className="paragraph my-5 sm:my-6 PH max-w-2xl text-[0.95rem] sm:text-[1.05rem] leading-[1.6] text-[#FBFBF8]!">
+//           <p className="paragraph my-5 sm:my-6 PH max-w-2xl text-[#FBFBF8]!">
 //             MOSFET has officially announced the expansion of its AI-driven
 //             automotive solutions across India, marking a significant step in
 //             its global growth strategy and long-term commitment to
@@ -277,7 +277,7 @@ export default function HeroDecarbonizationSection() {
 
           {/* New Text Block from Image */}
           <div className=" w-full">
-            <h2 className="heading1 text-[#FBFBF8] uppercase text-center text-[2rem] sm:text-[3.5rem] lg:text-[4.5rem] font-bold tracking-tight mb-16 leading-[1.1]">
+            <h2 className="heading1 text-[#FBFBF8] uppercase text-center tracking-tight mb-16">
               NOW IMAGINE IT <span className="text-[#101010]">DONE BETTER.</span>
             </h2>
 
@@ -289,14 +289,14 @@ export default function HeroDecarbonizationSection() {
                 { from: 'PROBLEM', to: 'SOLUTION' }
               ].map((item, idx) => (
                 <div key={idx} className="flex flex-col items-center">
-                  <div className="relative text-white/70 font-semibold tracking-[0.15em] text-sm sm:text-base uppercase">
+                  <div className="relative text-white/70 tracking-[0.15em] uppercase">
                     {item.from}
                     <span className="absolute top-1/2 left-[-10%] w-[120%] h-[2px] bg-[#101010] -translate-y-1/2"></span>
                   </div>
 
                   <div className="w-[1px] h-8 sm:h-10 bg-white/50 my-5"></div>
 
-                  <div className="text-[#FBFBF8] font-bold tracking-widest text-xl sm:text-2xl uppercase">
+                  <div className="text-[#FBFBF8] tracking-widest uppercase">
                     {item.to}
                   </div>
                 </div>
@@ -304,11 +304,11 @@ export default function HeroDecarbonizationSection() {
             </div>
           </div>
 
-          {/* <h1 className="heading1 leading-[1.15] text-[1.9rem]! text-[#FBFBF8]! sm:text-[3.25rem]! lg:text-[4rem]!">
+          {/* <h1 className="heading1 text-[#FBFBF8]!">
             Ready to Upgrade Your Ride?
           </h1>
 
-          <p className="paragraph my-5 sm:my-6 PH max-w-2xl text-[0.95rem] sm:text-[1.05rem] leading-[1.6] text-[#FBFBF8]!">
+          <p className="paragraph my-5 sm:my-6 PH max-w-2xl text-[#FBFBF8]!">
             From dash cams to audio and lighting, MOSFET builds the tech that keeps you safer, informed, and in control — on every route, every time.
           </p>
 
