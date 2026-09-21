@@ -105,10 +105,10 @@ export default function SoftwarePlatformSection() {
       {/* Intro Header Section */}
       <div className="mx-auto mb-16 flex flex-col justify-center items-center text-center">
         <h2 className="heading2 text-white!">
-          SOFTWARE IS <br />
+          SOFTWARE IS
           <span className="text-[red]">OUR CORE.</span>
         </h2>
-        <p className="paragraph text-white/70! max-w-3xl mt-6">
+        <p className="paragraph text-white/70! max-w-4xl mt-6">
           A unified cloud platform powering smart mobility, fleets, EV ecosystems, and emergency operations. The platform is built and maintained by MOSFET Tech&apos;s own team, and it ties every camera, telematics and sensory product together.
         </p>
       </div>

@@ -131,7 +131,7 @@ export default function PartnersCollaborators() {
       <div className=" mx-auto">
 
         <div className="flex flex-col items-center text-center mb-16 lg:mb-24">
-          <h2 className="heading1 mt-4 !text-white">
+          <h2 className="heading2 mt-4 !text-white">
             <span className="text-[red]">  TRUSTED BY THE PEOPLE </span> WHO
             PUT OUR SOLUTIONS TO WORK.
           </h2>
@@ -148,7 +148,7 @@ export default function PartnersCollaborators() {
               href={partner.href}
               className="partner-cell group flex items-center justify-center h-32 sm:h-40 lg:h-48 border-r border-b border-white/30 hover:bg-white/[0.03] transition-colors duration-500"
             >
-              <div className="text-white/60 group-hover:text-white transition-colors duration-500 scale-90 sm:scale-100">
+              <div className="text-white/60 group-hover:text-white font-semibold! transition-colors duration-500 scale-90 sm:scale-100">
                 {partner.logo}
               </div>
             </a>

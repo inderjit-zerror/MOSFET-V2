@@ -26,11 +26,11 @@ const HomePage = () => {
       <DragCompareSection />
       <WithOrWithoutMosfet />
       <HeroDecarbonizationSection />
-      <FuturePlansSection />
 
 
       <PartnersCollaborators />
 
+      <FuturePlansSection />
 
 
       {/* <NewsPress /> */}

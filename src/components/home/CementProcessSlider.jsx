@@ -287,9 +287,44 @@ const CARD_MARKS = [];
 
 export default function CapabilitiesShowcase() {
   const [index, setIndex] = useState(0);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const contentRef = useRef(null);
+  const sidebarRef = useRef(null);
   const isAnimating = useRef(false);
+  const [highlightStyle, setHighlightStyle] = useState({ top: 0, left: 0, width: 0, height: 0, opacity: 0 });
+
+  useEffect(() => {
+    const sidebar = sidebarRef.current;
+    if (!sidebar) return;
+
+    const updateHighlight = () => {
+      const buttons = sidebar.querySelectorAll("button");
+      const activeBtn = buttons[index];
+      if (activeBtn) {
+        setHighlightStyle({
+          top: activeBtn.offsetTop,
+          left: activeBtn.offsetLeft,
+          width: activeBtn.offsetWidth,
+          height: activeBtn.offsetHeight,
+          opacity: 1,
+        });
+      }
+    };
+
+    updateHighlight();
+
+    // Slight delay to ensure layout is settled
+    const timeout = setTimeout(updateHighlight, 100);
+
+    const resizeObserver = new ResizeObserver(() => {
+      updateHighlight();
+    });
+    resizeObserver.observe(sidebar);
+
+    return () => {
+      clearTimeout(timeout);
+      resizeObserver.disconnect();
+    };
+  }, [index]);
 
   const reducedMotion = () =>
     typeof window !== "undefined" &&
@@ -297,18 +332,15 @@ export default function CapabilitiesShowcase() {
 
   const goTo = (nextIndex) => {
     if (isAnimating.current || nextIndex === index) {
-      setDropdownOpen(false);
       return;
     }
 
     if (reducedMotion()) {
       setIndex(nextIndex);
-      setDropdownOpen(false);
       return;
     }
 
     isAnimating.current = true;
-    setDropdownOpen(false);
 
     // Animate old content down smoothly and fade out
     gsap.to(contentRef.current, {
@@ -364,67 +396,57 @@ export default function CapabilitiesShowcase() {
         </div>
       </div>
 
-      {/* CARDER AND DROPDOWN CONTAINER */}
-      <div className="relative w-full max-w-5xl mx-auto flex flex-col gap-8">
+      {/* SIDEBAR AND CONTENT CONTAINER */}
+      <div className="relative w-full  mx-auto flex flex-col lg:grid lg:grid-cols-[350px_1fr] gap-8">
 
-        {/* Dropdown Filter */}
-        <div className="relative z-50 w-full" onKeyDown={onKeyDown}>
-          <button
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-            className="w-full bg-black border border-white/20  px-5 py-4 flex items-center justify-between transition-colors duration-200 "
-          >
-            <div className="flex items-center gap-4 text-left">
-              <span className="shrink-0 w-10 h-10 flex items-center justify-center border border-white! text-black bg-white paragraph font-semibold">
-                {slide.id}
-              </span>
-              <div>
-                <span className="block tracking-[0.14em] paragraph uppercase text-white! mb-1 text-[11px]">
-                  {slide.category}
-                </span>
-                <span className="block paragraph text-white/60! font-medium text-[15px] sm:text-base leading-tight">
-                  {slide.title}
-                </span>
-              </div>
-            </div>
-            <ChevronDown
-              className={`w-5 h-5 text-white/70 transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`}
-            />
-          </button>
-
-          {/* Dropdown Menu */}
+        {/* Sidebar Navigation */}
+        <div
+          ref={sidebarRef}
+          className="relative flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 custom-scrollbar snap-x snap-mandatory"
+          onKeyDown={onKeyDown}
+        >
+          {/* Sliding Highlight */}
           <div
-            className={`absolute top-full left-0 w-full mt-2 bg-[#1a1a1a] border border-white/10 shadow-2xl overflow-hidden transition-all duration-300 origin-top ${dropdownOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'
-              }`}
-          >
-            <div className="max-h-[350px] overflow-y-auto custom-scrollbar grid grid-cols-1 sm:grid-cols-2">
-              {SLIDES.map((s, idx) => {
-                const active = index === idx;
-                return (
-                  <button
-                    key={s.id}
-                    onClick={() => goTo(idx)}
-                    className={`w-full flex items-center gap-4 text-left px-5 py-3 border-b border-white/5 transition-colors duration-200 hover:bg-white/10 ${active ? 'bg-white/5' : ''
-                      }`}
-                  >
-                    <span
-                      className={`shrink-0 w-8 h-8 flex items-center paragraph justify-center border transition-colors duration-200 text-sm ${active ? "bg-white text-black border-white" : "border-white/30 text-white/70!"
-                        }`}
-                    >
-                      {s.id}
-                    </span>
-                    <div>
-                      <span className="block tracking-[0.14em] paragraph uppercase text-white! mb-0.5 text-[10px]">
-                        {s.category}
-                      </span>
-                      <span className={`block paragraph text-[14px] ${active ? 'text-white/60!' : 'text-white/80!'}`}>
-                        {s.title}
-                      </span>
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
+            className="absolute bg-white shadow-lg transition-all duration-500 ease-in-out pointer-events-none z-0"
+            style={{
+              top: highlightStyle.top,
+              left: highlightStyle.left,
+              width: highlightStyle.width,
+              height: highlightStyle.height,
+              opacity: highlightStyle.opacity,
+            }}
+          />
+
+          {SLIDES.map((s, idx) => {
+            const active = index === idx;
+            return (
+              <button
+                key={s.id}
+                onClick={() => goTo(idx)}
+                className={`relative z-10 snap-start w-[280px] lg:w-full shrink-0 flex items-center gap-4 text-left px-5 py-4 transition-all duration-500 border ${active
+                  ? 'bg-transparent text-black border-white shadow-lg'
+                  : 'bg-black text-white border-white/20 hover:bg-[#202020]'
+                  }`}
+              >
+                <span
+                  className={`shrink-0 w-10 h-10 flex items-center paragraph font-semibold justify-center border transition-colors duration-500 ${active ? "border-black text-black!" : "border-white/30 text-white!"
+                    }`}
+                >
+                  {s.id}
+                </span>
+                <div className="transition-colors duration-500">
+                  <span className={`block tracking-[0.14em] paragraph uppercase mb-1 text-[11px] transition-colors duration-500 ${active ? 'text-black!' : 'text-white!'
+                    }`}>
+                    {s.category}
+                  </span>
+                  <span className={`block paragraph font-medium text-[15px] leading-tight transition-colors duration-500 ${active ? 'text-black!' : 'text-white!'
+                    }`}>
+                    {s.title}
+                  </span>
+                </div>
+              </button>
+            );
+          })}
         </div>
 
         {/* Sheet content wrapped in overflow-hidden for animation */}

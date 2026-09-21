@@ -6,6 +6,7 @@ import Link from "next/link";
 import Button from "./Button";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
+import Button2 from "./Button2";
 
 const navItems = [
   {
@@ -53,9 +54,28 @@ const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(false);
   const closeTimeout = useRef(null);
 
+  // Track scroll position
+  const [scrolled, setScrolled] = useState(false);
+
   // Mobile menu state
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileAccordion, setMobileAccordion] = useState(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    // Check initial scroll position on mount
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const cancelClose = () => {
     if (closeTimeout.current) {
@@ -105,7 +125,7 @@ const Header = () => {
         onMouseEnter={closeWithDelay}
       ></div>
 
-      <header className="w-full fixed top-0 left-0 flex py-3 px-4 sm:py-[0.8rem] sm:px-[3rem] z-[1999]">
+      <header className={`w-full fixed top-0 left-0 flex py-3 px-4 sm:py-[0.8rem] sm:px-[3rem] z-[1999] transition-colors duration-300 ${scrolled ? "bg-[#ff3030]" : "bg-transparent"}`}>
         <a href="/">
           <div className="w-[100px] h-full max-md:hidden ">
             <img src={`/logo.png`} alt="img" className="w-full object-center object-cover" />
@@ -113,7 +133,7 @@ const Header = () => {
         </a>
         <div className="w-full md:w-fit h-fit flex justify-between md:justify-end ml-auto items-center gap-[1rem]">
           {/* Desktop nav */}
-          <div className="hidden md:flex BGLightTint w-fit h-full justify-between ml-auto items-center gap-[1rem] px-[2rem] py-[0.6rem] -skew-x-[15deg]">
+          <div className="hidden md:flex  w-fit h-full justify-between ml-auto items-center  gap-[1rem] px-[2rem] py-[0.6rem]">
             {navItems.map((item, index) => {
               const isActive =
                 item.href &&
@@ -130,7 +150,7 @@ const Header = () => {
                   onMouseLeave={hasDropdown ? closeWithDelay : undefined}
                 >
                   <span
-                    className={`h-[0.35rem] w-[0.35rem] mr-1 BGRed
+                    className={`h-[0.35rem] w-[0.35rem] mr-1 ${scrolled ? "bg-black" : "BGRed"}
                     ${isActive ? "visible" : "hidden"}
                     `}
                   ></span>
@@ -140,7 +160,7 @@ const Header = () => {
                       <div className={`flex items-center ${item.isSpecial ? "border border-[#EE2F2E]/30 bg-[#EE2F2E]/10 px-3 py-1.5 rounded-sm" : ""}`}>
                         {item.isSpecial && <div className="w-1.5 h-1.5 rounded-full bg-[#EE2F2E] mr-2"></div>}
                         <p
-                          className={`paragraph text-[0.8rem]! font-medium! uppercase tracking-wider hover:text-[#EE2F2E]! ${isActive ? "TextRed" : ""
+                          className={`paragraph text-[0.8rem]! text-white! font-medium! uppercase tracking-wider transition-colors duration-300 ${scrolled ? "hover:text-black!" : "hover:text-[#EE2F2E]!"} ${isActive ? (scrolled ? "text-black!" : "TextRed") : ""
                             }`}
                         >
                           {item.title}
@@ -151,7 +171,7 @@ const Header = () => {
                     <div className={`flex items-center ${item.isSpecial ? "border border-[#EE2F2E]/30 bg-[#EE2F2E]/10 px-3 py-1.5 rounded-sm" : ""}`}>
                       {item.isSpecial && <div className="w-1.5 h-1.5 rounded-full bg-[#EE2F2E] mr-2"></div>}
                       <p
-                        className={`paragraph text-[0.7rem]! font-medium! uppercase tracking-wider hover:text-[#EE2F2E]! ${isActive ? "TextRed" : ""
+                        className={`paragraph text-[0.7rem]! text-white! font-medium! uppercase tracking-wider transition-colors duration-300 ${scrolled ? "hover:text-black!" : "hover:text-[#EE2F2E]!"} ${isActive ? (scrolled ? "text-black!" : "TextRed") : ""
                           }`}
                       >
                         {item.title}
@@ -201,7 +221,7 @@ const Header = () => {
           </div>
 
           <Link href={`/contact`} className="hidden md:block ">
-            <Button txt={"TALK TO MOSFET TECH"} />
+            <Button2 txt={"TALK TO MOSFET TECH"} />
           </Link>
 
           {/* Mobile bar: logo/spacer + hamburger */}
@@ -222,7 +242,7 @@ const Header = () => {
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
               onClick={() => setMobileOpen((prev) => !prev)}
-              className="flex h-9 w-9 items-center justify-center rounded-full BGRed text-white"
+              className={`flex h-9 w-9 items-center justify-center rounded-full text-white transition-colors duration-300 ${scrolled ? "bg-black" : "BGRed"}`}
             >
               {mobileOpen ? (
                 <X className="h-5 w-5" strokeWidth={2} />
@@ -333,7 +353,7 @@ const Header = () => {
 
           <div className="mt-auto pt-8">
             <Link href="/contact" onClick={() => setMobileOpen(false)}>
-              <Button txt={"TALK TO MOSFET TECH"} />
+              <Button2 txt={"TALK TO MOSFET TECH"} />
             </Link>
           </div>
         </div>

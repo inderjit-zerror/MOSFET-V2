@@ -1,193 +1,56 @@
-// export default function Footer() {
-//   return (
-//     <footer className="relative overflow-hidden bg-black border-t border-[#ECEEE9]  text-[#ECEEE9]">
-
-//       <div className="absolute left-[-4vw] top-[-5rem] h-[14rem] w-[14rem] rounded-full border-[0.0625rem] border-white/5 opacity-30" />
-//       <div className="absolute right-[-6vw] top-[4rem] h-[26rem] w-[26rem] rounded-full border-[0.0625rem] border-white/5 opacity-30" />
-
-//       <div className="relative mx-auto flex min-h-[34.625rem] max-w-[93vw] flex-col justify-between pt-[6rem]">
-//         <div className="grid grid-cols-[1fr_0.78fr] gap-[8vw]">
-//           <div>
-//             <div className="mb-[2.5rem]">
-//               <h2 className="text-[2.8rem] font-light leading-none tracking-[0rem] text-[#ff3030]">
-//                 mosfet
-//               </h2>
-//               <p className="mt-[0.3rem] paragraph tracking-[0.03rem] text-[#ECEEE9]!">
-//                 Tech Solutions Pvt. Ltd.
-//               </p>
-//             </div>
-
-//             <p className="paragraph max-w-[30rem] PP text-[#ECEEE9]! ">
-//               Engineered MOSFET power solutions designed for
-//               <br />
-//               high efficiency and reliable performance.
-//             </p>
-//           </div>
-
-//           <div className="grid grid-cols-1 gap-[1.35rem] pt-[0.3rem] ml-auto">
-//             <div>
-//               <p className="mb-1 paragraph text-[#ff3030]!">Phone</p>
-//               <p className="paragraph leading-[1.4] PP text-[#ECEEE9]!">
-//                 +91 9999878104 / +91 9910700028
-//               </p>
-//             </div>
-
-//             <div>
-//               <p className="mb-1 paragraph text-[#ff3030]!">
-//                 Location
-//               </p>
-//               <p className="max-w-[25rem] paragraph PP  text-[#ECEEE9]!">
-//                 B-66, 1st Floor, Naraina Industrial Area, Phase 1, New Delhi,
-//                 India
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-
-//         <div className="h-[0.0625rem] w-full bg-white/50" />
-
-//         <div className="grid grid-cols-[1fr_1.1fr_1.35fr_1fr_0.75fr] gap-[3vw]">
-//           <FooterColumn
-//             title="Company"
-//             links={["About MOSFET", "Leadership", "Careers"]}
-//           />
-//           <FooterColumn
-//             title="Solutions"
-//             links={["OEM Solutions", "Car Electronics", "Mobility & Logistics"]}
-//           />
-//           <FooterColumn
-//             title="Technology"
-//             links={[
-//               "AI Vehicle Intelligence",
-//               "Telematics Platform",
-//               "Vehicle Safety Systems",
-//             ]}
-//           />
-//           <FooterColumn title="Resources" links={["Blog", "Press", "Partners"]} />
-
-//           <div>
-//             <h3 className="mb-[1rem] paragraph  text-[#ff3030]! capitalize">
-//               Download App
-//             </h3>
-
-//             <div className="flex flex-col gap-[0.9rem]">
-//               <img
-//                 src="/images/Android.png"
-//                 alt="Get it on Google Play"
-//                 className="h-[2.1rem] w-[6.3rem] object-contain"
-//               />
-//               <img
-//                 src="/images/IOS.png"
-//                 alt="Download on the App Store"
-//                 className="h-[2.1rem] w-[6.3rem] object-contain"
-//               />
-//             </div>
-//           </div>
-//         </div>
-
-//         <div className="h-[0.0625rem] w-full bg-white/50" />
-
-//         <div className="flex items-center justify-between pb-[0.5rem]">
-//           <div className="flex items-center gap-[0.65rem]">
-//             <span className="text-[0.95rem] text-[#ECEEE9]/90 PP">Follow us:</span>
-
-//             {["f", "𝕏", "◎", "in"].map((item, index) => (
-//               <a
-//                 key={item}
-//                 href="#"
-//                 className={`flex h-[1.65rem] w-[1.65rem] items-center justify-center rounded-full border-[0.0625rem] text-[0.78rem] transition ${
-//                   index === 0
-//                     ? "border-[#ff3030] bg-[#ff3030] text-[#ECEEE9]"
-//                     : "border-white/25 text-[#ECEEE9]/80 hover:border-[#ff3030] hover:text-[#ff3030]"
-//                 }`}
-//               >
-//                 {item}
-//               </a>
-//             ))}
-//           </div>
-
-//           <p className="paragraph text-[#ECEEE9]! PP">
-//             © All Right Reserved. 2026. Mosfet
-//           </p>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// }
-
-// function FooterColumn({ title, links }) {
-//   return (
-//     <div>
-//       <h3 className="mb-[1rem] paragraph   text-[#ff3030]! capitalize">{title}</h3>
-
-//       <ul className="">
-//         {links.map((link) => (
-//           <li key={link}>
-//             <a
-//               href="#"
-//               className="paragraph PP text-[#ECEEE9]/90! hover:text-[#ff3030]!"
-//             >
-//               {link}
-//             </a>
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }
-
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-black border-t border-[#ECEEE9]  text-[#ECEEE9]">
+    <footer className="relative overflow-hidden pt-16 md:pt-24 pb-8 text-[#ECEEE9]">
+      {/* Background Image & Tint Overlay */}
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/images/home/Home_Hero.jpg')" }}
+      />
+      <div className="absolute inset-0 z-0 bg-black/80" />
 
-      <div className="absolute left-[-4vw] top-[-5rem] h-[8rem] w-[8rem] sm:h-[10rem] sm:w-[10rem] md:h-[14rem] md:w-[14rem] rounded-full border-[0.0625rem] border-white/5 opacity-30" />
-      <div className="absolute right-[-6vw] top-[4rem] h-[14rem] w-[14rem] sm:h-[18rem] sm:w-[18rem] md:h-[26rem] md:w-[26rem] rounded-full border-[0.0625rem] border-white/5 opacity-30" />
+      {/* Background Ornaments */}
+      <div className="absolute z-0 left-[-4vw] top-[-5rem] h-[10rem] w-[10rem] md:h-[20rem] md:w-[20rem] rounded-full border-[0.0625rem] border-white/5 opacity-30 pointer-events-none" />
+      <div className="absolute z-0 right-[-6vw] bottom-[-10rem] h-[18rem] w-[18rem] md:h-[30rem] md:w-[30rem] rounded-full border-[0.0625rem] border-white/5 opacity-30 pointer-events-none" />
 
-      <div className="relative mx-auto flex min-h-fit md:min-h-[34.625rem] max-w-[93vw] flex-col justify-between gap-[2.5rem] md:gap-0 pt-[3.5rem] md:pt-[6rem] pb-[1.5rem] md:pb-0">
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_0.78fr] gap-[2.5rem] md:gap-[8vw]">
-          <div>
-            <div className="mb-[2rem] md:mb-[2.5rem]">
-              <h2 className="text-[2.1rem] md:text-[2.8rem] font-light leading-none tracking-[0rem] text-[#ff3030]">
+      <div className="relative z-10 mx-auto max-w-[93vw] flex flex-col gap-12 md:gap-20">
+
+        {/* Top Section: Links & Info */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1.5fr] gap-12 lg:gap-8">
+
+          {/* Col 1: Brand Info & Socials */}
+          <div className="flex flex-col gap-6 max-w-sm">
+            <div>
+              <h2 className="text-[2.5rem] md:text-[3rem] font-light leading-none tracking-tight text-[#ff3030]">
                 mosfet
               </h2>
-              <p className="mt-[0.3rem] paragraph tracking-[0.03rem] text-[#ECEEE9]!">
+              <p className="mt-1 paragraph text-[#ECEEE9]! opacity-80">
                 Tech Solutions Pvt. Ltd.
               </p>
             </div>
-
-            <p className="paragraph max-w-[30rem] PP text-[#ECEEE9]! ">
-              Engineered MOSFET power solutions designed for
-              <br className="hidden sm:block" />
-              high efficiency and reliable performance.
+            <p className="paragraph PP text-[#ECEEE9]! opacity-70">
+              Engineered MOSFET power solutions designed for high efficiency and reliable performance.
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-[1.35rem] pt-[0.3rem] md:ml-auto">
-            <div>
-              <p className="mb-1 paragraph text-[#ff3030]!">Phone</p>
-              <p className="paragraph leading-[1.4] PP text-[#ECEEE9]! break-words">
-                +91 9999878104 / +91 9910700028
-              </p>
-            </div>
-
-            <div>
-              <p className="mb-1 paragraph text-[#ff3030]!">
-                Location
-              </p>
-              <p className="max-w-[25rem] paragraph PP  text-[#ECEEE9]!">
-                B-66, 1st Floor, Naraina Industrial Area, Phase 1, New Delhi,
-                India
-              </p>
+            <div className="flex items-center gap-3 mt-2">
+              <span className="text-[0.95rem] text-[#ECEEE9]/90 PP mr-2">Follow us:</span>
+              {["f", "𝕏", "◎", "in"].map((item, index) => (
+                <a
+                  key={item}
+                  href="#"
+                  className={`flex h-[2.2rem] w-[2.2rem] items-center justify-center rounded-full border-[0.0625rem] text-[0.85rem] transition ${index === 0
+                    ? "border-[#ff3030] bg-[#ff3030] text-[#ECEEE9]"
+                    : "border-white/25 text-[#ECEEE9]/80 hover:border-[#ff3030] hover:text-[#ff3030]"
+                    }`}
+                >
+                  {item}
+                </a>
+              ))}
             </div>
           </div>
-        </div>
 
-        <div className="h-[0.0625rem] w-full bg-white/50" />
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-[1fr_1.1fr_1.35fr_1fr_0.75fr] gap-x-[6vw] gap-y-[2rem] md:gap-[3vw] ">
+          {/* Col 2-4: Links */}
           <FooterColumn
             title="Company"
-            links={["About MOSFET", "Leadership", "Careers"]}
+            links={["About MOSFET", "Leadership", "Careers", "Partners"]}
           />
           <FooterColumn
             title="Solutions"
@@ -201,53 +64,57 @@ export default function Footer() {
               "Vehicle Safety Systems",
             ]}
           />
-          <FooterColumn title="Resources" links={["Blog", "Press", "Partners"]} />
 
-          <div className="">
-            <h3 className="mb-[1rem] paragraph  text-[#ff3030]! capitalize">
-              Download App
-            </h3>
+          {/* Col 5: Contact & App */}
+          <div className="flex flex-col gap-8">
+            <div>
+              <h3 className="mb-5 paragraph text-[#ff3030]! capitalize">Contact Us</h3>
+              <p className="paragraph PP text-[#ECEEE9]! opacity-70 mb-2">
+                +91 9999878104<br />+91 9910700028
+              </p>
+              <p className="paragraph PP text-[#ECEEE9]! opacity-70">
+                B-66, 1st Floor, Naraina Industrial Area, Phase 1, New Delhi, India
+              </p>
+            </div>
 
-            <div className="flex flex-row sm:flex-col gap-[0.9rem] ">
-              <img
-                src="/images/Android.png"
-                alt="Get it on Google Play"
-                className="h-[2.1rem] w-[6.3rem] object-contain"
-              />
-              <img
-                src="/images/IOS.png"
-                alt="Download on the App Store"
-                className="h-[2.1rem] w-[6.3rem] object-contain"
-              />
+            <div>
+              <h3 className="mb-4 paragraph text-[#ff3030]! capitalize">Get The App</h3>
+              <div className="flex gap-3">
+                <img
+                  src="/images/Android.png"
+                  alt="Get it on Google Play"
+                  className="h-[2.1rem] w-[6.3rem] object-contain cursor-pointer hover:opacity-80 transition-opacity"
+                />
+                <img
+                  src="/images/IOS.png"
+                  alt="Download on the App Store"
+                  className="h-[2.1rem] w-[6.3rem] object-contain cursor-pointer hover:opacity-80 transition-opacity"
+                />
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="h-[0.0625rem] w-full bg-white/50" />
+        {/* Bottom Section: Huge Text & Copyright */}
+        <div className="flex flex-col items-center mt-4">
 
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-[1rem] sm:gap-0 pb-[0.5rem]">
-          <div className="flex items-center gap-[0.65rem] max-sm:mx-auto">
-            <span className="text-[0.95rem] text-[#ECEEE9]/90 PP">Follow us:</span>
-
-            {["f", "𝕏", "◎", "in"].map((item, index) => (
-              <a
-                key={item}
-                href="#"
-                className={`flex h-[1.65rem] w-[1.65rem] items-center justify-center rounded-full border-[0.0625rem] text-[0.78rem] transition ${
-                  index === 0
-                    ? "border-[#ff3030] bg-[#ff3030] text-[#ECEEE9]"
-                    : "border-white/25 text-[#ECEEE9]/80 hover:border-[#ff3030] hover:text-[#ff3030]"
-                }`}
-              >
-                {item}
-              </a>
-            ))}
+          {/* Huge Typography Watermark */}
+          <div className="w-full border-t border-white/10 pt-8 pb-4 flex justify-center overflow-hidden">
+            <h1 className="text-[20vw] leading-[0.75] font-black text-center text-white tracking-tighter uppercase select-none">
+              MOSFET
+            </h1>
           </div>
 
-          <p className="paragraph text-[#ECEEE9]! PP max-sm:mx-auto">
-            © All Right Reserved. 2026. Mosfet
-          </p>
+          {/* Footer Bar */}
+          <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#ECEEE9]/50 PP pt-6">
+            <p>© All Right Reserved. 2026. Mosfet Tech Solutions Pvt. Ltd.</p>
+            <div className="flex gap-6">
+              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+          </div>
         </div>
+
       </div>
     </footer>
   );
@@ -256,14 +123,13 @@ export default function Footer() {
 function FooterColumn({ title, links }) {
   return (
     <div>
-      <h3 className="mb-[1rem] paragraph   text-[#ff3030]! capitalize">{title}</h3>
-
-      <ul className="">
+      <h3 className="mb-5 paragraph text-[#ff3030]! capitalize">{title}</h3>
+      <ul className="flex flex-col gap-1">
         {links.map((link) => (
           <li key={link}>
             <a
               href="#"
-              className="paragraph PP text-[#ECEEE9]/90! hover:text-[#ff3030]!"
+              className="paragraph PP text-[#ECEEE9]/70! hover:text-[#ff3030]! transition-colors"
             >
               {link}
             </a>

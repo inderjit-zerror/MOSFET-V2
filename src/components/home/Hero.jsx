@@ -32,7 +32,7 @@ const Hero = () => {
   return (
     <div className="w-full h-svh overflow-hidden relative z-99" ref={container}>
       <div className="relative w-full h-full">
-        <video src={`/video/HEROHOME.mp4`} muted loop autoPlay className="w-full h-full object-cover object-center"></video>
+        <video src={`/video/AboutVideo.mp4`} muted loop autoPlay className="w-full h-full object-cover object-center"></video>
 
         <div className="absolute inset-0 bg-black/50"></div>
       </div>

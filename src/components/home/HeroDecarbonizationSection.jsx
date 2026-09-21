@@ -227,6 +227,23 @@ export default function HeroDecarbonizationSection() {
           scrub: true,
         },
       });
+
+      // Strikethrough lines animation
+      gsap.fromTo(
+        ".strikethrough-line",
+        { scaleX: 0, transformOrigin: "left center" },
+        {
+          scaleX: 1,
+          ease: "none",
+          stagger: 0.15,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 50%",
+            end: "top 20%",
+            scrub: 1,
+          },
+        }
+      );
     }, sectionRef);
 
     return () => ctx.revert();
@@ -277,7 +294,7 @@ export default function HeroDecarbonizationSection() {
 
           {/* New Text Block from Image */}
           <div className=" w-full">
-            <h2 className="heading1 text-[#FBFBF8] uppercase text-center tracking-tight mb-16">
+            <h2 className="heading2 text-[#FBFBF8] uppercase text-center tracking-tight mb-16">
               NOW IMAGINE IT <span className="text-[#101010]">DONE BETTER.</span>
             </h2>
 
@@ -291,7 +308,7 @@ export default function HeroDecarbonizationSection() {
                 <div key={idx} className="flex flex-col items-center">
                   <div className="relative text-white/70 tracking-[0.15em] uppercase">
                     {item.from}
-                    <span className="absolute top-1/2 left-[-10%] w-[120%] h-[2px] bg-[#101010] -translate-y-1/2"></span>
+                    <span className="absolute strikethrough-line top-1/2 left-[-10%] w-[120%] h-[2px] bg-[white] -translate-y-1/2"></span>
                   </div>
 
                   <div className="w-[1px] h-8 sm:h-10 bg-white/50 my-5"></div>
