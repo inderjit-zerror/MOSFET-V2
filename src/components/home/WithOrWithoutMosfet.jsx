@@ -51,31 +51,11 @@ export default function WithOrWithoutMosfet() {
     <section className="bg-[#ECEEE9] py-20 sm:py-32 px-5 sm:px-[3vw]">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 lg:gap-24">
 
-        {/* WITHOUT MOSFET COLUMN */}
-        <div className="flex-1">
-          <h3 className="text-[#D97706] heading1 tracking-[0.2em] uppercase mb-12 md:text-center">
-            Without MOSFET
-          </h3>
-          <div className="space-y-12">
-            {FEATURES.map((item) => (
-              <div key={`without-${item.id}`} className="flex items-start gap-5">
-                <X className="text-[#D97706] shrink-0 mt-0.5" size={20} strokeWidth={2.5} />
-                <div>
-                  <h4 className="paragraph  text-[#D97706]!!  uppercase tracking-widest mb-1.5">
-                    {item.label}
-                  </h4>
-                  <p className="paragraph text-black">
-                    {item.without}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+
 
         {/* WITH MOSFET COLUMN */}
         <div className="flex-1">
-          <h3 className="text-[#EE2F2E] heading1 tracking-[0.2em] uppercase mb-12 md:text-center">
+          <h3 className="text-[#EE2F2E] heading2 tracking-[0.2em] uppercase mb-12 md:text-center">
             With MOSFET
           </h3>
           <div className="space-y-12">
@@ -83,11 +63,34 @@ export default function WithOrWithoutMosfet() {
               <div key={`with-${item.id}`} className="flex items-start gap-5">
                 <Check className="text-[#EE2F2E] shrink-0 mt-0.5" size={20} strokeWidth={2.5} />
                 <div>
-                  <h4 className="paragraph! text-[#EE2F2E]!  uppercase tracking-widest mb-1.5">
+                  <h4 className="paragraph! text-[#EE2F2E]! font-semibold  uppercase tracking-widest mb-1.5">
                     {item.label}
                   </h4>
                   <p className="paragraph text-black">
                     {item.with}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+
+        {/* WITHOUT MOSFET COLUMN */}
+        <div className="flex-1">
+          <h2 className="text-[black] heading2 tracking-[0.2em] uppercase mb-12 md:text-center">
+            Without MOSFET
+          </h2>
+          <div className="space-y-12">
+            {FEATURES.map((item) => (
+              <div key={`without-${item.id}`} className="flex items-start gap-5">
+                <X className="text-[black] shrink-0 mt-0.5" size={20} strokeWidth={2.5} />
+                <div>
+                  <h4 className="paragraph  text-[black]! font-semibold!  uppercase tracking-widest mb-1.5">
+                    {item.label}
+                  </h4>
+                  <p className="paragraph text-black">
+                    {item.without}
                   </p>
                 </div>
               </div>

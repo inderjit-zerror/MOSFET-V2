@@ -55,7 +55,7 @@ export default function DragCompareSection() {
   return (
     <section className="relative w-full px-5 pt-16 sm:px-[3vw] sm:pt-[12vh] bg-[#ECEEE9] text-white overflow-hidden">
       <div className="relative flex flex-col items-center text-center pb-8 sm:pb-12 px-2 max-w-4xl mx-auto z-10">
-        <h2 className="heading1 text-[#EE2F2E]  uppercase tracking-tight">
+        <h2 className="heading2 text-[#EE2F2E]  uppercase tracking-tight">
           With MOSFET. Or without.
         </h2>
         <p className="paragraph mt-4 text-gray-400 max-w-2xl">
