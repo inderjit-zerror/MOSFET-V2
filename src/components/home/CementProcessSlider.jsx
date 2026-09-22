@@ -466,15 +466,29 @@ export default function CapabilitiesShowcase() {
               {/* card schedule */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {slide.cards.map((card, idx) => {
-                  const images = [
+                  const allImages = [
+                    "/images/dashcam_stalk_1790055651797.jpg",
+                    "/images/dashcam_compact_1790055671221.jpg",
+                    "/images/dashcam_module_1790055685809.jpg",
+                    "/images/dashcam_dual_1790055700928.jpg",
+                    "/images/dashcam_eng_1_1790056154997.jpg",
+                    "/images/dashcam_eng_2_1790056308642.jpg",
+                    "/images/dashcam_eng_3_1790056319698.jpg",
+                    "/images/dashcam_eng_4_1790056478824.jpg",
+                    "/images/dashcam_tooling_1_1790055961525.jpg",
+                    "/images/dashcam_tooling_2_1790055974859.jpg",
+                    "/images/dashcam_tooling_3_1790055998467.jpg",
+                    "/images/dashcam_tooling_4_1790056141782.jpg",
                     "/images/dashcam_orange.jpg",
                     "/images/dashcam_blue.jpg",
                     "/images/camera_lens_green.jpg",
                     "/images/suv_camera_purple.jpg"
                   ];
+                  const slideIndex = parseInt(slide.id) - 1; // 0 to 6
+                  const imageIndex = (slideIndex * 4 + idx) % allImages.length;
+                  const img = allImages[imageIndex];
                   const colors = ["white", "white", "white", "white"];
                   const color = colors[idx % 4];
-                  const img = images[idx % 4];
 
                   return (
                     <div

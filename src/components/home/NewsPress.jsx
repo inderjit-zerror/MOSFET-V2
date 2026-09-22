@@ -95,7 +95,7 @@ export default function NewsPress() {
     >
       <GridLine />
 
-      <div className="relative mx-auto max-w-[1900px] px-6 py-20 sm:px-10 lg:px-[3vw] lg:py-[9vh]">
+      <div className="relative mx-auto max-w-[1900px]  px-6 py-20 sm:px-10 lg:px-[3vw] lg:py-[20vh]">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[minmax(0,440px)_1fr] lg:gap-[6vw]">
           {/* Left: sticky intro */}
           <div className="lg:sticky lg:top-[10vh] lg:self-start">

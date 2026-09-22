@@ -11,7 +11,7 @@ import Button2 from "./Button2";
 const navItems = [
   {
     title: "solutions",
-    href: "/",
+    href: "/solutions",
     // list: [
     //   {
     //     title: "Product 1",
@@ -126,11 +126,11 @@ const Header = () => {
       ></div>
 
       <header className={`w-full fixed top-0 left-0 flex py-3 px-4 sm:py-[0.8rem] sm:px-[3rem] z-[1999] transition-colors duration-300 ${scrolled ? "bg-[#ff3030]" : "bg-transparent"}`}>
-        <a href="/">
-          <div className="w-[100px] h-full max-md:hidden ">
-            <img src={`/logo.png`} alt="img" className="w-full object-center object-cover" />
+        <Link href="/" className="max-md:hidden flex items-center bg-white px-3 py-1.5 ">
+          <div className="w-[100px]">
+            <img src={`/logo.png`} alt="MOSFET Tech" className="w-full h-auto object-contain" />
           </div>
-        </a>
+        </Link>
         <div className="w-full md:w-fit h-fit flex justify-between md:justify-end ml-auto items-center gap-[1rem]">
           {/* Desktop nav */}
           <div className="hidden md:flex  w-fit h-full justify-between ml-auto items-center  gap-[1rem] px-[2rem] py-[0.6rem]">
@@ -228,12 +228,12 @@ const Header = () => {
           <div className="flex md:hidden w-full items-center justify-between BGLightTint px-[2rem] py-[0.6rem] -skew-x-[15deg]">
             <Link
               href="/"
-              className="paragraph text-[0.9rem]! font-medium! capitalize"
+              className="bg-white px-3 py-1.5 rounded-md flex items-center justify-center shadow-sm"
             >
               <img
                 src={`/logo.png`}
-                alt="img"
-                className="h-[1.8rem] object-cover "
+                alt="MOSFET Tech"
+                className="h-[1.6rem] w-auto object-contain skew-x-[15deg]"
               />
             </Link>
 
