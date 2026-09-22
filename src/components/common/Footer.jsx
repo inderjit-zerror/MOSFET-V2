@@ -1,10 +1,14 @@
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden pt-16 md:pt-24 pb-8 text-[#ECEEE9]">
-      {/* Background Image & Tint Overlay */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/home/Home_Hero.jpg')" }}
+      {/* Background Video & Tint Overlay */}
+      <video
+        src="/video/FV.mp4"
+        muted
+        loop
+        autoPlay
+        playsInline
+        className="absolute inset-0 z-0 w-full h-full object-cover object-center"
       />
       <div className="absolute inset-0 z-0 bg-black/80" />
 

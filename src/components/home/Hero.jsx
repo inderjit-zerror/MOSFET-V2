@@ -6,9 +6,9 @@ const Hero = () => {
   return (
     <div className="w-full h-svh overflow-hidden relative z-99">
       <div className="relative w-full h-full">
-        <video src={`/video/HV.mp4`} muted loop autoPlay className="w-full h-full object-cover object-center"></video>
+        <video src={`/video/HHvideo.mp4`} muted loop autoPlay className="w-full h-full object-cover object-center"></video>
 
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
       <div className="w-full h-full px-5 pb-10 sm:px-10 sm:pb-20 absolute bottom-0 left-0 flex flex-col text-center items-center justify-center">
