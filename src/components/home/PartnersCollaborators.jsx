@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import Image from "next/image";
 import InTitle from "../common/InTitle";
 import GridLine from "../common/GridLine";
 
@@ -9,75 +10,74 @@ const partners = [
   {
     name: "AUTOYOU",
     href: "#",
-    logo: <span className=" tracking-widest uppercase">AUTOYOU</span>,
+    logo: <span className="tracking-widest uppercase font-bold text-sm sm:text-base md:text-lg opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 text-center">AUTOYOU</span>,
   },
   {
     name: "MOBIS",
     href: "#",
-    logo: <span className=" tracking-wider uppercase">MOBIS</span>,
+    logo: <span className="tracking-widest uppercase font-bold text-sm sm:text-base md:text-lg opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 text-center">MOBIS</span>,
   },
   {
     name: "ADOBE",
     href: "#",
-    logo: <span className=" tracking-tight uppercase">ADOBE</span>,
+    logo: <Image src="/partners/adobe.png" alt="ADOBE" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
   },
   {
     name: "AVL",
     href: "#",
-    logo: <span className=" italic tracking-tighter uppercase">AVL</span>,
+    logo: <Image src="/partners/avl.png" alt="AVL" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
   },
   {
     name: "MG",
     href: "#",
-    logo: (
-      <span className="flex flex-col items-center">
-        <span className="">MG</span>
-        <span className=" tracking-widest mt-1 uppercase text-center">Morris Garages</span>
-      </span>
-    ),
+    logo: <Image src="/partners/mg.png" alt="MG" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
   },
   {
     name: "TATA CARS",
     href: "#",
-    logo: <span className=" tracking-tighter uppercase text-center">TATA CARS</span>,
+    logo: <Image src="/partners/tata.svg" alt="TATA CARS" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
   },
   {
     name: "SUZUKI",
     href: "#",
-    logo: <span className=" tracking-tight uppercase">SUZUKI</span>,
+    logo: <span className="tracking-widest uppercase font-bold text-sm sm:text-base md:text-lg opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 text-center">SUZUKI</span>,
   },
   {
     name: "HONDA",
     href: "#",
-    logo: <span className=" tracking-widest uppercase">HONDA</span>,
+    logo: <Image src="/partners/honda.svg" alt="HONDA" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
   },
   {
     name: "CITROËN",
     href: "#",
-    logo: <span className=" tracking-widest uppercase">CITROËN</span>,
+    logo: <Image src="/partners/citroen.png" alt="CITROËN" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
   },
   {
     name: "GOMECHANIC",
     href: "#",
-    logo: <span className=" tracking-tight uppercase text-center">GOMECHANIC</span>,
+    logo: <Image src="/partners/gomechanic.png" alt="GOMECHANIC" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
   },
   {
     name: "MOTHERSON",
     href: "#",
-    logo: <span className=" tracking-widest uppercase text-center">MOTHERSON</span>,
+    logo: <Image src="/partners/motherson.png" alt="MOTHERSON" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
   },
   {
     name: "DYLECT",
     href: "#",
-    logo: <span className=" tracking-widest uppercase">DYLECT</span>,
+    // logo: <Image src="/partners/dylect.png" alt="DYLECT" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
+    logo: (
+      <span className="flex flex-col items-center opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
+        <span className="font-bold text-sm sm:text-base md:text-lg">DYLECT</span>
+      </span>
+    ),
   },
   {
     name: "CATS",
     href: "#",
     logo: (
-      <span className="flex flex-col items-center">
-        <span className="">CATS</span>
-        <span className=" tracking-widest mt-2 text-center uppercase">Centralized Ambulance<br />Transport Services</span>
+      <span className="flex flex-col items-center opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
+        <span className="font-bold text-sm sm:text-base md:text-lg">CATS</span>
       </span>
     ),
   },
@@ -85,20 +85,15 @@ const partners = [
     name: "LANDMARK",
     href: "#",
     logo: (
-      <span className="flex flex-col items-center">
-        <span className="">LANDMARK</span>
-        <span className=" tracking-widest mt-1 uppercase text-center">You Drive Us</span>
+      <span className="flex flex-col items-center opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
+        <span className="font-bold text-sm sm:text-base md:text-lg">LANDMARK</span>
       </span>
     ),
   },
   {
     name: "YOUR BRAND",
     href: "#",
-    logo: (
-      <span className=" tracking-widest text-white/40 uppercase">
-        Join the Network
-      </span>
-    )
+    logo: <Image src="/partners/yourbrand.svg" alt="YOUR BRAND" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
   }
 ];
 

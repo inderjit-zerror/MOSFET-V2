@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import InTitle from "../common/InTitle";
 import GridLine from "../common/GridLine";
+import BlurText from "../common/BlurText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -89,9 +90,9 @@ export default function FuturePlansSection() {
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[minmax(0,500px)_1fr] lg:gap-[7.5vw]">
           {/* Left: sticky intro */}
           <div className="lg:sticky lg:top-[15vh] lg:self-start heading-anim">
-            <h1 className="heading2 text-[#101010]!">
+            <BlurText as="h1" className="heading2 text-[#101010]!">
               WHERE WE'RE HEADED.
-            </h1>
+            </BlurText>
 
             <p className="paragraph text-[#101010]! PH mt-10">
               The plans we are building towards, exactly as we share them with partners. Made in India, built for global consumption.

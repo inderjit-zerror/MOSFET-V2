@@ -3,6 +3,7 @@
 import { useState, useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { CheckCircle2 } from "lucide-react";
+import BlurText from "../common/BlurText";
 
 const platformData = [
   {
@@ -104,10 +105,10 @@ export default function SoftwarePlatformSection() {
     <section className="bg-black text-white py-20 px-4 md:px-12 lg:px-10 overflow-hidden">
       {/* Intro Header Section */}
       <div className="mx-auto mb-16 flex flex-col justify-center items-center text-center">
-        <h2 className="heading2 text-white!">
+        <BlurText as="h2" className="heading2 text-white!">
           SOFTWARE IS
           <span className="text-[red]">OUR CORE.</span>
-        </h2>
+        </BlurText>
         <p className="paragraph text-white/70! max-w-4xl mt-6">
           A unified cloud platform powering smart mobility, fleets, EV ecosystems, and emergency operations. The platform is built and maintained by MOSFET Tech&apos;s own team, and it ties every camera, telematics and sensory product together.
         </p>

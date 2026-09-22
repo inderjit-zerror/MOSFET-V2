@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import InTitle from "../common/InTitle";
 import GridLine from "../common/GridLine";
+import BlurText from "../common/BlurText";
 
 const sectors = [
   {
@@ -65,7 +66,7 @@ export default function NewsPress() {
         ease: "power3.out",
       });
 
-      gsap.from(".news-title, .news-copy", {
+      gsap.from(".news-copy", {
         y: 34,
         opacity: 0,
         duration: 0.9,
@@ -103,9 +104,9 @@ export default function NewsPress() {
               <InTitle txt={""} />
             </div>
 
-            <h1 className="heading2 news-title text-[#ECEEE9]!">
+            <BlurText as="h1" className="heading2 text-[#ECEEE9]!">
               WE DO <br /> OPERATE IN
-            </h1>
+            </BlurText>
 
             <p className="paragraph news-copy text-[#ECEEE9]! PH mt-10 max-w-[420px]">
               Five industries, one engineering partner: from the electronics

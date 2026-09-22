@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { Check, X } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BlurText from "../common/BlurText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -94,15 +95,15 @@ export default function WithOrWithoutMosfet() {
         <div className="flex flex-col md:flex-row mb-8 md:mb-12 headers-container overflow-hidden">
           {/* With MOSFET Header (Left) */}
           <div className="flex-1 md:pr-12 lg:pr-16 md:border-r border-black/20 mb-8 md:mb-0 header-anim">
-            <h2 className="text-[#EE2F2E] heading2 tracking-[0.2em] uppercase md:text-center">
+            <BlurText as="h2" className="text-[#EE2F2E] heading2 tracking-[0.2em] uppercase md:text-center">
               With MOSFET
-            </h2>
+            </BlurText>
           </div>
           {/* Without MOSFET Header (Right) */}
           <div className="flex-1 md:pl-12 lg:pl-16 header-anim">
-            <h2 className="text-[black] heading2 tracking-[0.2em] uppercase md:text-center">
+            <BlurText as="h2" className="text-[black] heading2 tracking-[0.2em] uppercase md:text-center">
               Without MOSFET
-            </h2>
+            </BlurText>
           </div>
         </div>
 

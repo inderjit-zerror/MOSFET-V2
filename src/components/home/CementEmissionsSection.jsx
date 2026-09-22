@@ -12,11 +12,8 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 const PARAGRAPH_ONE =
   "We engineer OEM-specific camera, telematics and sensory solutions that make automotive businesses safer, simpler and more dependable. ";
 
-const PARAGRAPH_TWO_PARTS = {
-  before: "Smarter Tech for Safer Vehicles",
-  after:
-    "One partner for camera, telematics, software and Made-in-India certified hardware. Built around your vehicle, not bolted on.",
-};
+const PARAGRAPH_TWO =
+  "Smarter Tech for Safer Vehicles. One partner for camera, telematics, software and Made-in-India certified hardware. Built around your vehicle, not bolted on.";
 
 export default function CementEmissionsSection() {
   const sectionRef = useRef(null);
@@ -121,21 +118,19 @@ export default function CementEmissionsSection() {
         <div className="relative z-10 mx-auto flex w-[90vw] sm:w-[80vw] max-w-[64rem] flex-col items-center text-center">
 
           <div className="relative w-full">
-            <h2
+            <h5
               ref={paraOneRef}
               className="absolute heading2 uppercase inset-0 m-0 text-white"
             >
               {PARAGRAPH_ONE}
-            </h2>
+            </h5>
 
-            <h2
+            <h5
               ref={paraTwoRef}
               className="invisible heading2 uppercase m-0 text-[#EE2F2E]"
             >
-              {PARAGRAPH_TWO_PARTS.before}
-              <sub className="bottom-0">2</sub>
-              {PARAGRAPH_TWO_PARTS.after}
-            </h2>
+              {PARAGRAPH_TWO}
+            </h5>
 
             <div className="w-fit flex gap-5 mt-[10vh] mx-auto">
               <Button txt={'DISCOVER OUR SOLUTIONS'} />

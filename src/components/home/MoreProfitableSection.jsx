@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import InTitle from "../common/InTitle";
 import InTitle2 from "../common/InTitle2";
+import BlurText from "../common/BlurText";
 
 const flowStages = [
     {
@@ -86,10 +87,10 @@ export default function MoreProfitableSection() {
                 <div className="max-w-3xl mb-16">
 
                     <InTitle2 txt={'Section 02: More Profitable'} />
-                    <h2 className=" heading1 mt-4 text-white">
+                    <BlurText as="h2" className=" heading1 mt-4 text-white">
                         TURN TECHNOLOGY INTO <br className="hidden md:block" />
                         <span className="text-[#202020]">BUSINESS VALUE.</span>
-                    </h2>
+                    </BlurText>
                 </div>
 
                 {/* Process flow: Product -> Customer Value -> Business Value */}

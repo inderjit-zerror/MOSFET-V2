@@ -4,6 +4,7 @@ import { useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ShieldCheck } from "lucide-react";
 import InTitle from "../common/InTitle";
+import BlurText from "../common/BlurText";
 
 const dependableBullets = [
     { text: "An engineering focus on precision, quality and reliability." },
@@ -37,10 +38,10 @@ export default function MoreDependableSection() {
             <div className=" mx-auto">
                 <div className="max-w-3xl ">
 
-                    <h2 className=" heading1 mt-4 text-white">
+                    <BlurText as="h2" className=" heading1 mt-4 text-white">
                         BUILD CONFIDENCE <br className="hidden md:block" />
                         INTO <span className="text-[#202020]">EVERY DRIVE.</span>
-                    </h2>
+                    </BlurText>
                 </div>
 
                 <div className="flex flex-col-reverse md:flex-row items-center gap-14 lg:gap-20">

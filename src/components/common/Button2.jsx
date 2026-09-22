@@ -4,7 +4,7 @@ import React from "react";
 
 const Button2 = ({ txt }) => {
   return (
-    <button className="relative overflow-hidden flex w-fit group items-center justify-center bg-white border-2 border-white px-[2rem] py-[0.6rem]  transition-all duration-300 hover:scale-[1.03] hover:shadow-lg">
+    <button className="relative overflow-hidden flex w-fit group items-center justify-center -skew-x-[15deg] bg-white border-2 border-white px-[2rem] py-[0.6rem]  transition-all duration-300 hover:scale-[1.03] hover:shadow-lg">
       {/* Hover Background Sweep */}
       <div className="absolute inset-0 w-0 BGRed transition-all duration-300 ease-out group-hover:w-full"></div>
 
