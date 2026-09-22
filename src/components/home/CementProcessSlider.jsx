@@ -155,7 +155,7 @@ export default function CapabilitiesShowcase() {
           const containerWidth = sidebar.clientWidth;
           const btnLeft = activeBtn.offsetLeft;
           const btnRight = btnLeft + activeBtn.offsetWidth;
-          
+
           if (btnRight > containerScrollLeft + containerWidth) {
             sidebar.scrollTo({ left: btnRight - containerWidth + 20, behavior: 'smooth' });
           } else if (btnLeft < containerScrollLeft) {
@@ -180,9 +180,9 @@ export default function CapabilitiesShowcase() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Initial setup to prevent FOUC: First card at 0%, others at 100%
+    // Initial setup to prevent FOUC: First card at 0%, others at 100vh
     gsap.set(cardsRef.current[0], { y: "0%" });
-    gsap.set(cardsRef.current.slice(1), { y: "100%" });
+    gsap.set(cardsRef.current.slice(1), { y: "100vh" });
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -220,7 +220,7 @@ export default function CapabilitiesShowcase() {
       // 2. New Card comes in from bottom
       tl.fromTo(
         cardsRef.current[i],
-        { y: "100%", boxShadow: "none" },
+        { y: "100vh", boxShadow: "none" },
         {
           y: "0%",
           boxShadow: "none",
@@ -306,20 +306,20 @@ export default function CapabilitiesShowcase() {
                     }`}
                 >
                   <span
-                    className={`shrink-0 w-10 h-10 flex items-center paragraph font-semibold justify-center border transition-colors duration-500 ${active ? "border-black text-black!" : "border-white/30 text-white!"
+                    className={`shrink-0 w-10 h-10 flex text-[2rem]! items-center paragraph font-bold! justify-center  transition-colors duration-500 ${active ? " text-[#EE2F2E]!" : " text-[#EE2F2E]!"
                       }`}
                   >
                     {s.id}
                   </span>
                   <div className="transition-colors duration-500">
                     <span
-                      className={`block tracking-[0.14em] paragraph uppercase mb-1 text-[11px] transition-colors duration-500 ${active ? "text-black!" : "text-white!"
+                      className={`block tracking-[0.14em] paragraph font-bold! uppercase mb-1 text-[11px] transition-colors duration-500 ${active ? "text-black!" : "text-[white]!"
                         }`}
                     >
                       {s.category}
                     </span>
                     <span
-                      className={`block paragraph font-medium text-[15px] leading-tight transition-colors duration-500 ${active ? "text-black!" : "text-white!"
+                      className={`block paragraph font-medium text-[15px] leading-tight transition-colors   duration-500 ${active ? "text-[#202020]!" : "text-[#949494]!"
                         }`}
                     >
                       {s.title}
@@ -336,7 +336,7 @@ export default function CapabilitiesShowcase() {
               <div
                 key={slide.id}
                 ref={(el) => (cardsRef.current[idx] = el)}
-                className="absolute inset-0 w-full h-full bg-white text-black overflow-y-auto custom-scrollbar flex flex-col will-change-transform"
+                className="absolute inset-0 w-full h-fit bg-white text-black overflow-y-auto custom-scrollbar flex flex-col will-change-transform"
                 style={{ zIndex: idx }}
               >
                 <div className="px-6 sm:px-9 pt-8 sm:pt-10 pb-9 sm:pb-11 flex-1">
