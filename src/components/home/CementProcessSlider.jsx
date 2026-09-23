@@ -32,6 +32,9 @@ import {
   Cloud,
   RefreshCw,
   KeyRound,
+  Database,
+  Thermometer,
+  Wifi,
 } from "lucide-react";
 
 // ---------------------------------------------------------------------------
@@ -45,22 +48,22 @@ const SLIDES = [
     description:
       "We design and own the tools — for the camera housing and, where the programme needs it, for the vehicle part it sits in.",
     cards: [
-      { titlePart1: "Exclusive", titlePart2: "tools", icon: Lock, description: "A mould developed for one customer is not offered to another. The housing stays yours." },
-      { titlePart1: "Family", titlePart2: "moulds", icon: Layers, description: "A shared core with interchangeable inserts, so variants come off one tool at a fraction of the NRE." },
-      { titlePart1: "Coupled", titlePart2: "parts", icon: Link2, description: "Camera tool and vehicle-part tool developed together, so tolerance, grain and finish match across the joint." },
-      { titlePart1: "Trial before", titlePart2: "tooling", icon: ClipboardCheck, description: "NRE and lead time are confirmed only after a physical fitment trial on the target vehicle." },
+      { titlePart1: "Exclusive", titlePart2: "tools", icon: Lock, description: "A mould developed for one customer is not offered to another. The housing stays yours.", image: "/images/tooling_exclusive_1790154886682.jpg" },
+      { titlePart1: "Family", titlePart2: "moulds", icon: Layers, description: "A shared core with interchangeable inserts, so variants come off one tool at a fraction of the NRE.", image: "/images/tooling_family_1790154899615.jpg" },
+      { titlePart1: "Coupled", titlePart2: "parts", icon: Link2, description: "Camera tool and vehicle-part tool developed together, so tolerance, grain and finish match across the joint.", image: "/images/tooling_coupled_1790154911932.jpg" },
+      { titlePart1: "Trial before", titlePart2: "tooling", icon: ClipboardCheck, description: "NRE and lead time are confirmed only after a physical fitment trial on the target vehicle.", image: "/images/tooling_trial_1790154926099.jpg" },
     ],
   },
   {
     id: "02",
     category: "Engineering",
     title: "Customised development & product engineering",
-    description: "Our engineering team works closely with your product managers to ensure every component fits perfectly into your ecosystem.",
+    description: "Which SOC works best with which sensor, lens and memory — decided on the bench, for the quality and the price the programme needs.",
     cards: [
-      { titlePart1: "Custom", titlePart2: "designs", icon: PenTool, description: "Tailored designs that seamlessly integrate with your existing products and architectural requirements." },
-      { titlePart1: "Rapid", titlePart2: "prototypes", icon: Zap, description: "Fast-tracked prototyping so you can test and iterate before committing to full-scale production." },
-      { titlePart1: "Strict", titlePart2: "testing", icon: TestTube, description: "Rigorous quality checks at every engineering phase to meet global safety and performance standards." },
-      { titlePart1: "System", titlePart2: "validation", icon: CheckCircle2, description: "Comprehensive end-to-end validation of the complete product lifecycle." },
+      { titlePart1: "SOC &", titlePart2: "Sensor Pairing", icon: Cpu, description: "Every SOC behaves differently with every sensor. We test the combinations rather than trusting the datasheet, and we keep the footage that proves it.", image: "/images/engineering_soc_1790154940576.jpg" },
+      { titlePart1: "Lens &", titlePart2: "Field of view", icon: Wifi, description: "Focal length, aperture and coating chosen against the mounting position, so a number plate is readable where it actually matters.", image: "/images/engineering_lens_1790154954815.jpg" },
+      { titlePart1: "Memory &", titlePart2: "Endurance", icon: Database, description: "SD card class, controller and write pattern matched to loop recording, so cards survive the duty cycle instead of failing in month four.", image: "/images/engineering_memory_1790154966611.jpg" },
+      { titlePart1: "Thermal &", titlePart2: "Power", icon: Thermometer, description: "Windscreen temperature, boot time and low-voltage behaviour engineered in at design stage, not discovered in the field.", image: "/images/engineering_thermal_1790154980139.jpg" },
     ],
   },
   {
@@ -69,58 +72,57 @@ const SLIDES = [
     title: "Benchmarked against the closest competition",
     description: "We constantly analyse and benchmark our solutions against industry leaders to keep performance and value ahead of the field.",
     cards: [
-      { titlePart1: "Market", titlePart2: "analysis", icon: BarChart3, description: "A close read of market trends to position your product ahead of the curve." },
-      { titlePart1: "Competitor", titlePart2: "insight", icon: Radar, description: "Actionable intelligence on competitor products to define clear differentiation strategies." },
-      { titlePart1: "Performance", titlePart2: "metrics", icon: Gauge, description: "Data-driven performance metrics to validate product superiority." },
-      { titlePart1: "Value", titlePart2: "proposition", icon: Award, description: "Balancing cost, quality and time-to-market to maximise return." },
+      { titlePart1: "Market", titlePart2: "analysis", icon: BarChart3, description: "A close read of market trends to position your product ahead of the curve.", image: "/images/benchmarking_market_1790154993099.jpg" },
+      { titlePart1: "Competitor", titlePart2: "insight", icon: Radar, description: "Actionable intelligence on competitor products to define clear differentiation strategies.", image: "/images/benchmarking_competitor_1790155267954.jpg" },
+      { titlePart1: "Performance", titlePart2: "metrics", icon: Gauge, description: "Data-driven performance metrics to validate product superiority.", image: "/images/dashcam_eng_1_1790056154997.jpg" },
+      { titlePart1: "Value", titlePart2: "proposition", icon: Award, description: "Balancing cost, quality and time-to-market to maximise return.", image: "/images/dashcam_eng_2_1790056308642.jpg" },
     ],
   },
   {
     id: "04",
     category: "Manufacturing",
     title: "Assembled, aged and tested on our own line",
-    description: "End-to-end manufacturing capability, giving us direct control over quality and a streamlined production line.",
+    description: "Every camera in the range is assembled in-house in India — not drop-shipped from an overseas vendor.",
     cards: [
-      { titlePart1: "In-house", titlePart2: "assembly", icon: Factory, description: "Purpose-built assembly lines tailored for precision manufacturing." },
-      { titlePart1: "Aging", titlePart2: "process", icon: Timer, description: "Rigorous aging tests to guarantee long-term reliability in the field." },
-      { titlePart1: "Quality", titlePart2: "control", icon: ShieldCheck, description: "Multi-stage quality gates to catch defects before they leave the factory." },
-      { titlePart1: "Scalable", titlePart2: "production", icon: TrendingUp, description: "Flexible lines that scale in step with your demand." },
+      { titlePart1: "36 HRS", titlePart2: "Minimum ageing test", icon: Timer, description: "Every product runs continuously in-house before it is cleared for despatch, so infant failures are caught by us and not by your customer.", image: "/images/dashcam_eng_3_1790056319698.jpg" },
+      { titlePart1: "100%", titlePart2: "SD card compatibility", icon: CheckCircle2, description: "Compatibility testing across the card brands, classes and capacities your market actually buys, because most field complaints start with the card.", image: "/images/dashcam_eng_4_1790056478824.jpg" },
+      { titlePart1: "INDIA", titlePart2: "Made on our own line", icon: Factory, description: "Assembled on our line, so a build change does not wait in a queue behind somebody else's order at an overseas factory.", image: "/images/dashcam_tooling_1_1790055961525.jpg" },
+      { titlePart1: "IN-HOUSE", titlePart2: "Easy warranty redressal", icon: ShieldCheck, description: "Warranty handled by the team that built the unit — no third-party depot in the loop and no shipping the fault overseas.", image: "/images/dashcam_tooling_2_1790055974859.jpg" },
     ],
   },
   {
     id: "05",
     category: "Enablement",
     title: "Training and back-end support for your team",
-    description: "We don't just deliver products — we make sure your team is equipped and trained to manage them.",
+    description: "Your sales team should be able to answer any question a customer asks across the counter.",
     cards: [
-      { titlePart1: "Team", titlePart2: "training", icon: GraduationCap, description: "Structured training modules for your engineering and support teams." },
-      { titlePart1: "Technical", titlePart2: "support", icon: Wrench, description: "A dedicated technical support line for troubleshooting and diagnostics." },
-      { titlePart1: "Knowledge", titlePart2: "base", icon: BookOpen, description: "Documentation and reference material tailored to your deployment." },
-      { titlePart1: "Live", titlePart2: "assistance", icon: Headphones, description: "Real-time support channels that keep downtime to a minimum." },
+      { titlePart1: "Sales", titlePart2: "training", icon: GraduationCap, description: "Product, positioning and objection handling, delivered to your field team at launch and refreshed whenever the line-up changes.", image: "/images/dashcam_tooling_3_1790055998467.jpg" },
+      { titlePart1: "Feature", titlePart2: "explanation", icon: BookOpen, description: "Plain-language walk-throughs of the app, parking mode, GPS and the 4G features — with demo units your team can keep.", image: "/images/dashcam_tooling_4_1790056141782.jpg" },
+      { titlePart1: "Query", titlePart2: "desk", icon: Headphones, description: "A named back-end team for escalations from your people, not a generic support inbox that answers in four days.", image: "/images/dashcam_dual_1790055700928.jpg" },
+      { titlePart1: "Counter", titlePart2: "collateral", icon: FileText, description: "Catalogues, comparison sheets, demo videos and display material supplied with the range and updated with it.", image: "/images/dashcam_module_1790055685809.jpg" },
     ],
   },
   {
     id: "06",
     category: "Compliance",
     title: "BIS support for your product line-up",
-    description: "Navigating regulatory requirements with a dedicated compliance and certification team.",
+    description: "MOSFET Tech Solutions is registered as a manufacturer under BIS India, and can legally support BIS certification for your product line-up.",
     cards: [
-      { titlePart1: "BIS", titlePart2: "certification", icon: BadgeCheck, description: "End-to-end handling of the BIS certification process." },
-      { titlePart1: "Regulatory", titlePart2: "advisory", icon: ScrollText, description: "Guidance on local and international compliance standards." },
-      { titlePart1: "Document", titlePart2: "preparation", icon: FileText, description: "Streamlined preparation of required legal and technical documentation." },
-      { titlePart1: "Audit", titlePart2: "support", icon: Users, description: "On-ground support during facility and product audits." },
+      { titlePart1: "Registered", titlePart2: "manufacturer", icon: BadgeCheck, description: "Our registration is already live, so your line-up can be brought under it rather than starting the process from zero.", image: "/images/dashcam_compact_1790055671221.jpg" },
+      { titlePart1: "Documentation", titlePart2: "prepared", icon: ScrollText, description: "Test reports, factory documentation and application paperwork prepared and filed by our compliance team.", image: "/images/dashcam_stalk_1790055651797.jpg" },
+      { titlePart1: "Timeline", titlePart2: "visibility", icon: Timer, description: "Certification steps are planned alongside tooling and production, so a launch date is not lost waiting on paperwork.", image: "/images/suv_camera_purple.jpg" },
+      { titlePart1: "Ongoing", titlePart2: "compliance", icon: ShieldCheck, description: "Renewals, model additions and specification changes tracked for the life of the range.", image: "/images/camera_lens_green.jpg" },
     ],
   },
   {
     id: "07",
     category: "Software",
     title: "Software is our core",
-    description: "Hardware is only half the job. Our software stack is what keeps it intelligent, secure and scalable.",
+    description: "The unified cloud platform that every camera, telematics and sensory product in the range runs on — built and maintained by MOSFET Tech's own team.",
     cards: [
-      { titlePart1: "Firmware", titlePart2: "development", icon: Cpu, description: "Custom firmware tuned for power efficiency and performance." },
-      { titlePart1: "Cloud", titlePart2: "integration", icon: Cloud, description: "Straightforward connectivity with major cloud platforms and custom backends." },
-      { titlePart1: "Over-the-air", titlePart2: "updates", icon: RefreshCw, description: "Reliable, secure OTA update mechanisms for fleets of devices." },
-      { titlePart1: "Security", titlePart2: "protocols", icon: KeyRound, description: "Enterprise-grade encryption and secure-boot implementations." },
+      { titlePart1: "SAAS", titlePart2: "Unified cloud platform", icon: Cloud, description: "Powering smart mobility, fleets, EV ecosystems and emergency operations from one platform.", image: "/images/saas_main_header.jpg" },
+      { titlePart1: "05", titlePart2: "Platform products", icon: Layers, description: "Fleet Management System, Emergency Response & SOS, Last Mile Delivery, AI Insights Engine and Bus (School & Transport) Management.", image: "/images/saas_fms.jpg" },
+      { titlePart1: "INDIA", titlePart2: "Made and hosted in India", icon: ShieldCheck, description: "Designed and developed in India, for the vehicles, roads and operations we know. Customer data stays on servers hosted in India.", image: "/images/saas_ai_insights.jpg" },
     ],
   },
 ];
@@ -347,28 +349,7 @@ export default function CapabilitiesShowcase() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {slide.cards.map((card, cardIdx) => {
-                      const allImages = [
-                        "/images/dashcam_stalk_1790055651797.jpg",
-                        "/images/dashcam_compact_1790055671221.jpg",
-                        "/images/dashcam_module_1790055685809.jpg",
-                        "/images/dashcam_dual_1790055700928.jpg",
-                        "/images/dashcam_eng_1_1790056154997.jpg",
-                        "/images/dashcam_eng_2_1790056308642.jpg",
-                        "/images/dashcam_eng_3_1790056319698.jpg",
-                        "/images/dashcam_eng_4_1790056478824.jpg",
-                        "/images/dashcam_tooling_1_1790055961525.jpg",
-                        "/images/dashcam_tooling_2_1790055974859.jpg",
-                        "/images/dashcam_tooling_3_1790055998467.jpg",
-                        "/images/dashcam_tooling_4_1790056141782.jpg",
-                        "/images/dashcam_orange.jpg",
-                        "/images/dashcam_blue.jpg",
-                        "/images/camera_lens_green.jpg",
-                        "/images/suv_camera_purple.jpg",
-                      ];
-
-                      const slideIndex = parseInt(slide.id) - 1;
-                      const imageIndex = (slideIndex * 4 + cardIdx) % allImages.length;
-                      const img = allImages[imageIndex];
+                      const img = card.image;
                       const colors = ["white", "white", "white", "white"];
                       const color = colors[cardIdx % 4];
 

@@ -125,9 +125,9 @@ const Header = () => {
         onMouseEnter={closeWithDelay}
       ></div>
 
-      <header className={`w-full fixed top-0 left-0 flex py-3 px-4 sm:py-[0.8rem] sm:px-[3rem] z-[1999] transition-colors duration-300 ${scrolled ? "bg-[#ff3030]" : "bg-transparent"}`}>
-        <Link href="/" className="max-md:hidden flex items-center bg-white px-3 py-1.5 ">
-          <div className="w-[100px]">
+      <header className={`w-full fixed top-0 left-0 flex py-3 px-4 items-center sm:py-[0.8rem] sm:px-[3rem] z-[1999] transition-colors duration-300 ${scrolled ? "bg-[#ff3030]" : "bg-transparent"}`}>
+        <Link href="/" className="max-md:hidden flex items-center h-[fit] bg-white px-3 py-1 -skew-x-[15deg]">
+          <div className="w-[100px] skew-x-[15deg]">
             <img src={`/logo.png`} alt="MOSFET Tech" className="w-full h-auto object-contain" />
           </div>
         </Link>
