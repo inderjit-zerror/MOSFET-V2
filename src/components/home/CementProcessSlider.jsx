@@ -382,9 +382,9 @@ export default function CapabilitiesShowcase() {
                               </span>
                             </h3>
 
-                            <p className="text-white/60 text-sm mt-auto">
+                            {/* <p className="text-white/60 text-sm mt-auto">
                               {card.description}
-                            </p>
+                            </p> */}
                           </div>
                         </div>
                       );
