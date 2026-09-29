@@ -218,9 +218,6 @@ export default function HeroScrollSection() {
         </div>
 
         <section className=" TopDetailSection w-full overflow-hidden opacity-0  h-full absolute top-0 left-0 z-99">
-          {/* Background image */}
-
-          {/* Dark overlay for text legibility */}
           <div className="absolute inset-0 bg-black/50" />
 
           <div className="relative z-10 mx-auto flex min-h-[90vh] w-full max-w-[90rem] items-center px-5 py-16 sm:px-[6vw] sm:py-24">
