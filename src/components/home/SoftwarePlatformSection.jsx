@@ -107,7 +107,7 @@ export default function SoftwarePlatformSection() {
       <div className="mx-auto mb-16 flex flex-col justify-center items-center text-center">
         <BlurText as="h2" className="heading2 text-white!">
           SOFTWARE IS
-          <span className="text-[red]">OUR CORE.</span>
+          <span className="text-[red] ml-2"> OUR CORE.</span>
         </BlurText>
         <p className="paragraph text-white/70! max-w-4xl mt-6">
           A unified cloud platform powering smart mobility, fleets, EV ecosystems, and emergency operations. The platform is built and maintained by MOSFET Tech&apos;s own team, and it ties every camera, telematics and sensory product together.

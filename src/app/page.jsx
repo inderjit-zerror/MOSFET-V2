@@ -18,19 +18,23 @@ const HomePage = () => {
       <Hero />
       <CementEmissionsSection />
 
-      {/* <HeroScrollSection /> */}
+
 
       <CementProcessSlider />
       <SoftwarePlatformSection />
 
-      <DragCompareSection />
+      {/* <DragCompareSection /> */}
       <WithOrWithoutMosfet />
       <HeroDecarbonizationSection />
 
 
       <PartnersCollaborators />
 
+      <HeroScrollSection />
+
       <FuturePlansSection />
+
+
 
 
       {/* <NewsPress /> */}

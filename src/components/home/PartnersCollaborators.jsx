@@ -1,155 +1,100 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import { useRef } from "react";
 import Image from "next/image";
-import InTitle from "../common/InTitle";
-import GridLine from "../common/GridLine";
 
 const partners = [
   {
-    name: "AUTOYOU",
-    href: "#",
-    logo: <span className="tracking-widest uppercase font-bold text-sm sm:text-base md:text-lg opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 text-center">AUTOYOU</span>,
+    name: "TATA",
+    logo: <Image src="/partners/tata.svg" alt="TATA CARS" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />,
   },
   {
-    name: "MOBIS",
-    href: "#",
-    logo: <span className="tracking-widest uppercase font-bold text-sm sm:text-base md:text-lg opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 text-center">MOBIS</span>,
+    name: "MARUTI SUZUKI",
+    logo: <Image src="/partners/suzuki_new.svg" alt="SUZUKI" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
   },
   {
-    name: "ADOBE",
-    href: "#",
-    logo: <Image src="/partners/adobe.png" alt="ADOBE" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
+    name: "MAHINDRA",
+    logo: <Image src="/partners/mahindra_twin_peaks.svg" alt="MAHINDRA" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
   },
   {
-    name: "AVL",
-    href: "#",
-    logo: <Image src="/partners/avl.png" alt="AVL" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
+    name: "HYUNDAI",
+    logo: <Image src="/partners/hyundai.svg" alt="HYUNDAI" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
   },
   {
-    name: "MG",
-    href: "#",
-    logo: <Image src="/partners/mg.png" alt="MG" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
+    name: "KIA",
+    logo: <Image src="/partners/kia.svg" alt="KIA" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
   },
   {
-    name: "TATA CARS",
-    href: "#",
-    logo: <Image src="/partners/tata.svg" alt="TATA CARS" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
-  },
-  {
-    name: "SUZUKI",
-    href: "#",
-    logo: <span className="tracking-widest uppercase font-bold text-sm sm:text-base md:text-lg opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 text-center">SUZUKI</span>,
+    name: "TOYOTA",
+    logo: <Image src="/partners/toyota.svg" alt="TOYOTA" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
   },
   {
     name: "HONDA",
-    href: "#",
-    logo: <Image src="/partners/honda.svg" alt="HONDA" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
+    logo: <Image src="/partners/honda_new.svg" alt="HONDA" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
   },
   {
-    name: "CITROËN",
-    href: "#",
-    logo: <Image src="/partners/citroen.png" alt="CITROËN" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
+    name: "MG",
+    logo: <Image src="/partners/mg_new.svg" alt="MG" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
   },
   {
-    name: "GOMECHANIC",
-    href: "#",
-    logo: <Image src="/partners/gomechanic.png" alt="GOMECHANIC" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
+    name: "RENAULT",
+    logo: <Image src="/partners/renault.svg" alt="RENAULT" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
   },
   {
-    name: "MOTHERSON",
-    href: "#",
-    logo: <Image src="/partners/motherson.png" alt="MOTHERSON" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
+    name: "VOLKSWAGEN",
+    logo: <Image src="/partners/volkswagen.svg" alt="VOLKSWAGEN" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
   },
-  {
-    name: "DYLECT",
-    href: "#",
-    // logo: <Image src="/partners/dylect.png" alt="DYLECT" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
-    logo: (
-      <span className="flex flex-col items-center opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
-        <span className="font-bold text-sm sm:text-base md:text-lg">DYLECT</span>
-      </span>
-    ),
-  },
-  {
-    name: "CATS",
-    href: "#",
-    logo: (
-      <span className="flex flex-col items-center opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
-        <span className="font-bold text-sm sm:text-base md:text-lg">CATS</span>
-      </span>
-    ),
-  },
-  {
-    name: "LANDMARK",
-    href: "#",
-    logo: (
-      <span className="flex flex-col items-center opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
-        <span className="font-bold text-sm sm:text-base md:text-lg">LANDMARK</span>
-      </span>
-    ),
-  },
-  {
-    name: "YOUR BRAND",
-    href: "#",
-    logo: <Image src="/partners/yourbrand.svg" alt="YOUR BRAND" width={120} height={60} className="object-contain w-auto h-8 sm:h-10 md:h-12 opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />,
-  }
 ];
 
 export default function PartnersCollaborators() {
   const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(".partner-cell", {
-        opacity: 0,
-        y: 20,
-        duration: 0.8,
-        stagger: 0.05,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 70%",
-        }
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
     <section
       ref={sectionRef}
-      className="bg-[#050505] text-white py-24 sm:py-32 px-4 md:px-12 lg:px-16"
+      className="bg-[#050505] text-white py-24 sm:py-32 overflow-hidden"
     >
-      <div className=" mx-auto">
-
-        <div className="flex flex-col items-center text-center mb-16 lg:mb-24">
+      <style>{`
+        @keyframes marqueeLeftToRight {
+          from { transform: translateX(-50%); }
+          to { transform: translateX(0%); }
+        }
+        .animate-marquee-ltr {
+          display: flex;
+          width: max-content;
+          animation: marqueeLeftToRight 30s linear infinite;
+        }
+        .animate-marquee-ltr:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+      <div className="mx-auto px-4 md:px-12 lg:px-16 mb-16 lg:mb-24">
+        <div className="flex flex-col items-center text-center">
           <h2 className="heading2 mt-4 !text-white">
-            <span className="text-[red]">  TRUSTED BY THE PEOPLE </span> WHO
+            <span className="text-[red]">TRUSTED BY THE PEOPLE</span> WHO
             PUT OUR SOLUTIONS TO WORK.
           </h2>
           <p className="paragraph !text-white/70 max-w-2xl mt-6">
             MOSFET works with OEMs, fleet operators, dealers, and retail partners across India to bring connected vehicle technology to every kind of driver.
           </p>
         </div>
+      </div>
 
-        {/* Logo Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border-t border-l border-white/30">
-          {partners.map((partner, i) => (
-            <a
-              key={partner.name}
-              href={partner.href}
-              className="partner-cell group flex items-center justify-center h-32 sm:h-40 lg:h-48 border-r border-b border-white/30 hover:bg-white/[0.03] transition-colors duration-500"
+      {/* Infinite Logo Marquee Left to Right */}
+      <div className="w-full overflow-hidden flex relative before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-[150px] before:bg-gradient-to-r before:from-[#050505] before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-[150px] after:bg-gradient-to-l after:from-[#050505] after:to-transparent">
+        <div className="animate-marquee-ltr flex items-center gap-16 sm:gap-24 pl-16 sm:pl-24">
+          {/* Double the list for infinite scrolling effect */}
+          {[...partners, ...partners].map((partner, i) => (
+            <div
+              key={`${partner.name}-${i}`}
+              className="flex items-center justify-center flex-shrink-0"
             >
-              <div className="text-white/60 group-hover:text-white font-semibold! transition-colors duration-500 scale-90 sm:scale-100">
+              <div className="text-white hover:text-white font-semibold transition-colors duration-500 scale-90 sm:scale-100 flex items-center justify-center min-w-[120px]">
                 {partner.logo}
               </div>
-            </a>
+            </div>
           ))}
         </div>
-
       </div>
     </section>
   );

@@ -17,7 +17,6 @@ const PARAGRAPH_TWO =
 
 export default function CementEmissionsSection() {
   const sectionRef = useRef(null);
-  const pinRef = useRef(null);
   const paraOneRef = useRef(null);
   const paraTwoRef = useRef(null);
 
@@ -33,49 +32,41 @@ export default function CementEmissionsSection() {
         linesClass: "cura-line",
       });
 
-      gsap.set(splitTwo.lines, {
+      gsap.set([splitOne.lines, splitTwo.lines], {
         opacity: 0,
         filter: "blur(0.6rem)",
         yPercent: 30,
       });
-      gsap.set(paraTwoRef.current, { autoAlpha: 1 });
-      gsap.set(paraOneRef.current, { autoAlpha: 1 });
+      gsap.set([paraOneRef.current, paraTwoRef.current], { autoAlpha: 1 });
 
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top top",
-          end: "bottom bottom", // shorter scroll distance = faster feel
+          start: "top 75%",
+          end: "top 30%",
           scrub: true,
-          pin: pinRef.current,
-          anticipatePin: 1,
-          // markers: true,
         },
       });
 
       tl.to(splitOne.lines, {
-        opacity: 0,
-        filter: "blur(0.6rem)",
-        yPercent: -30,
-        stagger: 0.04, // was 0.06
-        duration: 0.5, // was 0.7
-        ease: "power2.in",
-      });
-
-      tl.to(
+        opacity: 1,
+        filter: "blur(0rem)",
+        yPercent: 0,
+        stagger: 0.08,
+        duration: 0.8,
+        ease: "power2.out",
+      }).to(
         splitTwo.lines,
         {
           opacity: 1,
           filter: "blur(0rem)",
           yPercent: 0,
-          stagger: 0.05, // was 0.08
-          duration: 0.7, // was 1
+          stagger: 0.08,
+          duration: 0.8,
           ease: "power2.out",
         },
-        "-=0.15", // slightly tighter overlap
+        "-=0.4"
       );
-
-      tl.to({}, { duration: 0.5 }); // was 0.8, shorter hold at end
     }, sectionRef);
 
     return () => ctx.revert();
@@ -84,10 +75,8 @@ export default function CementEmissionsSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full  h-[200vh] overflow-hidden z-99 bg-[#000000]"
-
+      className="relative w-full overflow-hidden z-99 bg-[#000000] py-24 sm:py-32"
     >
-
       <style>{`
         @keyframes mosfetFadeSlide {
           from { opacity: 0; transform: translateY(4px); }
@@ -110,35 +99,26 @@ export default function CementEmissionsSection() {
         <rect width="100%" height="100%" fill="url(#mosfet-trace)" />
       </svg>
 
-      <div
-        ref={pinRef}
-        className=" sticky top-0 left-0 flex h-[100vh] w-full items-center justify-center overflow-hidden "
-      >
+      <div className="relative z-10 mx-auto flex w-full flex-col items-center text-center gap-12">
+        <div className="w-[80vw] flex flex-col gap-8">
+          <h5
+            ref={paraOneRef}
+            className="heading4 uppercase m-0 text-white invisible"
+          >
+            {PARAGRAPH_ONE}
+          </h5>
 
-        <div className="relative z-10 mx-auto flex w-[90vw] sm:w-[80vw] max-w-[64rem] flex-col items-center text-center">
+          <h5
+            ref={paraTwoRef}
+            className="heading4 uppercase m-0 text-[#EE2F2E] invisible"
+          >
+            {PARAGRAPH_TWO}
+          </h5>
+        </div>
 
-          <div className="relative w-full">
-            <h5
-              ref={paraOneRef}
-              className="absolute heading2 uppercase inset-0 m-0 text-white"
-            >
-              {PARAGRAPH_ONE}
-            </h5>
-
-            <h5
-              ref={paraTwoRef}
-              className="invisible heading2 uppercase m-0 text-[#EE2F2E]"
-            >
-              {PARAGRAPH_TWO}
-            </h5>
-
-            <div className="w-fit flex gap-5 mt-[10vh] mx-auto">
-              <Button txt={'DISCOVER OUR SOLUTIONS'} />
-              <Button2 txt={'WHY MOSFET TECH?'} />
-            </div>
-          </div>
-
-
+        <div className="w-fit flex flex-wrap justify-center gap-5 mx-auto mt-4">
+          <Button txt={'DISCOVER OUR SOLUTIONS'} />
+          <Button2 txt={'WHY MOSFET TECH?'} />
         </div>
       </div>
     </section>

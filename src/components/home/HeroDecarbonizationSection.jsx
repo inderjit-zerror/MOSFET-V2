@@ -258,7 +258,7 @@ export default function HeroDecarbonizationSection() {
         {/* Grid lines background — 2 vertical + 1 horizontal, like the reference */}
         <GridLine />
 
-        <img
+        {/* <img
           ref={img1Ref}
           src="/try4.png"
           alt="IMG"
@@ -286,7 +286,7 @@ export default function HeroDecarbonizationSection() {
           alt="IMG"
           aria-hidden="true"
           className="pointer-events-none absolute hidden sm:block scale-[3] bottom-[80%] left-[0%] w-[6vw] select-none will-change-transform"
-        />
+        /> */}
 
 
         {/* Content */}
@@ -321,18 +321,7 @@ export default function HeroDecarbonizationSection() {
             </div>
           </div>
 
-          {/* <h1 className="heading1 text-[#FBFBF8]!">
-            Ready to Upgrade Your Ride?
-          </h1>
 
-          <p className="paragraph my-5 sm:my-6 PH max-w-2xl text-[#FBFBF8]!">
-            From dash cams to audio and lighting, MOSFET builds the tech that keeps you safer, informed, and in control — on every route, every time.
-          </p>
-
-          <Button2 txt={"Speak with us"} /> */}
-
-          {/* Small underline accent */}
-          {/* <div className="mt-10 sm:mt-14 h-px w-16 bg-white/25" /> */}
         </div>
       </section>
     </div>

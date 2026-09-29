@@ -226,7 +226,7 @@ export default function HeroScrollSection() {
           <div className="relative z-10 mx-auto flex min-h-[90vh] w-full max-w-[90rem] items-center px-5 py-16 sm:px-[6vw] sm:py-24">
             <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 md:gap-8">
               {/* Left: Heading */}
-              <h2 className="heading1 text-[#ECEEE9]!">
+              <h2 className="heading3 text-[#ECEEE9]!">
                 Smarter Tech <br className="hidden sm:block" /> for Safer Vehicles <br className="hidden sm:block" />AI-driven automotive solutions across India
               </h2>
 
@@ -237,7 +237,7 @@ export default function HeroScrollSection() {
                 </p>
 
                 <p className="paragraph mt-6 text-[#ECEEE9]!">
-                 MOSFET is introducing a suite of advanced solutions that combine precision-engineered hardware with powerful AI-based software.
+                  MOSFET is introducing a suite of advanced solutions that combine precision-engineered hardware with powerful AI-based software.
                 </p>
 
                 <div className="mt-8 sm:mt-10">
