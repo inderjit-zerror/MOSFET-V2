@@ -86,7 +86,7 @@ const SLIDES = [
     cards: [
       { titlePart1: "36 HRS", titlePart2: "Minimum ageing test", icon: Timer, description: "Every product runs continuously in-house before it is cleared for despatch, so infant failures are caught by us and not by your customer.", image: "/images/thermal_power_1790681725549.jpg" },
       { titlePart1: "100%", titlePart2: "SD card compatibility", icon: CheckCircle2, description: "Compatibility testing across the card brands, classes and capacities your market actually buys, because most field complaints start with the card.", image: "/images/memory_endurance_1790681710018.jpg" },
-      { titlePart1: "INDIA", titlePart2: "Made on our own line", icon: Factory, description: "Assembled on our line, so a build change does not wait in a queue behind somebody else's order at an overseas factory.", image: "/images/soc_sensor_1790681674460.jpg" },
+      { titlePart1: "INDIA", titlePart2: "Made on our own line", icon: Factory, description: "Assembled on our line, so a build change does not wait in a queue behind somebody else's order at an overseas factory.", image: "/images/india_manufacturing_actual.jpg" },
       { titlePart1: "IN-HOUSE", titlePart2: "Easy warranty redressal", icon: ShieldCheck, description: "Warranty handled by the team that built the unit — no third-party depot in the loop and no shipping the fault overseas.", image: "/images/trial_tooling_1790681661775.jpg" },
     ],
   },
@@ -122,7 +122,7 @@ const SLIDES = [
     cards: [
       { titlePart1: "SAAS", titlePart2: "Unified cloud platform", icon: Cloud, description: "Powering smart mobility, fleets, EV ecosystems and emergency operations from one platform.", image: "/images/performance_metrics_1790681804112.jpg" },
       { titlePart1: "05", titlePart2: "Platform products", icon: Layers, description: "Fleet Management System, Emergency Response & SOS, Last Mile Delivery, AI Insights Engine and Bus (School & Transport) Management.", image: "/images/soc_sensor_1790681674460.jpg" },
-      { titlePart1: "INDIA", titlePart2: "Made and hosted in India", icon: ShieldCheck, description: "Designed and developed in India, for the vehicles, roads and operations we know. Customer data stays on servers hosted in India.", image: "/images/market_analysis_1790681763565.jpg" },
+      { titlePart1: "INDIA", titlePart2: "Made and hosted in India", icon: ShieldCheck, description: "Designed and developed in India, for the vehicles, roads and operations we know. Customer data stays on servers hosted in India.", image: "/images/india_manufacturing.jpg" },
     ],
   },
 ];
