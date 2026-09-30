@@ -5,44 +5,52 @@ import Image from "next/image";
 
 const partners = [
   {
-    name: "TATA",
-    logo: <Image src="/partners/tata_new.svg" alt="TATA CARS" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
-  },
-  {
-    name: "MARUTI SUZUKI",
+    name: "SUZUKI",
     logo: <Image src="/partners/suzuki_new.svg" alt="SUZUKI" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
-  },
-  {
-    name: "MAHINDRA",
-    logo: <Image src="/partners/mahindra_twin_peaks.svg" alt="MAHINDRA" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
-  },
-  {
-    name: "HYUNDAI",
-    logo: <Image src="/partners/hyundai.svg" alt="HYUNDAI" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
-  },
-  {
-    name: "KIA",
-    logo: <Image src="/partners/kia.svg" alt="KIA" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
-  },
-  {
-    name: "TOYOTA",
-    logo: <Image src="/partners/toyota.svg" alt="TOYOTA" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
   },
   {
     name: "HONDA",
     logo: <Image src="/partners/honda_new.svg" alt="HONDA" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
   },
+  // {
+  //   name: "BLAUPUNKT",
+  //   logo: <Image src="/partners/blaupunkt.png" alt="BLAUPUNKT" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
+  // },
+  // {
+  //   name: "UNO MINDA",
+  //   logo: <Image src="/partners/uno_minda.png" alt="UNO MINDA" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
+  // },
   {
-    name: "MG",
-    logo: <Image src="/partners/mg_new.svg" alt="MG" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
+    name: "AUTOYOU",
+    logo: <Image src="/partners/autoyou.svg" alt="AUTOYOU" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
   },
   {
-    name: "RENAULT",
-    logo: <Image src="/partners/renault.svg" alt="RENAULT" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
+    name: "MOBIS",
+    logo: <Image src="/partners/mobis.png" alt="MOBIS" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
   },
   {
-    name: "VOLKSWAGEN",
-    logo: <Image src="/partners/volkswagen.svg" alt="VOLKSWAGEN" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
+    name: "ADOBE",
+    logo: <Image src="/partners/adobe_real.svg" alt="ADOBE" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
+  },
+  {
+    name: "MOTHERSON",
+    logo: <Image src="/partners/motherson_new.svg" alt="MOTHERSON" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
+  },
+  {
+    name: "LANDMARK",
+    logo: <Image src="/partners/landmark.svg" alt="LANDMARK" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
+  },
+  {
+    name: "JCBL",
+    logo: <Image src="/partners/jcbl_new.png" alt="JCBL" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
+  },
+  {
+    name: "JEEP",
+    logo: <Image src="/partners/jeep_new.svg" alt="JEEP" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
+  },
+  {
+    name: "STELLANTIS",
+    logo: <Image src="/partners/stellantis_new.svg" alt="STELLANTIS" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
   },
 ];
 
@@ -104,9 +112,9 @@ export default function PartnersCollaborators() {
               >
                 <div className="group text-[#ECEEE9] hover:text-[#ECEEE9] font-semibold transition-colors duration-500 scale-90 sm:scale-100 flex items-center gap-4 justify-center">
                   {partner.logo}
-                  <span className="text-lg md:text-xl tracking-wider uppercase text-[#ECEEE9]/50 group-hover:text-[#ECEEE9] transition-colors duration-300">
+                  {/* <span className="text-lg md:text-xl tracking-wider uppercase text-[#ECEEE9]/50 group-hover:text-[#ECEEE9] transition-colors duration-300">
                     {partner.name}
-                  </span>
+                  </span> */}
                 </div>
               </div>
             ))}
@@ -124,9 +132,9 @@ export default function PartnersCollaborators() {
               >
                 <div className="group text-[#ECEEE9] hover:text-[#ECEEE9] font-semibold transition-colors duration-500 scale-90 sm:scale-100 flex items-center gap-4 justify-center">
                   {partner.logo}
-                  <span className="text-lg md:text-xl tracking-wider uppercase text-[#ECEEE9]/50 group-hover:text-[#ECEEE9] transition-colors duration-300">
+                  {/* <span className="text-lg md:text-xl tracking-wider uppercase text-[#ECEEE9]/50 group-hover:text-[#ECEEE9] transition-colors duration-300">
                     {partner.name}
-                  </span>
+                  </span> */}
                 </div>
               </div>
             ))}

@@ -266,7 +266,7 @@ export default function CapabilitiesShowcase() {
             .<br />
             <span className="text-[black]">PRODUCT FOR YOUR LINEUP.</span>
           </h2>
-          <p className="paragraph text-[#ECEEE9]! max-w-xl mx-auto">
+          <p className="paragraph text-[#ECEEE9]/80! max-w-xl mx-auto">
             Tooling, product engineering, competitor benchmarking, local assembly, team training and BIS compliance — before the order and after it.
           </p>
         </div>
