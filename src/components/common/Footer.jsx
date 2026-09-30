@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden pt-16 md:pt-24 pb-8 text-white bg-black">
+    <footer className="relative overflow-hidden pt-16 md:pt-24 pb-8 text-[#ECEEE9] bg-black">
       {/* Background Video & Tint Overlay */}
       {/* <video
         src="/video/FV.mp4"
@@ -27,23 +27,20 @@ export default function Footer() {
               <h2 className="text-[2.5rem] md:text-[3rem] font-light leading-none tracking-tight text-[#ff3030]">
                 mosfet
               </h2>
-              <p className="mt-1 paragraph text-white! opacity-80">
+              <p className="mt-1 paragraph text-[#ECEEE9]! opacity-80">
                 Tech Solutions Pvt. Ltd.
               </p>
             </div>
-            <p className="paragraph PP text-white! opacity-70">
+            <p className="paragraph PP text-[#ECEEE9]! opacity-70">
               Engineered MOSFET power solutions designed for high efficiency and reliable performance.
             </p>
             <div className="flex items-center gap-3 mt-2">
-              <span className="text-[0.95rem] text-white/90 PP mr-2">Follow us:</span>
+              <span className="text-[0.95rem] text-[#ECEEE9]/90 PP mr-2">Follow us:</span>
               {["f", "𝕏", "◎", "in"].map((item, index) => (
                 <a
                   key={item}
                   href="#"
-                  className={`flex h-[2.2rem] w-[2.2rem] items-center justify-center rounded-full border-[0.0625rem] text-[0.85rem] transition ${index === 0
-                    ? "border-[#ff3030] bg-[#ff3030] text-white"
-                    : "border-white/25 text-white hover:border-[#ff3030] hover:text-[#ff3030]"
-                    }`}
+                  className="flex h-[2.2rem] w-[2.2rem] items-center justify-center rounded-full border-[0.0625rem] text-[0.85rem] transition border-white/25 text-[#ECEEE9] hover:bg-[#ff3030] hover:border-[#ff3030] hover:text-[#ECEEE9]"
                 >
                   {item}
                 </a>
@@ -73,10 +70,10 @@ export default function Footer() {
           <div className="flex flex-col gap-8">
             <div>
               <h3 className="mb-5 paragraph text-[#ff3030]! capitalize">Contact Us</h3>
-              <p className="paragraph PP text-white! opacity-70 mb-2">
+              <p className="paragraph PP text-[#ECEEE9]! opacity-70 mb-2">
                 +91 9999878104<br />+91 9910700028
               </p>
-              <p className="paragraph PP text-white! opacity-70">
+              <p className="paragraph PP text-[#ECEEE9]! opacity-70">
                 B-66, 1st Floor, Naraina Industrial Area, Phase 1, New Delhi, India
               </p>
             </div>
@@ -104,17 +101,17 @@ export default function Footer() {
 
           {/* Huge Typography Watermark */}
           <div className="w-full border-t border-white/10 pt-8 pb-4 flex justify-center overflow-hidden">
-            <h1 className="text-[20vw] leading-[0.75] font-black text-center text-white tracking-tighter uppercase select-none">
+            <h1 className="text-[20vw] leading-[0.75] font-black text-center text-[#ECEEE9] tracking-tighter uppercase select-none">
               MOSFET
             </h1>
           </div>
 
           {/* Footer Bar */}
-          <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50 PP pt-6">
+          <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#ECEEE9]/50 PP pt-6">
             <p>© All Right Reserved. 2026. Mosfet Tech Solutions Pvt. Ltd.</p>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-[#ECEEE9] transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-[#ECEEE9] transition-colors">Terms of Service</a>
             </div>
           </div>
         </div>
@@ -133,7 +130,7 @@ function FooterColumn({ title, links }) {
           <li key={link}>
             <a
               href="#"
-              className="paragraph PP text-white/70! hover:text-[#ff3030]! transition-colors"
+              className="paragraph PP text-[#ECEEE9]/70! hover:text-[#ff3030]! transition-colors"
             >
               {link}
             </a>

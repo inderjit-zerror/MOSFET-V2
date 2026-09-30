@@ -21,11 +21,10 @@ export default function FilterBar({
             <button
               key={cat.id}
               onClick={() => onChange(cat.id)}
-              className={`filter-pill snap-start whitespace-nowrap  rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
-                isActive
-                  ? "bg-[#EE2F2E] text-white shadow-lg shadow-mosfet-amber/20"
+              className={`filter-pill snap-start whitespace-nowrap  rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300 ${isActive
+                  ? "bg-[#EE2F2E] text-[#ECEEE9] shadow-lg shadow-mosfet-amber/20"
                   : "BGLightTint text-mosfet-muted  hover:bg-white/10"
-              }`}
+                }`}
             >
               {cat.label}
             </button>
@@ -53,14 +52,13 @@ export default function FilterBar({
             sortDir === "asc"
               ? "Sorted: price low to high"
               : sortDir === "desc"
-              ? "Sorted: price high to low"
-              : "Sort by price"
+                ? "Sorted: price high to low"
+                : "Sort by price"
           }
-          className={`flex h-11 w-11 shrink-0 items-center justify-center  BGLightTint rounded-full  transition-colors ${
-            sortDir
+          className={`flex h-11 w-11 shrink-0 items-center justify-center  BGLightTint rounded-full  transition-colors ${sortDir
               ? "border-mosfet-amber text-mosfet-amber"
               : "border-mosfet-line text-mosfet-muted  "
-          }`}
+            }`}
         >
           <ArrowUpDown size={16} />
         </button>

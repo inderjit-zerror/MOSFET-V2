@@ -34,11 +34,11 @@ export default function MoreDependableSection() {
     }, []);
 
     return (
-        <section className="bg-[#EE2F2E] text-white py-24 px-4 md:px-12 lg:px-10">
+        <section className="bg-[#EE2F2E] text-[#ECEEE9] py-24 px-4 md:px-12 lg:px-10">
             <div className=" mx-auto">
                 <div className="max-w-3xl ">
 
-                    <BlurText as="h2" className=" heading1 mt-4 text-white">
+                    <BlurText as="h2" className=" heading1 mt-4 text-[#ECEEE9]">
                         BUILD CONFIDENCE <br className="hidden md:block" />
                         INTO <span className="text-[#202020]">EVERY DRIVE.</span>
                     </BlurText>
@@ -49,13 +49,13 @@ export default function MoreDependableSection() {
                     <div className="w-full md:w-2/5 flex flex-col gap-10">
                         {dependableBullets.map((bullet, i) => (
                             <div key={i} className="flex items-start gap-5">
-                                <div className="p-3 bg-white/20 rounded-xl text-white shrink-0 mt-1 shadow-inner shadow-white/10">
+                                <div className="p-3 bg-white/20 rounded-xl text-[#ECEEE9] shrink-0 mt-1 shadow-inner shadow-white/10">
                                     <ShieldCheck size={28} />
                                 </div>
                                 <div>
-                                    <p className=" text-white/95">{bullet.text}</p>
+                                    <p className=" text-[#ECEEE9]/95">{bullet.text}</p>
                                     {bullet.tag && (
-                                        <span className="inline-block mt-4 tracking-wide text-white bg-[#202020] border border-[#202020] rounded-full px-4 py-1.5 shadow-lg">
+                                        <span className="inline-block mt-4 tracking-wide text-[#ECEEE9] bg-[#202020] border border-[#202020] rounded-full px-4 py-1.5 shadow-lg">
                                             {bullet.tag}
                                         </span>
                                     )}

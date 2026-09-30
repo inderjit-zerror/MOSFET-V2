@@ -91,7 +91,7 @@ export default function NewsPress() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-fit overflow-hidden text-white z-99 bg-[#EE2F2E]"
+      className="relative h-fit overflow-hidden text-[#ECEEE9] z-99 bg-[#EE2F2E]"
 
     >
       <GridLine />
@@ -141,7 +141,7 @@ export default function NewsPress() {
                   )}
 
                   {/* {!isHero && (
-                    <span className="pointer-events-none absolute -right-1 -top-3 select-none text-[76px] font-light leading-none text-white/[0.08]">
+                    <span className="pointer-events-none absolute -right-1 -top-3 select-none text-[76px] font-light leading-none text-[#ECEEE9]/[0.08]">
                       {item.code}
                     </span>
                   )} */}
@@ -154,7 +154,7 @@ export default function NewsPress() {
                     )} */}
 
                     {isHero && (
-                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/40 text-white opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 translate-x-1">
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/40 text-[#ECEEE9] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 translate-x-1">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
                           <path
                             d="M7 17L17 7M17 7H9M17 7V15"
@@ -170,7 +170,7 @@ export default function NewsPress() {
 
                   <div className={`relative z-10 p-6 ${isHero ? "pt-0" : ""}`}>
                     <h2
-                      className={`tracking-[-0.02em] text-white ${isHero
+                      className={`tracking-[-0.02em] text-[#ECEEE9] ${isHero
                         ? "max-w-[420px] text-2xl sm:text-[2rem]"
                         : "max-w-[240px] text-base sm:text-lg"
                         }`}

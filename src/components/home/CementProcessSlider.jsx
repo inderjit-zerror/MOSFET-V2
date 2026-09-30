@@ -48,10 +48,10 @@ const SLIDES = [
     description:
       "We design and own the tools — for the camera housing and, where the programme needs it, for the vehicle part it sits in.",
     cards: [
-      { titlePart1: "Exclusive", titlePart2: "tools", icon: Lock, description: "A mould developed for one customer is not offered to another. The housing stays yours.", image: "/images/exclusive_mould_1790681605246.jpg" },
-      { titlePart1: "Family", titlePart2: "moulds", icon: Layers, description: "A shared core with interchangeable inserts, so variants come off one tool at a fraction of the NRE.", image: "/images/family_mould_1790681617611.jpg" },
-      { titlePart1: "Coupled", titlePart2: "parts", icon: Link2, description: "Camera tool and vehicle-part tool developed together, so tolerance, grain and finish match across the joint.", image: "/images/coupled_parts_1790681646282.jpg" },
-      { titlePart1: "Trial before", titlePart2: "tooling", icon: ClipboardCheck, description: "NRE and lead time are confirmed only after a physical fitment trial on the target vehicle.", image: "/images/trial_tooling_1790681661775.jpg" },
+      { titlePart1: "Exclusive", titlePart2: "tools", icon: Lock, description: "Custom moulds exclusively for your products.", image: "/images/exclusive_mould_1790681605246.jpg" },
+      { titlePart1: "Family", titlePart2: "moulds", icon: Layers, description: "Shared core moulds for interchangeable variants.", image: "/images/family_mould_1790681617611.jpg" },
+      { titlePart1: "Coupled", titlePart2: "parts", icon: Link2, description: "Co-developed tools for perfect joint tolerance.", image: "/images/coupled_parts_1790681646282.jpg" },
+      { titlePart1: "Trial before", titlePart2: "tooling", icon: ClipboardCheck, description: "Confirming fitment before finalizing tooling timelines.", image: "/images/trial_tooling_1790681661775.jpg" },
     ],
   },
   {
@@ -60,10 +60,10 @@ const SLIDES = [
     title: "Customised development & product engineering",
     description: "Which SOC works best with which sensor, lens and memory — decided on the bench, for the quality and the price the programme needs.",
     cards: [
-      { titlePart1: "SOC &", titlePart2: "Sensor Pairing", icon: Cpu, description: "Every SOC behaves differently with every sensor. We test the combinations rather than trusting the datasheet, and we keep the footage that proves it.", image: "/images/soc_sensor_1790681674460.jpg" },
-      { titlePart1: "Lens &", titlePart2: "Field of view", icon: Wifi, description: "Focal length, aperture and coating chosen against the mounting position, so a number plate is readable where it actually matters.", image: "/images/lens_fov_1790681687186.jpg" },
-      { titlePart1: "Memory &", titlePart2: "Endurance", icon: Database, description: "SD card class, controller and write pattern matched to loop recording, so cards survive the duty cycle instead of failing in month four.", image: "/images/memory_endurance_1790681710018.jpg" },
-      { titlePart1: "Thermal &", titlePart2: "Power", icon: Thermometer, description: "Windscreen temperature, boot time and low-voltage behaviour engineered in at design stage, not discovered in the field.", image: "/images/thermal_power_1790681725549.jpg" },
+      { titlePart1: "SOC &", titlePart2: "Sensor Pairing", icon: Cpu, description: "Testing optimal SOC and sensor combinations.", image: "/images/soc_sensor_1790681674460.jpg" },
+      { titlePart1: "Lens &", titlePart2: "Field of view", icon: Wifi, description: "Choosing optimal lenses for perfect visibility.", image: "/images/lens_fov_1790681687186.jpg" },
+      { titlePart1: "Memory &", titlePart2: "Endurance", icon: Database, description: "Matching SD endurance to loop recording.", image: "/images/memory_endurance_1790681710018.jpg" },
+      { titlePart1: "Thermal &", titlePart2: "Power", icon: Thermometer, description: "Engineering thermal and low-voltage stability.", image: "/images/thermal_power_1790681725549.jpg" },
     ],
   },
   {
@@ -72,10 +72,10 @@ const SLIDES = [
     title: "Benchmarked against the closest competition",
     description: "We constantly analyse and benchmark our solutions against industry leaders to keep performance and value ahead of the field.",
     cards: [
-      { titlePart1: "Market", titlePart2: "analysis", icon: BarChart3, description: "A close read of market trends to position your product ahead of the curve.", image: "/images/market_analysis_1790681763565.jpg" },
-      { titlePart1: "Competitor", titlePart2: "insight", icon: Radar, description: "Actionable intelligence on competitor products to define clear differentiation strategies.", image: "/images/competitor_insight_dashcam_1790743699079.jpg" },
-      { titlePart1: "Performance", titlePart2: "metrics", icon: Gauge, description: "Data-driven performance metrics to validate product superiority.", image: "/images/performance_metrics_1790681804112.jpg" },
-      { titlePart1: "Value", titlePart2: "proposition", icon: Award, description: "Balancing cost, quality and time-to-market to maximise return.", image: "/images/value_proposition_dashcam_1790743710634.jpg" },
+      { titlePart1: "Market", titlePart2: "analysis", icon: BarChart3, description: "Analyzing trends to keep you ahead.", image: "/images/market_analysis_1790681763565.jpg" },
+      { titlePart1: "Competitor", titlePart2: "insight", icon: Radar, description: "Actionable intelligence for clear competitor differentiation.", image: "/images/competitor_insight_dashcam_1790743699079.jpg" },
+      { titlePart1: "Performance", titlePart2: "metrics", icon: Gauge, description: "Data-driven metrics validating product superiority.", image: "/images/performance_metrics_1790681804112.jpg" },
+      { titlePart1: "Value", titlePart2: "proposition", icon: Award, description: "Balancing cost and quality for returns.", image: "/images/value_proposition_dashcam_1790743710634.jpg" },
     ],
   },
   {
@@ -84,10 +84,10 @@ const SLIDES = [
     title: "Assembled, aged and tested on our own line",
     description: "Every camera in the range is assembled in-house in India — not drop-shipped from an overseas vendor.",
     cards: [
-      { titlePart1: "36 HRS", titlePart2: "Minimum ageing test", icon: Timer, description: "Every product runs continuously in-house before it is cleared for despatch, so infant failures are caught by us and not by your customer.", image: "/images/ageing_test_dashcam_1790743724354.jpg" },
-      { titlePart1: "100%", titlePart2: "SD card compatibility", icon: CheckCircle2, description: "Compatibility testing across the card brands, classes and capacities your market actually buys, because most field complaints start with the card.", image: "/images/sd_card_dashcam_1790743736196.jpg" },
-      { titlePart1: "INDIA", titlePart2: "Made on our own line", icon: Factory, description: "Assembled on our line, so a build change does not wait in a queue behind somebody else's order at an overseas factory.", image: "/images/india_manufacturing_actual.jpg" },
-      { titlePart1: "IN-HOUSE", titlePart2: "Easy warranty redressal", icon: ShieldCheck, description: "Warranty handled by the team that built the unit — no third-party depot in the loop and no shipping the fault overseas.", image: "/images/warranty_redressal_dashcam_1790743772106.jpg" },
+      { titlePart1: "36 HRS", titlePart2: "Minimum ageing test", icon: Timer, description: "Continuous in-house testing prevents early failures.", image: "/images/ageing_test_dashcam_1790743724354.jpg" },
+      { titlePart1: "100%", titlePart2: "SD card compatibility", icon: CheckCircle2, description: "Broad SD compatibility testing reduces complaints.", image: "/images/sd_card_dashcam_1790743736196.jpg" },
+      { titlePart1: "INDIA", titlePart2: "Made on our own line", icon: Factory, description: "Locally assembled for faster build changes.", image: "/images/india_manufacturing_actual.jpg" },
+      { titlePart1: "IN-HOUSE", titlePart2: "Easy warranty redressal", icon: ShieldCheck, description: "Direct warranty support from our team.", image: "/images/warranty_redressal_dashcam_1790743772106.jpg" },
     ],
   },
   {
@@ -96,10 +96,10 @@ const SLIDES = [
     title: "Training and back-end support for your team",
     description: "Your sales team should be able to answer any question a customer asks across the counter.",
     cards: [
-      { titlePart1: "Sales", titlePart2: "training", icon: GraduationCap, description: "Product, positioning and objection handling, delivered to your field team at launch and refreshed whenever the line-up changes.", image: "/images/sales_training_dashcam_1790743787659.jpg" },
-      { titlePart1: "Feature", titlePart2: "explanation", icon: BookOpen, description: "Plain-language walk-throughs of the app, parking mode, GPS and the 4G features — with demo units your team can keep.", image: "/images/feature_explanation_dashcam_1790743802767.jpg" },
-      { titlePart1: "Query", titlePart2: "desk", icon: Headphones, description: "A named back-end team for escalations from your people, not a generic support inbox that answers in four days.", image: "/images/query_desk_dashcam_1790743815059.jpg" },
-      { titlePart1: "Counter", titlePart2: "collateral", icon: FileText, description: "Catalogues, comparison sheets, demo videos and display material supplied with the range and updated with it.", image: "/images/counter_collateral_dashcam_1790743881783.jpg" },
+      { titlePart1: "Sales", titlePart2: "training", icon: GraduationCap, description: "Comprehensive product positioning for sales teams.", image: "/images/sales_training_dashcam_1790743787659.jpg" },
+      { titlePart1: "Feature", titlePart2: "explanation", icon: BookOpen, description: "Clear feature walkthroughs with demo units.", image: "/images/feature_explanation_dashcam_1790743802767.jpg" },
+      { titlePart1: "Query", titlePart2: "desk", icon: Headphones, description: "Dedicated back-end support for quick escalation.", image: "/images/query_desk_dashcam_1790743815059.jpg" },
+      { titlePart1: "Counter", titlePart2: "collateral", icon: FileText, description: "Updated brochures and videos for display.", image: "/images/counter_collateral_dashcam_1790743881783.jpg" },
     ],
   },
   {
@@ -108,10 +108,10 @@ const SLIDES = [
     title: "BIS support for your product line-up",
     description: "MOSFET Tech Solutions is registered as a manufacturer under BIS India, and can legally support BIS certification for your product line-up.",
     cards: [
-      { titlePart1: "Registered", titlePart2: "manufacturer", icon: BadgeCheck, description: "Our registration is already live, so your line-up can be brought under it rather than starting the process from zero.", image: "/images/registered_manufacturer_dashcam_1790743894436.jpg" },
-      { titlePart1: "Documentation", titlePart2: "prepared", icon: ScrollText, description: "Test reports, factory documentation and application paperwork prepared and filed by our compliance team.", image: "/images/documentation_prepared_dashcam_1790743906341.jpg" },
-      { titlePart1: "Timeline", titlePart2: "visibility", icon: Timer, description: "Certification steps are planned alongside tooling and production, so a launch date is not lost waiting on paperwork.", image: "/images/timeline_visibility_dashcam_1790743919341.jpg" },
-      { titlePart1: "Ongoing", titlePart2: "compliance", icon: ShieldCheck, description: "Renewals, model additions and specification changes tracked for the life of the range.", image: "/images/ongoing_compliance_dashcam_1790743934590.jpg" },
+      { titlePart1: "Registered", titlePart2: "manufacturer", icon: BadgeCheck, description: "Live BIS registration supports your lineup.", image: "/images/registered_manufacturer_dashcam_1790743894436.jpg" },
+      { titlePart1: "Documentation", titlePart2: "prepared", icon: ScrollText, description: "Comprehensive compliance paperwork and test reports.", image: "/images/documentation_prepared_dashcam_1790743906341.jpg" },
+      { titlePart1: "Timeline", titlePart2: "visibility", icon: Timer, description: "Planning certification alongside production timelines.", image: "/images/timeline_visibility_dashcam_1790743919341.jpg" },
+      { titlePart1: "Ongoing", titlePart2: "compliance", icon: ShieldCheck, description: "Tracking renewals for ongoing compliance.", image: "/images/ongoing_compliance_dashcam_1790743934590.jpg" },
     ],
   },
   {
@@ -120,9 +120,9 @@ const SLIDES = [
     title: "Software is our core",
     description: "The unified cloud platform that every camera, telematics and sensory product in the range runs on — built and maintained by MOSFET Tech's own team.",
     cards: [
-      { titlePart1: "SAAS", titlePart2: "Unified cloud platform", icon: Cloud, description: "Powering smart mobility, fleets, EV ecosystems and emergency operations from one platform.", image: "/images/saas_main_header.jpg" },
-      { titlePart1: "05", titlePart2: "Platform products", icon: Layers, description: "Fleet Management System, Emergency Response & SOS, Last Mile Delivery, AI Insights Engine and Bus (School & Transport) Management.", image: "/images/saas_fms.jpg" },
-      { titlePart1: "INDIA", titlePart2: "Made and hosted in India", icon: ShieldCheck, description: "Designed and developed in India, for the vehicles, roads and operations we know. Customer data stays on servers hosted in India.", image: "/images/india_manufacturing.jpg" },
+      { titlePart1: "SAAS", titlePart2: "Unified cloud platform", icon: Cloud, description: "Unified platform powering smart fleet operations.", image: "/images/saas_main_header.jpg" },
+      { titlePart1: "05", titlePart2: "Platform products", icon: Layers, description: "Five versatile products for fleet management.", image: "/images/saas_fms.jpg" },
+      { titlePart1: "INDIA", titlePart2: "Made and hosted in India", icon: ShieldCheck, description: "Locally developed software with secure hosting.", image: "/images/india_manufacturing.jpg" },
     ],
   },
 ];
@@ -256,17 +256,17 @@ export default function CapabilitiesShowcase() {
   };
 
   return (
-    <section className="relative w-full BGRed text-white">
+    <section className="relative w-full BGRed text-[#ECEEE9]">
 
       {/* Non-sticky Intro Section */}
       <div className="py-10 sm:py-16 px-4 sm:px-8 lg:px-16 mx-auto flex flex-col justify-center items-center">
         <div className="flex-1 space-y-6 text-center">
-          <h2 className="heading2 mt-4 text-white!">
+          <h2 className="heading2 mt-4 text-[black]!">
             THE PERFECTLY ENGINEERED
             .<br />
             <span className="text-[black]">PRODUCT FOR YOUR LINEUP.</span>
           </h2>
-          <p className="paragraph text-white/70! max-w-xl mx-auto">
+          <p className="paragraph text-[#ECEEE9]! max-w-xl mx-auto">
             Tooling, product engineering, competitor benchmarking, local assembly, team training and BIS compliance — before the order and after it.
           </p>
         </div>
@@ -304,7 +304,7 @@ export default function CapabilitiesShowcase() {
                   onClick={() => goTo(idx)}
                   className={`relative z-10 snap-start w-[280px] lg:w-full shrink-0 flex items-center gap-4 text-left px-5 py-4 transition-all duration-500 border ${active
                     ? "bg-transparent text-black border-white shadow-lg"
-                    : "bg-black text-white border-white/20 hover:bg-[#202020]"
+                    : "bg-black text-[#ECEEE9] border-white/20 hover:bg-[#202020]"
                     }`}
                 >
                   <span
@@ -338,7 +338,7 @@ export default function CapabilitiesShowcase() {
               <div
                 key={slide.id}
                 ref={(el) => (cardsRef.current[idx] = el)}
-                className="absolute inset-0 w-full h-fit bg-white text-black overflow-y-auto custom-scrollbar flex flex-col will-change-transform"
+                className="absolute inset-0 w-full h-fit bg-[#ECEEE9] text-black overflow-y-auto custom-scrollbar flex flex-col will-change-transform"
                 style={{ zIndex: idx }}
               >
                 <div className="px-6 sm:px-9 pt-8 sm:pt-10 pb-9 sm:pb-11 flex-1">
@@ -368,23 +368,23 @@ export default function CapabilitiesShowcase() {
                           </div>
 
                           <div className="relative z-10 flex flex-col h-full w-[65%]">
-                            <card.icon className="w-8 h-8 mb-4" strokeWidth={2} style={{ color }} />
+                            {/* <card.icon className="w-8 h-8 mb-4" strokeWidth={2} style={{ color }} /> */}
 
                             <h3 className="mb-2">
-                              <span className="block text-white text-[20px] uppercase sm:text-[22px] font-bold leading-tight">
-                                {card.titlePart1}
+                              <span className="block text-[#ECEEE9] heading4 text-[20px] max-w-[300px] uppercase sm:text-[22px] font-bold leading-tight">
+                                {card.titlePart1}  {card.titlePart2}
                               </span>
-                              <p
+                              {/* <p
                                 className=" text-[white]/80! capitalize"
                                 style={{ color }}
                               >
                                 {card.titlePart2}
-                              </p>
+                              </p> */}
                             </h3>
 
-                            {/* <p className="text-white/60 text-sm mt-auto">
+                            <p className="text-[#ECEEE9] text-sm mb-auto max-w-[300px]">
                               {card.description}
-                            </p> */}
+                            </p>
                           </div>
                         </div>
                       );

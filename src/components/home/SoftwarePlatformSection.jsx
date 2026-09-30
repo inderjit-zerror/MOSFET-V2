@@ -102,14 +102,14 @@ export default function SoftwarePlatformSection() {
   }, [activeIndex]);
 
   return (
-    <section className="bg-black text-white py-20 px-4 md:px-12 lg:px-10 overflow-hidden">
+    <section className="bg-black text-[#ECEEE9] py-20 px-4 md:px-12 lg:px-10 overflow-hidden">
       {/* Intro Header Section */}
       <div className="mx-auto mb-16 flex flex-col justify-center items-center text-center">
-        <BlurText as="h2" className="heading2 text-white!">
+        <BlurText as="h2" className="heading2 text-[#EE2F2E]!">
           SOFTWARE IS
-          <span className="text-[red] ml-2"> OUR CORE.</span>
+          <span className=" ml-2"> OUR CORE.</span>
         </BlurText>
-        <p className="paragraph text-white/70! max-w-4xl mt-6">
+        <p className="paragraph text-[#ECEEE9]/70! max-w-4xl mt-6">
           A unified cloud platform powering smart mobility, fleets, EV ecosystems, and emergency operations. The platform is built and maintained by MOSFET Tech&apos;s own team, and it ties every camera, telematics and sensory product together.
         </p>
       </div>
@@ -124,8 +124,8 @@ export default function SoftwarePlatformSection() {
                 key={item.id}
                 onClick={() => handleSelect(i)}
                 className={`px-5 py-2.5  text-xs md:text-sm tracking-wide font-medium transition-all duration-300 ${isActive
-                  ? "bg-[red] text-white shadow-[0_0_15px_rgba(255,0,0,0.4)] scale-105"
-                  : "bg-white/10 text-white/60 hover:bg-white/20 hover:text-white"
+                  ? "bg-[#EE2F2E] text-[#ECEEE9] shadow-[0_0_15px_rgba(255,0,0,0.4)] scale-105"
+                  : "bg-white/10 text-[#ECEEE9]/60 hover:bg-white/20 hover:text-[#ECEEE9]"
                   }`}
               >
                 {item.title}
@@ -142,10 +142,10 @@ export default function SoftwarePlatformSection() {
               {/* <div className="text-[red] font-mono text-sm mb-3 tracking-widest">
                 MODULE {platformData[activeIndex].id}
               </div> */}
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#ECEEE9] mb-4 leading-tight">
                 {platformData[activeIndex].title}
               </h3>
-              <p className="text-white/60 text-base md:text-lg max-w-xl leading-relaxed">
+              <p className="text-[#ECEEE9]/60 text-base md:text-lg max-w-xl leading-relaxed">
                 {platformData[activeIndex].subtitle}
               </p>
             </div>
@@ -158,10 +158,10 @@ export default function SoftwarePlatformSection() {
                   className="flex items-start gap-3 group/feature"
                 >
                   <CheckCircle2
-                    className="text-[red] shrink-0 mt-0.5 transition-transform duration-300 group-hover/feature:scale-125 group-hover/feature:text-white"
+                    className="text-[#EE2F2E] shrink-0 mt-0.5 transition-transform duration-300 group-hover/feature:scale-125 group-hover/feature:text-[#ECEEE9]"
                     size={20}
                   />
-                  <span className="text-sm md:text-base text-gray-300 tracking-wide transition-colors duration-300 group-hover/feature:text-white">
+                  <span className="text-sm md:text-base text-gray-300 tracking-wide transition-colors duration-300 group-hover/feature:text-[#ECEEE9]">
                     {feature}
                   </span>
                 </div>

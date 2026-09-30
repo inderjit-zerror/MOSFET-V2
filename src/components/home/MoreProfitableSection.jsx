@@ -81,13 +81,13 @@ export default function MoreProfitableSection() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="bg-[#EE2F2E] text-white py-24 px-4 md:px-12 lg:px-10">
+        <section ref={sectionRef} className="bg-[#EE2F2E] text-[#ECEEE9] py-24 px-4 md:px-12 lg:px-10">
             <div className=" mx-auto">
                 {/* Header */}
                 <div className="max-w-3xl mb-16">
 
                     <InTitle2 txt={'Section 02: More Profitable'} />
-                    <BlurText as="h2" className=" heading1 mt-4 text-white">
+                    <BlurText as="h2" className=" heading1 mt-4 text-[#ECEEE9]">
                         TURN TECHNOLOGY INTO <br className="hidden md:block" />
                         <span className="text-[#202020]">BUSINESS VALUE.</span>
                     </BlurText>
@@ -97,9 +97,9 @@ export default function MoreProfitableSection() {
                 <div className="flow-track flex flex-col lg:flex-row items-stretch gap-0 mb-20">
                     {flowStages.map((stage, i) => (
                         <div key={stage.id} className="flex flex-col lg:flex-row items-center flex-1">
-                            <div className="flow-stage w-full bg-[#202020] text-white  p-8 md:p-10 flex flex-col h-full shadow-2xl shadow-black/20 border border-white/10">
+                            <div className="flow-stage w-full bg-[#202020] text-[#ECEEE9]  p-8 md:p-10 flex flex-col h-full shadow-2xl shadow-black/20 border border-white/10">
                                 <span className="text-[#EE2F2E] bg-white px-3 py-1 rounded-full w-max tracking-wider">{stage.id}</span>
-                                <h3 className=" mt-6 mb-6 text-white">{stage.label}</h3>
+                                <h3 className=" mt-6 mb-6 text-[#ECEEE9]">{stage.label}</h3>
                                 <ul className="space-y-4 flex-1">
                                     {stage.items.map((item, ii) => (
                                         <li key={ii} className=" text-gray-300 pl-5 relative">
@@ -112,8 +112,8 @@ export default function MoreProfitableSection() {
 
                             {i < flowStages.length - 1 && (
                                 <div className="flow-arrow flex items-center justify-center shrink-0 my-4 lg:my-0 lg:mx-4">
-                                    <ArrowDown className="lg:hidden text-white drop-shadow-lg" size={40} />
-                                    <ArrowRight className="hidden lg:block text-white drop-shadow-lg" size={40} />
+                                    <ArrowDown className="lg:hidden text-[#ECEEE9] drop-shadow-lg" size={40} />
+                                    <ArrowRight className="hidden lg:block text-[#ECEEE9] drop-shadow-lg" size={40} />
                                 </div>
                             )}
                         </div>
@@ -124,15 +124,15 @@ export default function MoreProfitableSection() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-10 mb-16 pt-16 border-t border-white/20">
                     {profitableBullets.map((bullet, i) => (
                         <div key={i} className="flex flex-col gap-4">
-                            <span className=" text-white/20">{String(i + 1).padStart(2, "0")}</span>
-                            <p className=" text-white">{bullet}</p>
+                            <span className=" text-[#ECEEE9]/20">{String(i + 1).padStart(2, "0")}</span>
+                            <p className=" text-[#ECEEE9]">{bullet}</p>
                         </div>
                     ))}
                 </div>
 
                 {/* Footer callout */}
                 <div className="border-l-4 border-white pl-6 py-2 max-w-3xl">
-                    <p className=" text-white">
+                    <p className=" text-[#ECEEE9]">
                         We don&apos;t publish ROI percentages we can&apos;t stand behind. Bring us a programme and we&apos;ll work through the numbers with you.
                     </p>
                 </div>

@@ -16,7 +16,7 @@
 //     image:
 //       "https://images.unsplash.com/photo-1598650554853-3507bdcb3ddb?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 //   },
- 
+
 // ];
 
 // export default function AboutDetail() {
@@ -178,14 +178,14 @@
 //             <button
 //               onClick={handlePrev}
 //               aria-label="Previous"
-//               className="flex h-11 w-11 items-center justify-center rounded-full BGRed text-white transition-colors hover:bg-[#da1e1e]/60"
+//               className="flex h-11 w-11 items-center justify-center rounded-full BGRed text-[#ECEEE9] transition-colors hover:bg-[#da1e1e]/60"
 //             >
 //               <ArrowLeft className="h-4 w-4" strokeWidth={2} />
 //             </button>
 //             <button
 //               onClick={handleNext}
 //               aria-label="Next"
-//               className="flex h-11 w-11 items-center justify-center rounded-full bg-[#ff3030] text-white transition-colors hover:bg-[#da1e1e]"
+//               className="flex h-11 w-11 items-center justify-center rounded-full bg-[#ff3030] text-[#ECEEE9] transition-colors hover:bg-[#da1e1e]"
 //             >
 //               <ArrowRight className="h-4 w-4" strokeWidth={2} />
 //             </button>
@@ -214,7 +214,7 @@ const SLIDES = [
     image:
       "https://images.unsplash.com/photo-1598650554853-3507bdcb3ddb?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
- 
+
 ];
 
 export default function AboutDetail() {
@@ -317,11 +317,11 @@ export default function AboutDetail() {
         <h1 className="heading1 mb-[1rem] sm:mb-[1.5rem] max-w-[45rem]">
           Precision Hardware.
           <br />
-           Smart Software.
+          Smart Software.
         </h1>
 
         <p className="paragraph max-w-[38rem] PH ">
-            Every MOSFET product pairs rugged, precision-built hardware with AI software tuned specifically for Indian roads and everyday driving conditions. From dash cams to audio systems, each component is engineered in-house and tested before it ever reaches a customer.
+          Every MOSFET product pairs rugged, precision-built hardware with AI software tuned specifically for Indian roads and everyday driving conditions. From dash cams to audio systems, each component is engineered in-house and tested before it ever reaches a customer.
         </p>
       </div>
 
@@ -376,14 +376,14 @@ export default function AboutDetail() {
             <button
               onClick={handlePrev}
               aria-label="Previous"
-              className="flex h-11 w-11 items-center justify-center rounded-full BGRed text-white transition-colors hover:bg-[#da1e1e]/60"
+              className="flex h-11 w-11 items-center justify-center rounded-full BGRed text-[#ECEEE9] transition-colors hover:bg-[#da1e1e]/60"
             >
               <ArrowLeft className="h-4 w-4" strokeWidth={2} />
             </button>
             <button
               onClick={handleNext}
               aria-label="Next"
-              className="flex h-11 w-11 items-center justify-center rounded-full bg-[#ff3030] text-white transition-colors hover:bg-[#da1e1e]"
+              className="flex h-11 w-11 items-center justify-center rounded-full bg-[#ff3030] text-[#ECEEE9] transition-colors hover:bg-[#da1e1e]"
             >
               <ArrowRight className="h-4 w-4" strokeWidth={2} />
             </button>

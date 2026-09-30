@@ -8,7 +8,7 @@ const Button = ({ txt }) => {
       <div className="absolute inset-0 w-0 bg-black transition-all duration-300 ease-out group-hover:w-full"></div>
 
       {/* Button Text */}
-      <p className="relative z-10 paragraph font-medium! text-[0.9rem]! text-white! uppercase tracking-widest">
+      <p className="relative z-10 paragraph font-medium! text-[0.9rem]! text-[#ECEEE9]! uppercase tracking-widest">
         {txt}
       </p>
     </button>

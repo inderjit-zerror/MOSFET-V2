@@ -18,8 +18,6 @@ const HomePage = () => {
       <Hero />
       <CementEmissionsSection />
 
-
-
       <CementProcessSlider />
       <SoftwarePlatformSection />
 

@@ -10,15 +10,11 @@ import Button from "../common/Button";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const PARAGRAPH_ONE =
-  "We engineer OEM-specific camera, telematics and sensory solutions that make automotive businesses safer, simpler and more dependable. ";
-
-const PARAGRAPH_TWO =
-  "Smarter Tech for Safer Vehicles. One partner for camera, telematics, software and Made-in-India certified hardware. Built around your vehicle, not bolted on.";
+  "We engineer OEM-specific camera, telematics and sensory solutions that make automotive businesses safer, simpler and more dependable. Smarter Tech for Safer Vehicles. One partner for camera, telematics, software and Made-in-India certified hardware. Built around your vehicle, not bolted on. ";
 
 export default function CementEmissionsSection() {
   const sectionRef = useRef(null);
   const paraOneRef = useRef(null);
-  const paraTwoRef = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -27,17 +23,12 @@ export default function CementEmissionsSection() {
         linesClass: "cura-line",
       });
 
-      const splitTwo = new SplitText(paraTwoRef.current, {
-        type: "lines",
-        linesClass: "cura-line",
-      });
-
-      gsap.set([splitOne.lines, splitTwo.lines], {
+      gsap.set(splitOne.lines, {
         opacity: 0,
         filter: "blur(0.6rem)",
         yPercent: 30,
       });
-      gsap.set([paraOneRef.current, paraTwoRef.current], { autoAlpha: 1 });
+      gsap.set(paraOneRef.current, { autoAlpha: 1 });
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -55,18 +46,7 @@ export default function CementEmissionsSection() {
         stagger: 0.08,
         duration: 0.8,
         ease: "power2.out",
-      }).to(
-        splitTwo.lines,
-        {
-          opacity: 1,
-          filter: "blur(0rem)",
-          yPercent: 0,
-          stagger: 0.08,
-          duration: 0.8,
-          ease: "power2.out",
-        },
-        "-=0.4"
-      );
+      });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -101,19 +81,19 @@ export default function CementEmissionsSection() {
 
       <div className="relative z-10 mx-auto flex w-full flex-col items-center text-center gap-12">
         <div className="w-[80vw] flex flex-col gap-8">
+
+          <h2 className="heading2 text-[#EE2F2E] ">
+            THE INTELLIGENCE <br className="hidden sm:block" />
+            BEHIND SAFER DRIVES !
+          </h2>
+
           <h5
             ref={paraOneRef}
-            className="heading4 uppercase m-0 text-white invisible"
+            className="heading4  uppercase m-0 text-[#ECEEE9] invisible"
           >
             {PARAGRAPH_ONE}
           </h5>
 
-          <h5
-            ref={paraTwoRef}
-            className="heading4 uppercase m-0 text-[#EE2F2E] invisible"
-          >
-            {PARAGRAPH_TWO}
-          </h5>
         </div>
 
         <div className="w-fit flex flex-wrap justify-center gap-5 mx-auto mt-4">

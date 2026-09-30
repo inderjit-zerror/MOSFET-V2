@@ -77,7 +77,7 @@ export default function Hero() {
         <div className="hero-cta mt-8">
           <a
             href="#products"
-            className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white px-7 py-3 text-xs font-semibold uppercase tracking-widest text-mosfet-black transition-colors hover:bg-mosfet-amber hover:text-white"
+            className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white px-7 py-3 text-xs font-semibold uppercase tracking-widest text-mosfet-black transition-colors hover:bg-mosfet-amber hover:text-[#ECEEE9]"
           >
             Explore the range
           </a>

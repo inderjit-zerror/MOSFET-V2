@@ -107,7 +107,7 @@ export default function BlogHero({ post }) {
           <div className="flex items-start justify-between">
             <span
               ref={eyebrowRef}
-              className="inline-flex items-center gap-2 text-white! text-xs paragraph sm:text-sm font-semibold tracking-[0.2em] uppercase opacity-90"
+              className="inline-flex items-center gap-2 text-[#ECEEE9]! text-xs paragraph sm:text-sm font-semibold tracking-[0.2em] uppercase opacity-90"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-[#EE2F2E]! " />
               Featured {post.bannerEyebrow}
@@ -117,7 +117,7 @@ export default function BlogHero({ post }) {
 
           <h2
             ref={titleRef}
-            className="text-white heading1 font-extrabold leading-[1.02] tracking-tight text-3xl sm:text-4xl md:text-5xl max-w-2xl"
+            className="text-[#ECEEE9] heading1 font-extrabold leading-[1.02] tracking-tight text-3xl sm:text-4xl md:text-5xl max-w-2xl"
           >
             {post.bannerTitle}
           </h2>
@@ -149,7 +149,7 @@ export default function BlogHero({ post }) {
           </h3>
         </div>
 
-       
+
       </div>
     </a>
   );

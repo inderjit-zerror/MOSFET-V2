@@ -120,7 +120,7 @@ export default function FuturePlansSection() {
                 </div>
 
                 {/* Interactive Arrow Button */}
-                <div className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center bg-white group-hover:bg-[#EE2F2F] group-hover:text-white group-hover:border-transparent transition-all duration-500">
+                <div className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center bg-white group-hover:bg-[#EE2F2F] group-hover:text-[#ECEEE9] group-hover:border-transparent transition-all duration-500">
                   <svg
                     width="22"
                     height="22"

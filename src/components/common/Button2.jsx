@@ -9,7 +9,7 @@ const Button2 = ({ txt }) => {
       <div className="absolute inset-0 w-0 BGRed transition-all duration-300 ease-out group-hover:w-full"></div>
 
       {/* Button Text */}
-      <p className="relative z-10 paragraph TextRed text-[0.9rem]! font-medium! uppercase tracking-widest transition-colors duration-300 group-hover:text-white!">
+      <p className="relative z-10 paragraph TextRed text-[0.9rem]! font-medium! uppercase tracking-widest transition-colors duration-300 group-hover:text-[#ECEEE9]!">
         {txt}
       </p>
     </button>

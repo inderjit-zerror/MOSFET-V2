@@ -160,7 +160,7 @@ const Header = () => {
                       <div className={`flex items-center ${item.isSpecial ? "border border-[#EE2F2E]/30 bg-[#EE2F2E]/10 px-3 py-1.5 rounded-sm" : ""}`}>
                         {item.isSpecial && <div className="w-1.5 h-1.5 rounded-full bg-[#EE2F2E] mr-2"></div>}
                         <p
-                          className={`paragraph text-[0.8rem]! text-white! font-medium! uppercase tracking-wider transition-colors duration-300 ${scrolled ? "hover:text-black!" : "hover:text-[#EE2F2E]!"} ${isActive ? (scrolled ? "text-black!" : "TextRed") : ""
+                          className={`paragraph text-[0.8rem]! text-[#ECEEE9]! font-medium! uppercase tracking-wider transition-colors duration-300 ${scrolled ? "hover:text-black!" : "hover:text-[#EE2F2E]!"} ${isActive ? (scrolled ? "text-black!" : "TextRed") : ""
                             }`}
                         >
                           {item.title}
@@ -171,7 +171,7 @@ const Header = () => {
                     <div className={`flex items-center ${item.isSpecial ? "border border-[#EE2F2E]/30 bg-[#EE2F2E]/10 px-3 py-1.5 rounded-sm" : ""}`}>
                       {item.isSpecial && <div className="w-1.5 h-1.5 rounded-full bg-[#EE2F2E] mr-2"></div>}
                       <p
-                        className={`paragraph text-[0.7rem]! text-white! font-medium! uppercase tracking-wider transition-colors duration-300 ${scrolled ? "hover:text-black!" : "hover:text-[#EE2F2E]!"} ${isActive ? (scrolled ? "text-black!" : "TextRed") : ""
+                        className={`paragraph text-[0.7rem]! text-[#ECEEE9]! font-medium! uppercase tracking-wider transition-colors duration-300 ${scrolled ? "hover:text-black!" : "hover:text-[#EE2F2E]!"} ${isActive ? (scrolled ? "text-black!" : "TextRed") : ""
                           }`}
                       >
                         {item.title}
@@ -242,7 +242,7 @@ const Header = () => {
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
               onClick={() => setMobileOpen((prev) => !prev)}
-              className={`flex h-9 w-9 items-center justify-center rounded-full text-white transition-colors duration-300 ${scrolled ? "bg-black" : "BGRed"}`}
+              className={`flex h-9 w-9 items-center justify-center rounded-full text-[#ECEEE9] transition-colors duration-300 ${scrolled ? "bg-black" : "BGRed"}`}
             >
               {mobileOpen ? (
                 <X className="h-5 w-5" strokeWidth={2} />

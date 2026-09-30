@@ -6,7 +6,7 @@ import Image from "next/image";
 const partners = [
   {
     name: "TATA",
-    logo: <Image src="/partners/tata.svg" alt="TATA CARS" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />,
+    logo: <Image src="/partners/tata_new.svg" alt="TATA CARS" width={180} height={90} className="object-contain w-auto h-12 sm:h-16 md:h-20 opacity-70 brightness-0 invert hover:opacity-100 transition-all duration-300" />,
   },
   {
     name: "MARUTI SUZUKI",
@@ -52,7 +52,7 @@ export default function PartnersCollaborators() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#050505] text-white py-24 sm:py-32 overflow-hidden"
+      className="bg-[#050505] text-[#ECEEE9] py-24 sm:py-32 overflow-hidden"
     >
       <style>{`
         @keyframes marqueeLeftToRight {
@@ -82,11 +82,11 @@ export default function PartnersCollaborators() {
       `}</style>
       <div className="mx-auto px-4 md:px-12 lg:px-16 mb-16 lg:mb-24">
         <div className="flex flex-col items-center text-center">
-          <h2 className="heading2 mt-4 !text-white">
-            <span className="text-[red]">TRUSTED BY THE PEOPLE</span> WHO
+          <h2 className="heading2 mt-4 text-[#EE2F2E]! ">
+            <span className="">TRUSTED BY THE PEOPLE</span> WHO
             PUT OUR SOLUTIONS TO WORK.
           </h2>
-          <p className="paragraph !text-white/70 max-w-2xl mt-6">
+          <p className="paragraph !text-[#ECEEE9]/70 max-w-2xl mt-6">
             MOSFET works with OEMs, fleet operators, dealers, and retail partners across India to bring connected vehicle technology to every kind of driver.
           </p>
         </div>
@@ -102,8 +102,11 @@ export default function PartnersCollaborators() {
                 key={`${partner.name}-${i}-ltr`}
                 className="flex items-center justify-center flex-shrink-0"
               >
-                <div className="text-white hover:text-white font-semibold transition-colors duration-500 scale-90 sm:scale-100 flex items-center justify-center min-w-[180px]">
+                <div className="group text-[#ECEEE9] hover:text-[#ECEEE9] font-semibold transition-colors duration-500 scale-90 sm:scale-100 flex items-center gap-4 justify-center">
                   {partner.logo}
+                  <span className="text-lg md:text-xl tracking-wider uppercase text-[#ECEEE9]/50 group-hover:text-[#ECEEE9] transition-colors duration-300">
+                    {partner.name}
+                  </span>
                 </div>
               </div>
             ))}
@@ -119,8 +122,11 @@ export default function PartnersCollaborators() {
                 key={`${partner.name}-${i}-rtl`}
                 className="flex items-center justify-center flex-shrink-0"
               >
-                <div className="text-white hover:text-white font-semibold transition-colors duration-500 scale-90 sm:scale-100 flex items-center justify-center min-w-[180px]">
+                <div className="group text-[#ECEEE9] hover:text-[#ECEEE9] font-semibold transition-colors duration-500 scale-90 sm:scale-100 flex items-center gap-4 justify-center">
                   {partner.logo}
+                  <span className="text-lg md:text-xl tracking-wider uppercase text-[#ECEEE9]/50 group-hover:text-[#ECEEE9] transition-colors duration-300">
+                    {partner.name}
+                  </span>
                 </div>
               </div>
             ))}

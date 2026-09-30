@@ -127,13 +127,13 @@ export default function BlogCard({ post, className = "", cardRef }) {
 
           <div className="relative h-full flex flex-col justify-between p-5 sm:p-6">
             {/* <div className="flex items-start justify-between">
-              <span className="text-white text-[11px] font-semibold tracking-[0.18em] uppercase opacity-85">
+              <span className="text-[#ECEEE9] text-[11px] font-semibold tracking-[0.18em] uppercase opacity-85">
                 {post.bannerEyebrow}
               </span>
-              <CFMark className="w-6 h-6 text-white opacity-90" />
+              <CFMark className="w-6 h-6 text-[#ECEEE9] opacity-90" />
             </div> */}
             {/* <h3
-              className="text-white font-extrabold heading1 leading-[1.05] text-xl sm:text-2xl md:text-[1.5rem]! tracking-tight"
+              className="text-[#ECEEE9] font-extrabold heading1 leading-[1.05] text-xl sm:text-2xl md:text-[1.5rem]! tracking-tight"
               style={clampTwoLines}
             >
               {post.bannerTitle}

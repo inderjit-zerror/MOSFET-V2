@@ -243,7 +243,7 @@
 //                 >
 //                  <span
 //   className={`text-base font-medium sm:text-lg  ${
-//     isOpen ? "text-white" : "TextStandard"
+//     isOpen ? "text-[#ECEEE9]" : "TextStandard"
 //   }`}
 // >
 //   {item.question}
@@ -281,7 +281,7 @@
 //                 >
 //                   <p
 //   className={`pr-10 text-sm leading-relaxed sm:text-base ${
-//     isOpen ? "text-white/80! opacity-100 paragraph" : "TextStandard opacity-70"
+//     isOpen ? "text-[#ECEEE9]/80! opacity-100 paragraph" : "TextStandard opacity-70"
 //   }`}
 // >
 //   {item.answer}
@@ -1062,9 +1062,8 @@ export default function FAQSection() {
                     className="flex w-full items-center justify-between gap-4 text-left"
                   >
                     <span
-                      className={`text-base font-medium sm:text-lg  ${
-                        isOpen ? "text-white" : "TextStandard"
-                      }`}
+                      className={`text-base font-medium sm:text-lg  ${isOpen ? "text-[#ECEEE9]" : "TextStandard"
+                        }`}
                     >
                       {item.question}
                     </span>
@@ -1100,11 +1099,10 @@ export default function FAQSection() {
                     style={{ height: 0, opacity: 0 }}
                   >
                     <p
-                      className={`pr-10 font-light! leading-relaxed paragraph ${
-                        isOpen
-                          ? "text-white/80! opacity-100 paragraph"
+                      className={`pr-10 font-light! leading-relaxed paragraph ${isOpen
+                          ? "text-[#ECEEE9]/80! opacity-100 paragraph"
                           : "TextStandard opacity-70"
-                      }`}
+                        }`}
                     >
                       {item.answer}
                     </p>
